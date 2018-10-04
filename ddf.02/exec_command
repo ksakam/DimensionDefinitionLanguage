@@ -1,0 +1,5 @@
+c:\MH>flex calc02.lex
+c:\MH>bison -d -y calc02.y
+c:\MH>tcc -o calc02.exe y.tab.c lex.yy.c
+c:\MH>calc02
+

@@ -1,0 +1,21 @@
+実行部ですが、
+
+from nimsUnitClass import Quantity
+
+a = Quantity()
+
+a.setValue(123)
+print(a.getValue())
+
+a.setUnit(456)
+print(a.getUnit())
+
+print(a.getQuantity())
+
+-------------------------
+123
+456
+qt(123, 456)
+-------------------------
+となりました。
+

@@ -1,0 +1,54 @@
+%token '1'
+%token '2'
+%token '3'
+%token '4'
+%token '5'
+%token '6'
+%token '7'
+%token '8'
+%token '9'
+%token '0'
+
+%%
+
+dimension_expression
+	: args
+	| args '-' '>' args
+	| func '-' '>' args
+
+func
+	: fname '(' args ')'
+
+fname
+	: '$' digits
+
+args
+	: arg
+	| args ',' arg
+
+arg
+	: '$' digits
+	| '$' digits dim
+
+dim
+	: '[' digits_list ']'
+
+digits_list
+	: digits
+	| digits_list ',' digits
+
+digits
+	: digit
+	| digits digit
+
+digit
+	: '1'
+	| '2'
+	| '3'
+	| '4'
+	| '5'
+	| '6'
+	| '7'
+	| '8'
+	| '9'
+	| '0'

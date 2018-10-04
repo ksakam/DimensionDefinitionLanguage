@@ -1,0 +1,16 @@
+#
+lex samplec.l
+yacc -d samplec.y
+cc lex.yy.c y.tab.c -ll
+
+#gcc44
+flex exe.l
+yacc ddf.y
+## y.tab.c を編集、#include "lex.yy.c" をインサート
+gcc44 y.tab.c -lfl -ly
+
+#gcc44
+exe.l に y.tab.c を include
+flex exe.l
+yacc ddf.y
+gcc44 lex.yy.c -lfl -ll
