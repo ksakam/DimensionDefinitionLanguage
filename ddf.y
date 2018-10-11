@@ -27,7 +27,6 @@ dimension_expression
 
 list
 	: arg FUNC_S argfunc FUNC_E
-	| arg FUNC_S FUNC_E
 	| arg FUNC_S list FUNC_E
 	| arg FUNC_S list LIST argfunc FUNC_E
 	| arg FUNC_S argfunc LIST list FUNC_E

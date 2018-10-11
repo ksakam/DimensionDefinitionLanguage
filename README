@@ -1,10 +1,10 @@
-#ddf
+#ddf (dimension definition language)
 ddf.l ddf.y
 lex ddf.l
 yacc -dv ddf.y
 gcc44 y.tab.c lex.yy.c  -lfl -ll
 
-#llf
+#llf (lisp like language)
 yacc -dv llf.y
 lex llf.l
 gcc44 y.tab.c lex.yy.c  -lfl -ll -o llf_
