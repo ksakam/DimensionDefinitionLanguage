@@ -1,12 +1,20 @@
-#ddf (dimension definition language)
-ddf.l ddf.y
-lex ddf.l
-yacc -dv ddf.y
-gcc44 y.tab.c lex.yy.c  -lfl -ll
-
 #llf (lisp like language)
-yacc -dv llf.y
 lex llf.l
+yacc -dv llf.y
 gcc44 y.tab.c lex.yy.c  -lfl -ll -o llf_
 cat test.llf | ./llf_
+
+
+#ddf (dimension definition language)
+lex ddf.l
+yacc -dv ddf.y
+gcc44 y.tab.c lex.yy.c  -lfl -ll -o ddf_
+cat test.ddf | ./ddf_
+
+
+#dfd (deta format definition)
+lex dfd.l
+yacc -dv dfd.y
+gcc44 y.tab.c lex.yy.c  -lfl -ll -o dfd_
+cat test.dfd | ./dfd_
 
