@@ -14,26 +14,28 @@ line_list
 	| line_list line
 
 line
-	: dimension_expression END {printf("END:\n");}
+	: dimension_expression END 	{printf("END:\n");}
 
 dimension_expression
-	: args
-	| func
-	| args rule args
-	| func rule args
-	| args rule func
-	| func rule func
+	: arg				{printf(":Dataset:");}
+	| list				{printf(":Dataset:");}
+	| arg RULE arg			{printf(":In->Out:");}
+	| arg RULE list			{printf(":In->Out:");}
+	| list RULE arg			{printf(":In->Out:");}
+	| list RULE list		{printf(":In->Out:");}
 
-rule
-	: RULE
+list
+	: arg FUNC_S argfunc FUNC_E
+	| arg FUNC_S FUNC_E
+	| arg FUNC_S list FUNC_E
+	| arg FUNC_S list LIST argfunc FUNC_E
+	| arg FUNC_S argfunc LIST list FUNC_E
 
-func
-	: FUNC_S args FUNC_E
 
-
-args
+argfunc
 	: arg
-	| args LIST arg
+	| argfunc LIST arg
+	| argfunc LIST FUNC_S argfunc FUNC_E
 
 
 arg
