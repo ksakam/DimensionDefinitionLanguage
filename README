@@ -4,6 +4,12 @@ yacc -dv llf.y
 gcc44 y.tab.c lex.yy.c  -lfl -ll -o llf_
 cat test.llf | ./llf_
 
+#llf (lisp like form)
+lex llf_rule.l
+yacc -dv llf_rule.y
+gcc44 y.tab.c lex.yy.c  -lfl -ll -o llf_rule
+cat test.llf_rule | ./llf_rule
+
 
 #ddf (dimension definition form)
 lex ddf.l
