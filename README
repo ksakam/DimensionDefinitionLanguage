@@ -1,11 +1,11 @@
-#llf (lisp like language)
+#llf (lisp like form)
 lex llf.l
 yacc -dv llf.y
 gcc44 y.tab.c lex.yy.c  -lfl -ll -o llf_
 cat test.llf | ./llf_
 
 
-#ddf (dimension definition language)
+#ddf (dimension definition form)
 lex ddf.l
 yacc -dv ddf.y
 gcc44 y.tab.c lex.yy.c  -lfl -ll -o ddf_
