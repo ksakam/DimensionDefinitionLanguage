@@ -18,7 +18,7 @@ line
 	| dimension_expression END 	{printf("END:\n");}
 
 dimension_expression_ref
-	: dimension_expression REF	{printf(":Ref:");}
+	: dimension_expression REF arg SET REF_S ALPH SET NUM REF_E	{printf(":Ref:");}
 
 dimension_expression
 	: arg				{printf(":Dataset:");}
