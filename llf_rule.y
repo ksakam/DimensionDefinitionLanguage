@@ -6,7 +6,7 @@ int yylex(void);
 extern char *yytext;
 %}
 
-%token DIM ARG FUNC_S FUNC_E RULE LIST END ERR
+%token DIM ARG FUNC_S FUNC_E RULE LIST REF ALPH NUM REF_S REF_E SET END ERR
 
 %%
 line_list
@@ -14,7 +14,19 @@ line_list
 	| line_list line
 
 line
-	: dimension_expression END 	{printf("END:\n");}
+	: dimension_expression_ref END 	{printf("END:\n");}
+	| dimension_expression END 	{printf("END:\n");}
+
+dimension_expression_ref
+	: dimension_expression REF refs	{printf(":Ref:");}
+
+refs
+	: ref
+	| refs LIST ref
+
+ref
+	: arg SET REF_S ALPH SET NUM REF_E
+	| arg SET REF_S ALPH SET arg REF_E
 
 dimension_expression
 	: arg				{printf(":Dataset:");}
