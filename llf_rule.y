@@ -14,8 +14,8 @@ line_list
 	| line_list line
 
 line
-	: dimension_expression_ref END 	{printf("END:\n");}
-	| dimension_expression END 	{printf("END:\n");}
+	: dimension_expression_ref END 	{printf(":END:\n");}
+	| dimension_expression END 	{printf(":END:\n");}
 
 dimension_expression_ref
 	: dimension_expression REF refs	{printf(":Ref:");}
