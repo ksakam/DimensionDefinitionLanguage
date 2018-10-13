@@ -4,7 +4,7 @@ yacc -dv llf.y
 gcc44 y.tab.c lex.yy.c  -lfl -ll -o llf_
 cat test.llf | ./llf_
 
-#llf (lisp like form)
+#llf_rule (lisp like form)
 lex llf_rule.l
 yacc -dv llf_rule.y
 gcc44 y.tab.c lex.yy.c  -lfl -ll -o llf_rule
