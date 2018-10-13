@@ -11,12 +11,12 @@ int  yywrap(void) { return 1; }
 ,			return LIST;
 \(			return FUNC_S;
 \)			return FUNC_E;
-"->"			return RULE;
-";"			return REF;
+->			return RULE;
+;			return REF;
 \[			return REF_S;
 \]			return REF_E;
-":"			return SET;
-"\n"			return END;
+:			return SET;
+\n			return END;
 .			return ERR;
 %%
 /*
