@@ -5,7 +5,11 @@ while(<>){
 	($f,$ref) = split(";",$_);
 	@arr=split(",",$ref);
 	%brr = {};
-	foreach $l (@arr) {
+	@hit = $_ =~ /\$[0-9]+/g;		# initialize
+	foreach $j (@hit) {
+		$brr{$j} = $j;
+	}
+	foreach $l (@arr) {			# replace rule
 		($head,$body,$tail) = split(":",$l);
 		$tail =~ s/\]$//;
 		$body =~ s/^\[//;
