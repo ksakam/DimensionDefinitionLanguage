@@ -6,7 +6,7 @@ int yylex(void);
 extern char *yytext;
 %}
 
-%token DIM ARGEX FUNC_S FUNC_E RULE LIST REF ALPH NUM REF_S REF_E SET END ERR
+%token DIM ARGEX ARG FUNC_S FUNC_E RULE LIST REF ALPH NUM REF_S REF_E SET END ERR
 
 %%
 line_list
