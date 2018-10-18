@@ -4,7 +4,7 @@
 int  yywrap(void) { return 1; }
 %}
 %%
-\$[0-9]+		return ARG;
+\$[0-9]*		return ARG;
 [a-zA-Z]+		return ALPH;
 [0-9]+			return NUM;
 \[[0-9]+(,[0-9]+)*\]	return DIM;
