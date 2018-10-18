@@ -5,7 +5,6 @@ int  yywrap(void) { return 1; }
 %}
 %%
 (\$[a-zA-Z]*)*(\$[0-9]+)	return ARGEX;
-\$[0-9]+                	return ARG;
 [a-zA-Z]+			return ALPH;
 [0-9]+				return NUM;
 \[[0-9]+(,[0-9]+)*\]		return DIM;
