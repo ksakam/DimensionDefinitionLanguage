@@ -25,7 +25,8 @@ refs
 	| refs LIST ref
 
 ref
-	: arg SET REF_S ALPH SET NUM REF_E
+	: arg SET REF_S ALPH SET REF_E
+	| arg SET REF_S ALPH SET NUM REF_E
 	| arg SET REF_S ALPH SET arg REF_E
 
 dimension_expression
