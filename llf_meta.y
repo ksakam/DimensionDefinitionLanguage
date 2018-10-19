@@ -39,6 +39,7 @@ dimension_expression
 list
 	: FUNC_S argfunc FUNC_E
 	| FUNC_S list LIST argfunc FUNC_E
+	| FUNC_S list FUNC_E
 
 
 argfunc
