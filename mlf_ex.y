@@ -48,9 +48,16 @@ func_b
 
 argm
 	: args
-	| args FUNC_S FUNC_E
+	| args null_funcs
 	| args FUNC_S argm FUNC_E
 	| args FUNC_S argm FUNC_E LIST argm
+
+null_funcs
+	: null_func
+	| null_funcs null_func
+
+null_func
+	: FUNC_S FUNC_E
 
 args
 	: arg
