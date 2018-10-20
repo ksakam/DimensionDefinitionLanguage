@@ -53,6 +53,7 @@ argm
 
 args
 	: arg
+	| arg FUNC_S FUNC_E
 	| args LIST arg
 arg
 	: ARGEX
