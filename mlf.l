@@ -7,7 +7,7 @@ int  yywrap(void) { return 1; }
 (\$[a-zA-Z]*)*(\$[0-9]+)	return ARGEX;
 [a-zA-Z]+			return ALPH;
 [0-9]+				return NUM;
-\[[0-9]+(,[0-9]+)*\]		return DIM;
+\[[0-9,]*\]			return DIM;
 ,				return LIST;
 \(				return FUNC_S;
 \)				return FUNC_E;
