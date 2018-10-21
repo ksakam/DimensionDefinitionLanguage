@@ -17,16 +17,4 @@ gcc44 y.tab.c lex.yy.c  -lfl -ll -o llf_meta
 cat test.llf_meta | ./llf_meta
 
 
-#ddf (dimension definition form)
-lex ddf.l
-yacc -dv ddf.y
-gcc44 y.tab.c lex.yy.c  -lfl -ll -o ddf_
-cat test.ddf | ./ddf_
-
-
-#dfd (deta format definition)
-lex dfd.l
-yacc -dv dfd.y
-gcc44 y.tab.c lex.yy.c  -lfl -ll -o dfd_
-cat test.dfd | ./dfd_
 
