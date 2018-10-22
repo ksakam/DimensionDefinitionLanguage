@@ -23,3 +23,9 @@ yacc -dv llf_meta.y
 gcc44 y.tab.c lex.yy.c -lfl -ll
 mv a.out llf_meta
 
+##llf_dict
+lex llf_dict.l
+yacc -dv llf_dict.y
+gcc44 y.tab.c lex.yy.c -lfl -ll
+mv a.out llf_dict
+

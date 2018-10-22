@@ -4,6 +4,7 @@
 #include "y.tab.h"
 int yylex(void);
 extern char *yytext;
+// lexfile: llf_meta.l
 %}
 
 %token DIM ARGEX FUNC_S FUNC_E RULE LIST REF ALPH NUM REF_S REF_E SET END ERR
