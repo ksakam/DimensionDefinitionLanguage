@@ -6,10 +6,6 @@ yacc -dv mlf.y
 gcc44 y.tab.c lex.yy.c -lfl -ll
 mv a.out mlf_
 
-##mlf_ex
-yacc -dv mlf_ex.y
-gcc44 y.tab.c lex.yy.c -lfl -ll
-mv a.out mlf_ex
 
 ##llf
 lex llf.l
