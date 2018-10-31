@@ -1,17 +1,14 @@
 #makefile
 ##checker 
-### ddf lex
-ddf_check_lex: ddf_check.l.c
-	gcc -o ddf_check_lex  ddf_check.l.c
+### mlf
+mlf_L: mlf_L.l mlf_L.y
+	gcc44 y.tab.c lex.yy.c -lfl -ll
+	mv a.out mlf_L 
 
-ddf_check.l.c: ddf_check.l
-	flex -o ddf_check.l.c ddf_check.l
+y.tab.c: mlf_L.y
+	yacc -dv mlf_L.y
+
+lex.yy.c: mlf_L.i
+	lex mlf_L.l
 
 
-### ddf syntax
-ddf_check_syn: y.tab.c lex.yy.c
-	gcc -o ddf_check_syn y.tab.c lex.yy.c -lfl -ll
-y.tab.c: ddf.y
-	yac -dv ddf.y
-lex.yy.c: ddf.l
-	lex ddf.l
