@@ -6,7 +6,7 @@ int yylex(void);
 extern char *yytext;
 %}
 
-%token DIM ARGEX FUNC_S FUNC_E RULE LIST REF ALPH NUM REF_S REF_E SET END ERR
+%token DIM ARGEX FUNC_S FUNC_E RULE LIST REF ALPH NUM REF_S REF_E SET SP LABEL END ERR
 
 %%
 line_list
@@ -29,12 +29,30 @@ ref
 	| arg SET REF_S ALPH SET arg REF_E
 
 dimension_expression
-	: arg				{printf(":Dataset:");}
-	| list				{printf(":Dataset:");}
-	| arg RULE arg			{printf(":In->Out:");}
-	| arg RULE list			{printf(":In->Out:");}
-	| list RULE arg			{printf(":In->Out:");}
-	| list RULE list		{printf(":In->Out:");}
+	: arg					{printf(":Dataset:");}
+	| list					{printf(":Dataset:");}
+	| arg RULE arg				{printf(":In->Out:");}
+	| arg RULE list				{printf(":In->Out:");}
+	| list RULE arg				{printf(":In->Out:");}
+	| list RULE list			{printf(":In->Out:");}
+	| label arg				{printf("L:Dataset:");}
+	| label list				{printf("L:Dataset:");}
+	| label arg RULE arg			{printf("L:In->Out:");}
+	| label arg RULE list			{printf("L:In->Out:");}
+	| label list RULE arg			{printf("L:In->Out:");}
+	| label list RULE list			{printf("L:In->Out:");}
+
+
+label
+	: LABEL NUM sps
+
+sps
+	: SP
+	| sps SP
+
+lists
+	: list
+	| lists LIST list
 
 list
 	: arg func_seq
@@ -49,7 +67,8 @@ func_b
 argm
 	: args
 	| args FUNC_S argm FUNC_E
-	| args FUNC_S argm FUNC_E LIST argm
+	| args FUNC_S argm FUNC_E LIST lists
+	| lists
 
 args
 	: arg
