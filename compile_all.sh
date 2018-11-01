@@ -49,3 +49,10 @@ yacc -dv llf_dict.y
 gcc44 y.tab.c lex.yy.c -lfl -ll
 mv a.out llf_dict
 
+##s
+echo s
+lex s.l
+yacc -dv s.y
+gcc44 y.tab.c lex.yy.c -lfl -ll
+mv a.out s
+
