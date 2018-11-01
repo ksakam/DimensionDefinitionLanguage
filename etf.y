@@ -51,11 +51,14 @@ sps
 	| sps SP
 
 list
-	: arg func_b
+	: func_m
 
+func_m
+	: func_b
+	| func_m func_b
 
 func_b
-	: FUNC_S argm FUNC_E
+	: arg FUNC_S argm FUNC_E
 
 argm
 	: args
