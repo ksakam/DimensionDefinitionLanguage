@@ -8,6 +8,9 @@ extern char *yytext;
 %}
 
 %token DIM ARG FUNC_S FUNC_E RULE LIST END ERR
+%right FUNC_S
+%right FUNC_E
+%left LIST
 
 %%
 line_list
@@ -26,34 +29,24 @@ dimension_expression
 	| list RULE list		{printf(":In->Out:");}
 
 list
-	: argF
-	| argI
-	| FUNC_S argL FUNC_E
+	: FUNC_S arg LIST argfuncs FUNC_E
 
+argfuncs
+	: argfunc
+	| argfuncs LIST argfunc
 
-
-argL
-	: argI LIST argI
-	| argL LIST argI
-
-argI
-	: FUNC_S argEL FUNC_E
-
-argEL
-	: argE LIST argE
-	| argEL LIST argE
-
-
-argE
+argfunc
 	: arg
-	| argF
+	| func
 
-argF
+func
 	: FUNC_S args FUNC_E
+	| FUNC_S args LIST func FUNC_E
 
 args
-	: arg LIST arg
+	: arg
 	| args LIST arg
+
 arg
 	: ARG
 	| ARG DIM
