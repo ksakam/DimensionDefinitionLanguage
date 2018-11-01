@@ -1,20 +1,2 @@
-#llf (lisp like form) : Dimension definition
-lex llf.l
-yacc -dv llf.y
-gcc44 y.tab.c lex.yy.c  -lfl -ll -o llf_
-cat test.llf | ./llf_
-
-#llf_ref (lisp like form) : Structure definition / Description rule
-lex llf_ref.l
-yacc -dv llf_ref.y
-gcc44 y.tab.c lex.yy.c  -lfl -ll -o llf_ref
-cat test.llf_ref | ./llf_ref
-
-#llf_meta (lisp like form) : Meta description
-lex llf_meta.l
-yacc -dv llf_meta.y
-gcc44 y.tab.c lex.yy.c  -lfl -ll -o llf_meta
-cat test.llf_meta | ./llf_meta
-
-
-
+# compile
+compile_all.sh
