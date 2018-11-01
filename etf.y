@@ -25,7 +25,7 @@ refs
 	| refs LIST ref
 
 ref
-	: arg SET REF_S ALPH SET NUM REF_E
+	: arg SET REF_S ALPH SET numalph REF_E
 	| arg SET REF_S ALPH SET arg REF_E
 
 dimension_expression
@@ -72,6 +72,10 @@ args
 arg
 	: ARGEX
 	| ARGEX DIM
+
+numalph
+	: NUM
+	| ALPH
 
 %%
 int yyerror(char const *str)
