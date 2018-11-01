@@ -35,16 +35,16 @@ dimension_expression
 	| arg RULE list				{printf(":In->Out:");}
 	| list RULE arg				{printf(":In->Out:");}
 	| list RULE list			{printf(":In->Out:");}
-	| label arg				{printf("L:Dataset:");}
-	| label list				{printf("L:Dataset:");}
-	| label arg RULE arg			{printf("L:In->Out:");}
-	| label arg RULE list			{printf("L:In->Out:");}
-	| label list RULE arg			{printf("L:In->Out:");}
-	| label list RULE list			{printf("L:In->Out:");}
+	| label arg				{printf(":Dataset:");}
+	| label list				{printf(":Dataset:");}
+	| label arg RULE arg			{printf(":In->Out:");}
+	| label arg RULE list			{printf(":In->Out:");}
+	| label list RULE arg			{printf(":In->Out:");}
+	| label list RULE list			{printf(":In->Out:");}
 
 
 label
-	: LABEL NUM sps
+	: LABEL NUM sps				{printf(":L:");}
 
 sps
 	: SP
@@ -86,5 +86,5 @@ int main(void)
     if (yyparse()) {
         exit(1);
     }
-    printf(":::CLEAR:::\n");
+    printf("::CLEAR::\n");
 }

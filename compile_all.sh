@@ -1,4 +1,9 @@
 #!/bin/bash
+##mlf
+lex tf.l
+yacc -dv tf.y
+gcc44 y.tab.c lex.yy.c -lfl -ll
+mv a.out tf
 
 ##mlf
 lex mlf.l
