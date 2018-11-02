@@ -32,18 +32,17 @@ list
 	: FUNC_S argfuncs FUNC_E
 
 argfuncs
-	: argfunc
-	| argfuncs LIST argfunc
-
-argfunc
-	: arg
-	| func
+	: func
+	| argfuncs LIST func
 
 func
-	: FUNC_S args FUNC_E
+	: arg
+	| FUNC_S args FUNC_E
 	| FUNC_S args LIST func FUNC_E
-	| FUNC_S func LIST func FUNC_E
 	| FUNC_S func LIST args FUNC_E
+	| FUNC_S func LIST func FUNC_E
+	| FUNC_S func  FUNC_E
+	| func LIST func
 
 args
 	: arg
