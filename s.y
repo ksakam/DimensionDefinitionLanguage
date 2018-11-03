@@ -33,7 +33,6 @@ list
 
 argfuncs
 	: func
-	| argfuncs LIST func
 
 func
 	: arg
