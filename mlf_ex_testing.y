@@ -53,11 +53,12 @@ argm
 
 args
 	: arg
-	| arg FUNC_S FUNC_E
 	| args LIST arg
 arg
 	: ARGEX
 	| ARGEX DIM
+	| ARGEX FUNC_S FUNC_E
+	| ARGEX DIM FUNC_S FUNC_E
 
 %%
 int yyerror(char const *str)
