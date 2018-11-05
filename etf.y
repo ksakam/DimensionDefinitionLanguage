@@ -26,7 +26,9 @@ refs
 
 ref
 	: arg SET REF_S ALPH SET numalph REF_E
+	| arg SET REF_S arg SET numalph REF_E
 	| arg SET REF_S ALPH SET arg REF_E
+	| arg SET REF_S arg SET arg REF_E
 
 dimension_expression
 	: arg					{printf(":Dataset:");}
