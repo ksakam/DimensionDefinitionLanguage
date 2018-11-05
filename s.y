@@ -18,7 +18,7 @@ line_list
 	| line_list line
 
 line
-	: dimension_expression END 	{printf("END:\n");}
+	: dimension_expression END 	{printf(":END:\n");}
 
 dimension_expression
 	: arg				{printf(":Dataset:");}
@@ -59,5 +59,5 @@ int main(void)
     if (yyparse()) {
         exit(1);
     }
-    printf(":::CLEAR:::\n");
+    printf("::CLEAR::\n");
 }
