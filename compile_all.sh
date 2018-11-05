@@ -16,11 +16,11 @@ mv a.out etf
 mv y.output etf.output
 
 ##mlf
-echo mlf_
+echo mlf
 lex mlf.l
 yacc -dv mlf.y
 gcc44 y.tab.c lex.yy.c -lfl -ll
-mv a.out mlf_
+mv a.out mlf
 mv y.output mlf.output
 
 ##mlf_L
@@ -33,11 +33,11 @@ mv y.output mlf_L.output
 
 
 ##llf
-echo llf_
+echo llf
 lex llf.l
 yacc -dv llf.y
 gcc44 y.tab.c lex.yy.c -lfl -ll
-mv a.out llf_
+mv a.out llf
 mv y.output llf.output
 
 ##llf_meta
@@ -71,4 +71,12 @@ yacc -dv s_ref.y
 gcc44 y.tab.c lex.yy.c -lfl -ll
 mv a.out s_ref
 mv y.output s_ref.output
+
+##es
+echo es
+lex es.l
+yacc -dv es.y
+gcc44 y.tab.c lex.yy.c -lfl -ll
+mv a.out es
+mv y.output es.output
 
