@@ -4,9 +4,13 @@
 #include "y.tab.h"
 int yylex(void);
 extern char *yytext;
+// lexfile: llf.l
 %}
 
-%token DIM ARGEX FUNC_S FUNC_E RULE LIST REF ALPH NUM REF_S REF_E SET SP LABEL END ERR
+%token DIM ARGEX ALPH NUM FUNC_S FUNC_E RULE LIST REF REF_S REF_E SET LABEL SP END ERR
+%right FUNC_S
+%right FUNC_E
+%left LIST
 
 %%
 line_list
@@ -14,8 +18,8 @@ line_list
 	| line_list line
 
 line
-	: dimension_expression_ref END 	{printf(":END:\n");}
-	| dimension_expression END 	{printf(":END:\n");}
+	: dimension_expression END 	{printf(":END:\n");}
+	| dimension_expression_ref END 	{printf(":END:\n");}
 
 dimension_expression_ref
 	: dimension_expression REF refs	{printf(":Ref:");}
@@ -25,57 +29,57 @@ refs
 	| refs LIST ref
 
 ref
-	: arg SET REF_S ALPH SET NUM REF_E
+	: arg SET REF_S ALPH SET numalph REF_E
+	| arg SET REF_S arg SET numalph REF_E
 	| arg SET REF_S ALPH SET arg REF_E
+	| arg SET REF_S arg SET arg REF_E
+	| arg SET REF_S LABEL SET NUM REF_E	{printf(":#:");}
 
 dimension_expression
-	: arg					{printf(":Dataset:");}
-	| list					{printf(":Dataset:");}
-	| arg RULE arg				{printf(":In->Out:");}
-	| arg RULE list				{printf(":In->Out:");}
-	| list RULE arg				{printf(":In->Out:");}
-	| list RULE list			{printf(":In->Out:");}
-	| label arg				{printf("L:Dataset:");}
-	| label list				{printf("L:Dataset:");}
-	| label arg RULE arg			{printf("L:In->Out:");}
-	| label arg RULE list			{printf("L:In->Out:");}
-	| label list RULE arg			{printf("L:In->Out:");}
-	| label list RULE list			{printf("L:In->Out:");}
+	: arg				{printf(":Dataset:");}
+	| list				{printf(":Dataset:");}
+	| arg RULE arg			{printf(":In->Out:");}
+	| arg RULE list			{printf(":In->Out:");}
+	| list RULE arg			{printf(":In->Out:");}
+	| list RULE list		{printf(":In->Out:");}
+	| label arg			{printf(":Dataset:");}
+	| label list			{printf(":Dataset:");}
+	| label arg RULE arg		{printf(":In->Out:");}
+	| label arg RULE list		{printf(":In->Out:");}
+	| label list RULE arg		{printf(":In->Out:");}
+	| label list RULE list		{printf(":In->Out:");}
 
 
 label
-	: LABEL NUM sps
+	: LABEL NUM sps			{printf(":L:");}
 
 sps
 	: SP
 	| sps SP
 
-lists
-	: list
-	| lists LIST list
-
 list
-	: arg func_seq
+	: arg list_b
 
-func_seq
-	: func_b
-	| func_seq func_b
+list_b
+	: FUNC_S func FUNC_E
+	| list_b list_b
 
-func_b
-	: FUNC_S argm FUNC_E
 
-argm
-	: args
-	| args FUNC_S argm FUNC_E
-	| args FUNC_S argm FUNC_E LIST lists
-	| lists
-
-args
+func
 	: arg
-	| args LIST arg
+	| arg FUNC_S func FUNC_E
+	| arg FUNC_S FUNC_E
+	| func LIST func
+	| func func
+
+
 arg
 	: ARGEX
 	| ARGEX DIM
+
+numalph
+	: NUM
+	| ALPH
 
 %%
 int yyerror(char const *str)
