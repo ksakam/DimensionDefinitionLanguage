@@ -49,7 +49,7 @@ list
 	: arg
 	| list LIST list
 	| list FUNC_S list FUNC_E
-	| list list 
+	| list list
 
 arg
 	: ARGEX
