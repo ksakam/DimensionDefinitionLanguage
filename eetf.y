@@ -32,17 +32,9 @@ ref
 	| arg SET REF_S LABEL SET NUM REF_E	{printf(":#:");}
 
 dimension_expression
-	: arg					{printf(":Dataset:");}
-	| list					{printf(":Dataset:");}
-	| arg RULE arg				{printf(":In->Out:");}
-	| arg RULE list				{printf(":In->Out:");}
-	| list RULE arg				{printf(":In->Out:");}
+	: list					{printf(":Dataset:");}
 	| list RULE list			{printf(":In->Out:");}
-	| label arg				{printf(":Dataset:");}
 	| label list				{printf(":Dataset:");}
-	| label arg RULE arg			{printf(":In->Out:");}
-	| label arg RULE list			{printf(":In->Out:");}
-	| label list RULE arg			{printf(":In->Out:");}
 	| label list RULE list			{printf(":In->Out:");}
 
 
@@ -54,21 +46,11 @@ sps
 	| sps SP
 
 list
-	: func_b
-	| list func_b
-
-func_b
-	: arg FUNC_S argm FUNC_E
-
-argm
-	: args
-	| argm FUNC_S argm FUNC_E
-	| argm LIST argm
-	| argm argm
-
-args
 	: arg
-	| args LIST arg
+	| list LIST list
+	| list FUNC_S list FUNC_E
+	| list list 
+
 arg
 	: ARGEX
 	| ARGEX DIM
