@@ -15,6 +15,15 @@ gcc44 y.tab.c lex.yy.c -lfl -ll
 mv a.out etf
 mv y.output etf.output
 
+##eetf
+echo eetf
+lex etf.l
+yacc -dv eetf.y
+gcc44 y.tab.c lex.yy.c -lfl -ll
+mv a.out eetf
+mv y.output eetf.output
+
+
 ##mlf
 echo mlf
 lex mlf.l
