@@ -47,6 +47,7 @@ sps
 
 list
 	: arg
+	| FUNC_S FUNC_E
 	| list LIST list
 	| list FUNC_S list FUNC_E
 	| list list
