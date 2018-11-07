@@ -73,14 +73,6 @@ gcc44 y.tab.c lex.yy.c -lfl -ll
 mv a.out s
 mv y.output s.output
 
-##s
-echo s_ref
-lex s_ref.l
-yacc -dv s_ref.y
-gcc44 y.tab.c lex.yy.c -lfl -ll
-mv a.out s_ref
-mv y.output s_ref.output
-
 ##es
 echo es
 lex es.l
