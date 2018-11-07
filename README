@@ -14,6 +14,13 @@ compile_all.sh
 
 #tool
 ##コンバーター
+### 一般
+- insref.pl
+  後置参照を中間参照に変換
+- insref_full.pl
+  後置参照を中間参照に変換、ただし参照されないargを落とす
+
 ### s -> ExJSON
 - sdim2form.pl
   後置型配列指定を関数型配列指定に変更
+
