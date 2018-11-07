@@ -1,2 +1,19 @@
+# 言語
+## tf系
+- tf
+- etf
+- eetf
+
+## s系
+- s
+- es
+
+
 # compile
 compile_all.sh
+
+#tool
+##コンバーター
+### s -> ExJSON
+- sdim2form.pl
+  後置型配列指定を関数型配列指定に変更
