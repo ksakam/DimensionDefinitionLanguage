@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <string.h>
 #define LEN 1024
+int print_BUF_HEAD(char *);
+int shlink_BUF_HEAD(char *);
 
 struct options {
 	int help;
@@ -70,14 +72,23 @@ void check_options(struct options *opt){
 	printf(" opt.in:%s:\n",(*opt).in);
 }
 
+// function definition
+int print_BUF_HEAD(char *_BUF_HEAD){
+	printf("%s",_BUF_HEAD);
+	return(0);
+}
+
+int shlink_BUF_HEAD(char *_BUF_HEAD){
+	printf("%s",_BUF_HEAD);
+	return(0);
+}
+
 int main(int argc, char **argv){
 	struct options *opt;
 	int ie = 0;
 	FILE *IN;
 	int is_open = 0;
 	int c;
-	int print_BUF_HEAD(char*);	// function prototype
-	int shlink_BUF_HEAD(char*);	// function prototype
 	opt = alloc_options();
 	init_options(opt);
 	get_options(argc-1, argv+1, opt);
@@ -107,7 +118,6 @@ int main(int argc, char **argv){
 	}
 	is_open = 1;
 
-	// function definition
 
 	// main function
 	int PRINT_TRIG_ACC;
