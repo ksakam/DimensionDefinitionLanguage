@@ -75,12 +75,12 @@ void check_options(struct options *opt){
 
 // function definition
 int print_BUF_HEAD(char *_BUF_HEAD, int *_SHLINK_POS){
-	printf("%s",_BUF_HEAD);
+	printf(":::%s:::\n",_BUF_HEAD);
 	return(0);
 }
 
 int shlink_BUF_HEAD(char *_BUF_HEAD, int *_SHLINK_POS){
-	printf("%s",_BUF_HEAD);
+	//printf("%s",_BUF_HEAD);
 	return(0);
 }
 
@@ -131,8 +131,8 @@ int main(int argc, char **argv){
 		exit(1);
 	}
 	BUF_HEAD[0] = '\0';
+	PRINT_TRIG_ACC = 1;
 	while((c = fgetc(IN)) != EOF){
-		PRINT_TRIG_ACC = 1;
 		PRINT_TRIG = 0;
 		if(c == '['){
 			PRINT_TRIG_ACC--;
@@ -168,7 +168,7 @@ int main(int argc, char **argv){
 	}
 
 	/* test */
-	printf("%s\n",BUF_HEAD);
+	//printf("%s",BUF_HEAD);
 	//printf("%s\n",BUF_HEAD+1);
 	/* test */
 
