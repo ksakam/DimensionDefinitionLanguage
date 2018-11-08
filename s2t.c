@@ -110,6 +110,7 @@ int print_BUF_HEAD(char *_BUF_HEAD, int *_SHLINK_POS, char *_BUF_TMP, int *_BRK_
 		}else{
 		*/
 			//printf("%s",_BUF_TMP+(*_BRK_REMAIN));
+			//printf(";01;%s;;",_BUF_TMP+(*_BRK_REMAIN));
 			printf("%s",_BUF_TMP+(*_BRK_REMAIN));
 			(*_BRK_REMAIN)--;
 			_BUF_HEAD[0] = '\0';
@@ -120,12 +121,25 @@ int print_BUF_HEAD(char *_BUF_HEAD, int *_SHLINK_POS, char *_BUF_TMP, int *_BRK_
 		*/
 
 	}else if(_BUF_HEAD[BUF_LEN-1] == ',' && _BUF_HEAD[0] != '('){
-		if(WAR > 0){ fprintf(stderr,"AP&AC\n"); }
-		//printf(";;;%s;;;",_BUF_TMP);
-		printf("%s",_BUF_TMP);
-		_BUF_HEAD[0] = '\0';
-		_BUF_TMP[0] = '\0';
-		RETURN_LEN = 0;
+		if(BUF_LEN > 1){		// IF LEN > 1
+			if(WAR > 0){ fprintf(stderr,"AP&AC\n"); }
+			if(WAR > 0){ fprintf(stderr,"::BL:%d:::\n",BUF_LEN); }
+			//printf(";;;%s;;;",_BUF_TMP);
+			//printf(";02;%s;;",_BUF_TMP);
+			printf("%s",_BUF_TMP);
+			_BUF_HEAD[0] = '\0';
+			_BUF_TMP[0] = '\0';
+			RETURN_LEN = 0;
+		}else{
+			if(WAR > 0){ fprintf(stderr,"NP&AC\n"); }
+			if(WAR > 0){ fprintf(stderr,"::BL:%d:::\n",BUF_LEN); }
+			//printf(";;;%s;;;",_BUF_TMP);
+			//printf(";02;%s;;",_BUF_TMP);
+			//printf("%s",_BUF_TMP);
+			_BUF_HEAD[0] = '\0';
+			_BUF_TMP[0] = '\0';
+			RETURN_LEN = 0;
+		}
 	}else if(_BUF_HEAD[BUF_LEN-1] == ')'){
 		if(WAR > 0){ fprintf(stderr,"PP&PC\n"); }
 		// search COPY_S_PTR
