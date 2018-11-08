@@ -129,7 +129,7 @@ int print_BUF_HEAD(char *_BUF_HEAD, int *_SHLINK_POS, char *_BUF_TMP){
 }
 
 int shlink_BUF_HEAD(char *_BUF_HEAD, int *_SHLINK_POS, char *_BUF_TMP){
-	//printf("%s",_BUF_HEAD);
+	// not used
 	return(0);
 }
 
@@ -216,6 +216,13 @@ int main(int argc, char **argv){
 		
 		if(c == '\n'){
 			printf(";;;%s;;;","\n");
+			PRINT_TRIG_ACC = 1;
+			PRINT_TRIG = 0;
+			BUF_HEAD[0] = '\0';
+			BUF_PTR = 0;
+			(*SHLINK_POS) = 0;
+			PTR_BACK = 0;
+			BUF_TMP[0] = '\0';
 		}
 		
 	}
