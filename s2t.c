@@ -99,6 +99,7 @@ int print_BUF_HEAD(char *_BUF_HEAD, int *_SHLINK_POS, char *_BUF_TMP, int *_BRK_
 		_BUF_TMP[BUF_LEN-1] = '(';	//Be carefull !!
 		//printf(";;;%s;;;",_BUF_TMP+1);
 		if(WAR > 0){ fprintf(stderr,"::BRK_R:%d:::\n",*_BRK_REMAIN); }
+		/*
 		if(*_BRK_REMAIN < 2){
 			//printf("%s",_BUF_TMP+(*_BRK_REMAIN));
 			printf("%s",_BUF_TMP+1);
@@ -107,13 +108,17 @@ int print_BUF_HEAD(char *_BUF_HEAD, int *_SHLINK_POS, char *_BUF_TMP, int *_BRK_
 			_BUF_TMP[0] = '\0';
 			RETURN_LEN = 0;
 		}else{
+		*/
 			//printf("%s",_BUF_TMP+(*_BRK_REMAIN));
 			printf("%s",_BUF_TMP+(*_BRK_REMAIN));
 			(*_BRK_REMAIN)--;
 			_BUF_HEAD[0] = '\0';
 			_BUF_TMP[0] = '\0';
 			RETURN_LEN = 0;
+		/*
 		}
+		*/
+
 	}else if(_BUF_HEAD[BUF_LEN-1] == ',' && _BUF_HEAD[0] != '('){
 		if(WAR > 0){ fprintf(stderr,"AP&AC\n"); }
 		//printf(";;;%s;;;",_BUF_TMP);
