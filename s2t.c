@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #define LEN 1024
+// protopype
 int print_BUF_HEAD(char *);
 int shlink_BUF_HEAD(char *);
 
@@ -117,7 +118,6 @@ int main(int argc, char **argv){
 		exit(1);
 	}
 	is_open = 1;
-
 
 	// main function
 	int PRINT_TRIG_ACC;
