@@ -81,3 +81,12 @@ gcc44 y.tab.c lex.yy.c -lfl -ll
 mv a.out es
 mv y.output es.output
 
+##ees
+echo ees
+lex es.l
+yacc -dv ees.y
+gcc44 y.tab.c lex.yy.c -lfl -ll
+mv a.out ees
+mv y.output ees.output
+
+
