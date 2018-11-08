@@ -3,6 +3,9 @@
 #include <string.h>
 #define LEN 1024
 #define BUFF_LEN 1024
+//  UNDER CONSTRUCTION
+// TODO: print simple ARG
+
 // protopype
 int print_BUF_HEAD(char *, int *, char *, int *, int);
 int shlink_BUF_HEAD(char *, int *, char *);
@@ -92,11 +95,6 @@ int print_BUF_HEAD(char *_BUF_HEAD, int *_SHLINK_POS, char *_BUF_TMP, int *_BRK_
 	if(WAR > 0){ fprintf(stderr,":::%d:::\n",BUF_LEN); }
 	if(WAR > 0){ fprintf(stderr,"::REMAIN:%s:::\n",_BUF_TMP); }
 	if(_BUF_HEAD[BUF_LEN-1] == ',' && _BUF_HEAD[0] == '('){
-
-		//  UNDER CONSTRUCTION
-		// TODO: condition match 
-		// search BRK_start and COPY_S_PTR
-
 		if(WAR > 0){ fprintf(stderr,"PP&AC\n"); }
 		_BUF_TMP[BUF_LEN-1] = '(';	//Be carefull !!
 		//printf(";;;%s;;;",_BUF_TMP+1);
@@ -252,10 +250,10 @@ int main(int argc, char **argv){
 			BUF_PTR = PTR_BACK;
 			BUF_HEAD[BUF_PTR+1] = '\0';
 		}
-		
 		if(c == '\n'){
 			//printf(";;;%s;;;","\n");
-			printf("%s","\n");
+			//printf("%s","\n");
+			printf("%s",BUF_HEAD);
 			PRINT_TRIG_ACC = 1;
 			PRINT_TRIG = 0;
 			BUF_HEAD[0] = '\0';
