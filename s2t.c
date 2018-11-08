@@ -124,7 +124,6 @@ int main(int argc, char **argv){
 	int PRINT_TRIG = 0;
 	char *BUF_HEAD;
 	int BUF_PTR = 0;
-	int BUF_LEN = 0;
 	int (*SHLINK_POS) = 0;
 	int PTR_BACK = 0;
 	if((BUF_HEAD = malloc((size_t)sizeof(char)*(*opt).buff)) == NULL){
@@ -133,16 +132,34 @@ int main(int argc, char **argv){
 	}
 	BUF_HEAD[0] = '\0';
 	while((c = fgetc(IN)) != EOF){
+		PRINT_TRIG_ACC = 1;
+		PRINT_TRIG = 0;
+		if(c == '['){
+			PRINT_TRIG_ACC--;
+		}
+		if(c == ']'){
+			PRINT_TRIG_ACC++;
+		}
+		if(PRINT_TRIG_ACC > 0 && c == ','){
+			PRINT_TRIG = 1;
+		}
+		if(PRINT_TRIG_ACC > 0 && c == ')'){
+			PRINT_TRIG = 1;
+		}
 		BUF_HEAD[BUF_PTR] = c;
-		BUF_HEAD[BUF_PTR+1] = '\0';
 		BUF_PTR++;
+		BUF_HEAD[BUF_PTR] = '\0';
 		//printf("%s\n",BUF_HEAD);
 		//putc(c,stdout);
-		print_BUF_HEAD(BUF_HEAD,SHLINK_POS);
-		PTR_BACK = shlink_BUF_HEAD(BUF_HEAD,SHLINK_POS);
-		BUF_PTR = BUF_PTR - PTR_BACK;
-		BUF_HEAD[BUF_PTR+1] = '\0';
-		PRINT_TRIG_ACC = 1;
+		if(PRINT_TRIG == 1){
+			print_BUF_HEAD(BUF_HEAD,SHLINK_POS);
+			PTR_BACK = shlink_BUF_HEAD(BUF_HEAD,SHLINK_POS);
+			BUF_PTR = BUF_PTR - PTR_BACK;
+			BUF_HEAD[BUF_PTR+1] = '\0';
+		}
+		
+		// if c == '\n'
+		
 	}
 
 	// close file
