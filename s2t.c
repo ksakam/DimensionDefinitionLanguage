@@ -205,11 +205,8 @@ int main(int argc, char **argv){
 		BUF_HEAD[BUF_PTR] = c;
 		BUF_PTR++;
 		BUF_HEAD[BUF_PTR] = '\0';
-		//printf("%s\n",BUF_HEAD);
-		//putc(c,stdout);
 		if(PRINT_TRIG == 1){
 			PTR_BACK = print_BUF_HEAD(BUF_HEAD,SHLINK_POS,BUF_TMP);
-			//PTR_BACK = shlink_BUF_HEAD(BUF_HEAD,SHLINK_POS,BUF_TMP);
 			BUF_PTR = PTR_BACK;
 			BUF_HEAD[BUF_PTR+1] = '\0';
 		}
