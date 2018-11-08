@@ -3,8 +3,8 @@
 #include <string.h>
 #define LEN 1024
 // protopype
-int print_BUF_HEAD(char *);
-int shlink_BUF_HEAD(char *);
+int print_BUF_HEAD(char *, int *);
+int shlink_BUF_HEAD(char *, int *);
 
 struct options {
 	int help;
@@ -74,12 +74,12 @@ void check_options(struct options *opt){
 }
 
 // function definition
-int print_BUF_HEAD(char *_BUF_HEAD){
+int print_BUF_HEAD(char *_BUF_HEAD, int *_SHLINK_POS){
 	printf("%s",_BUF_HEAD);
 	return(0);
 }
 
-int shlink_BUF_HEAD(char *_BUF_HEAD){
+int shlink_BUF_HEAD(char *_BUF_HEAD, int *_SHLINK_POS){
 	printf("%s",_BUF_HEAD);
 	return(0);
 }
@@ -120,24 +120,29 @@ int main(int argc, char **argv){
 	is_open = 1;
 
 	// main function
-	int PRINT_TRIG_ACC;
-	int PRINT_TRIG;
+	int PRINT_TRIG_ACC = 1;
+	int PRINT_TRIG = 0;
 	char *BUF_HEAD;
-	int BUF_PTR;
-	int BUF_LEN;
+	int BUF_PTR = 0;
+	int BUF_LEN = 0;
+	int (*SHLINK_POS) = 0;
+	int PTR_BACK = 0;
 	if((BUF_HEAD = malloc((size_t)sizeof(char)*(*opt).buff)) == NULL){
 		fprintf(stderr,"[FAILED] malloc() @ main.\n");
 		exit(1);
 	}
-	PRINT_TRIG_ACC = 1;
 	BUF_HEAD[0] = '\0';
-	BUF_PTR = 0;
 	while((c = fgetc(IN)) != EOF){
 		BUF_HEAD[BUF_PTR] = c;
 		BUF_HEAD[BUF_PTR+1] = '\0';
 		BUF_PTR++;
 		//printf("%s\n",BUF_HEAD);
 		//putc(c,stdout);
+		print_BUF_HEAD(BUF_HEAD,SHLINK_POS);
+		PTR_BACK = shlink_BUF_HEAD(BUF_HEAD,SHLINK_POS);
+		BUF_PTR = BUF_PTR - PTR_BACK;
+		BUF_HEAD[BUF_PTR+1] = '\0';
+		PRINT_TRIG_ACC = 1;
 	}
 
 	// close file
