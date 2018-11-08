@@ -1,27 +1,27 @@
 #!/bin/bash
-##tf
-echo tf
-lex tf.l
-yacc -dv tf.y
+##t
+echo t
+lex t.l
+yacc -dv t.y
 gcc44 y.tab.c lex.yy.c -lfl -ll
-mv a.out tf
-mv y.output tf.output
+mv a.out t
+mv y.output t.output
 
 ##etf
-echo etf
-lex etf.l
-yacc -dv etf.y
+echo et
+lex et.l
+yacc -dv et.y
 gcc44 y.tab.c lex.yy.c -lfl -ll
-mv a.out etf
-mv y.output etf.output
+mv a.out et
+mv y.output et.output
 
-##eetf
-echo eetf
-lex etf.l
-yacc -dv eetf.y
+##eet
+echo eet
+lex et.l
+yacc -dv eet.y
 gcc44 y.tab.c lex.yy.c -lfl -ll
-mv a.out eetf
-mv y.output eetf.output
+mv a.out eet
+mv y.output eet.output
 
 
 ##mlf
