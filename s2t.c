@@ -87,13 +87,15 @@ int print_BUF_HEAD(char *_BUF_HEAD, int *_SHLINK_POS, char *_BUF_TMP){
 	if(_BUF_HEAD[BUF_LEN-1] == ',' && _BUF_HEAD[0] == '('){
 		fprintf(stderr,"PP&AC\n");
 		_BUF_TMP[BUF_LEN-1] = '(';	//Be carefull !!
-		printf(";;;%s;;;",_BUF_TMP+1);
+		//printf(";;;%s;;;",_BUF_TMP+1);
+		printf("%s",_BUF_TMP+1);
 		_BUF_HEAD[0] = '\0';
 		_BUF_TMP[0] = '\0';
 		RETURN_LEN = 0;
 	}else if(_BUF_HEAD[BUF_LEN-1] == ',' && _BUF_HEAD[0] != '('){
 		fprintf(stderr,"AP&AC\n");
-		printf(";;;%s;;;",_BUF_TMP);
+		//printf(";;;%s;;;",_BUF_TMP);
+		printf("%s",_BUF_TMP);
 		_BUF_HEAD[0] = '\0';
 		_BUF_TMP[0] = '\0';
 		RETURN_LEN = 0;
@@ -115,11 +117,13 @@ int print_BUF_HEAD(char *_BUF_HEAD, int *_SHLINK_POS, char *_BUF_TMP){
 			_BUF_TMP[BUF_LEN-1] = '(';
 			_BUF_TMP[BUF_LEN] = ')';
 			_BUF_TMP[BUF_LEN+1] = '\0';
-			printf(";;;%s;;;",_BUF_TMP+COPY_S_PTR+1);
+			//printf(";;;%s;;;",_BUF_TMP+COPY_S_PTR+1);
+			printf("%s",_BUF_TMP+COPY_S_PTR+1);
 			_BUF_HEAD[COPY_S_PTR] = '\0';
 			RETURN_LEN = COPY_S_PTR;
 		}else{
-			printf(";;;%s;;;",_BUF_TMP);
+			//printf(";;;%s;;;",_BUF_TMP);
+			printf("%s",_BUF_TMP);
 			_BUF_TMP[0] = '\0';
 			_BUF_HEAD[0] = '\0';
 			RETURN_LEN = 0;
@@ -173,7 +177,7 @@ int main(int argc, char **argv){
 	int PRINT_TRIG = 0;
 	char *BUF_HEAD;
 	int BUF_PTR = 0;
-	int (*SHLINK_POS) = 0;
+	int *SHLINK_POS;
 	int PTR_BACK = 0;
 	char *BUF_TMP;
 	if((BUF_HEAD = malloc((size_t)sizeof(char)*(*opt).buff)) == NULL){
@@ -181,6 +185,11 @@ int main(int argc, char **argv){
 		exit(1);
 	}
 	BUF_HEAD[0] = '\0';
+	if((SHLINK_POS = malloc((size_t)sizeof(char)*(*opt).buff)) == NULL){
+		fprintf(stderr,"[FAILED] malloc() @ SHLINK_POS @ main .\n");
+		exit(1);
+	}
+	SHLINK_POS[0] = '\0';
 	if((BUF_TMP = malloc((size_t)sizeof(char)*(*opt).buff)) == NULL){
 		fprintf(stderr,"[FAILED] malloc() @ BUF_TMP @ main .\n");
 		exit(1);
@@ -212,7 +221,8 @@ int main(int argc, char **argv){
 		}
 		
 		if(c == '\n'){
-			printf(";;;%s;;;","\n");
+			//printf(";;;%s;;;","\n");
+			printf("%s","\n");
 			PRINT_TRIG_ACC = 1;
 			PRINT_TRIG = 0;
 			BUF_HEAD[0] = '\0';
