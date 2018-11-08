@@ -75,9 +75,57 @@ void check_options(struct options *opt){
 
 // function definition
 int print_BUF_HEAD(char *_BUF_HEAD, int *_SHLINK_POS, char *_BUF_TMP){
+	int RETURN_LEN = 0;
 	int BUF_LEN = 0;
-	fprintf(stderr,":::%s:::\n",_BUF_HEAD);
-	return(0);
+	int COPY_S_PTR = 0;
+	int i;
+	_BUF_TMP[0] = '\0';
+	strcpy(_BUF_TMP,_BUF_HEAD);
+	BUF_LEN = strlen(_BUF_TMP);
+	fprintf(stderr,":::%d:::\n",BUF_LEN);
+	fprintf(stderr,"::REMAIN:%s:::\n",_BUF_TMP);
+	if(_BUF_HEAD[BUF_LEN-1] == ',' && _BUF_HEAD[0] == '('){
+		fprintf(stderr,"PP&AC\n");
+		_BUF_TMP[BUF_LEN-1] = '(';	//Be carefull !!
+		printf(";;;%s;;;",_BUF_TMP+1);
+		_BUF_HEAD[0] = '\0';
+		_BUF_TMP[0] = '\0';
+		RETURN_LEN = 0;
+	}else if(_BUF_HEAD[BUF_LEN-1] == ',' && _BUF_HEAD[0] != '('){
+		fprintf(stderr,"AP&AC\n");
+		printf(";;;%s;;;",_BUF_TMP);
+		_BUF_HEAD[0] = '\0';
+		_BUF_TMP[0] = '\0';
+		RETURN_LEN = 0;
+	}else if(_BUF_HEAD[BUF_LEN-1] == ')'){
+		fprintf(stderr,"PP&PC\n");
+		// search COPY_S_PTR
+		for(i=BUF_LEN-1;i>=0;i--){
+			fprintf(stderr,"::i:%d:::",i);
+			fprintf(stderr,"::c:%c:::\n",_BUF_TMP[i]);
+			if(_BUF_TMP[i] == '('){
+				COPY_S_PTR = i;
+				break;
+			}else{
+				COPY_S_PTR = -1;
+			}
+		}
+		if(COPY_S_PTR != -1){
+			fprintf(stderr,"::C:%d:::\n",COPY_S_PTR);
+			_BUF_TMP[BUF_LEN-1] = '(';
+			_BUF_TMP[BUF_LEN] = ')';
+			_BUF_TMP[BUF_LEN+1] = '\0';
+			printf(";;;%s;;;",_BUF_TMP+COPY_S_PTR+1);
+			_BUF_HEAD[COPY_S_PTR] = '\0';
+			RETURN_LEN = COPY_S_PTR;
+		}else{
+			printf(";;;%s;;;",_BUF_TMP);
+			_BUF_TMP[0] = '\0';
+			_BUF_HEAD[0] = '\0';
+			RETURN_LEN = 0;
+		}
+	}
+	return(RETURN_LEN);
 }
 
 int shlink_BUF_HEAD(char *_BUF_HEAD, int *_SHLINK_POS, char *_BUF_TMP){
@@ -160,13 +208,15 @@ int main(int argc, char **argv){
 		//printf("%s\n",BUF_HEAD);
 		//putc(c,stdout);
 		if(PRINT_TRIG == 1){
-			print_BUF_HEAD(BUF_HEAD,SHLINK_POS,BUF_TMP);
-			PTR_BACK = shlink_BUF_HEAD(BUF_HEAD,SHLINK_POS,BUF_TMP);
-			BUF_PTR = BUF_PTR - PTR_BACK;
+			PTR_BACK = print_BUF_HEAD(BUF_HEAD,SHLINK_POS,BUF_TMP);
+			//PTR_BACK = shlink_BUF_HEAD(BUF_HEAD,SHLINK_POS,BUF_TMP);
+			BUF_PTR = PTR_BACK;
 			BUF_HEAD[BUF_PTR+1] = '\0';
 		}
 		
-		// if c == '\n'
+		if(c == '\n'){
+			printf(";;;%s;;;","\n");
+		}
 		
 	}
 
