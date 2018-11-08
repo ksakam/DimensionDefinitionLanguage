@@ -4,7 +4,7 @@
 #define LEN 1024
 #define BUFF_LEN 1024
 // protopype
-int print_BUF_HEAD(char *, int *, char *, int);
+int print_BUF_HEAD(char *, int *, char *, int *, int);
 int shlink_BUF_HEAD(char *, int *, char *);
 
 struct options {
@@ -65,6 +65,8 @@ void get_options(int optc, char **optv, struct options *opt){
 			(*opt).check = 1;
 		}else if(strncmp(optv[i],"buff=",5) == 0){
 			sscanf(optv[i],"buff=%d",&(*opt).buff);
+		}else if(strncmp(optv[i],"w=",2) == 0){
+			sscanf(optv[i],"w=%d",&(*opt).war);
 		}else if(strncmp(optv[i],"in=",3) == 0){
 			sscanf(optv[i],"in=%s",(*opt).in);
 		}
@@ -79,7 +81,7 @@ void check_options(struct options *opt){
 }
 
 // function definition
-int print_BUF_HEAD(char *_BUF_HEAD, int *_SHLINK_POS, char *_BUF_TMP, int WAR){
+int print_BUF_HEAD(char *_BUF_HEAD, int *_SHLINK_POS, char *_BUF_TMP, int *_BRK_REMAIN, int WAR){
 	int RETURN_LEN = 0;
 	int BUF_LEN = 0;
 	int COPY_S_PTR = 0;
@@ -93,15 +95,27 @@ int print_BUF_HEAD(char *_BUF_HEAD, int *_SHLINK_POS, char *_BUF_TMP, int WAR){
 
 		//  UNDER CONSTRUCTION
 		// TODO: condition match 
-		// search COPY_S_PTR
+		// search BRK_start and COPY_S_PTR
 
 		if(WAR > 0){ fprintf(stderr,"PP&AC\n"); }
 		_BUF_TMP[BUF_LEN-1] = '(';	//Be carefull !!
 		//printf(";;;%s;;;",_BUF_TMP+1);
-		printf("%s",_BUF_TMP+1);
-		_BUF_HEAD[0] = '\0';
-		_BUF_TMP[0] = '\0';
-		RETURN_LEN = 0;
+		if(WAR > 0){ fprintf(stderr,"::BRK_R:%d:::\n",*_BRK_REMAIN); }
+		if(*_BRK_REMAIN < 2){
+			//printf("%s",_BUF_TMP+(*_BRK_REMAIN));
+			printf("%s",_BUF_TMP+1);
+			(*_BRK_REMAIN)--;
+			_BUF_HEAD[0] = '\0';
+			_BUF_TMP[0] = '\0';
+			RETURN_LEN = 0;
+		}else{
+			//printf("%s",_BUF_TMP+(*_BRK_REMAIN));
+			printf("%s",_BUF_TMP+(*_BRK_REMAIN));
+			(*_BRK_REMAIN)--;
+			_BUF_HEAD[0] = '\0';
+			_BUF_TMP[0] = '\0';
+			RETURN_LEN = 0;
+		}
 	}else if(_BUF_HEAD[BUF_LEN-1] == ',' && _BUF_HEAD[0] != '('){
 		if(WAR > 0){ fprintf(stderr,"AP&AC\n"); }
 		//printf(";;;%s;;;",_BUF_TMP);
@@ -129,11 +143,16 @@ int print_BUF_HEAD(char *_BUF_HEAD, int *_SHLINK_POS, char *_BUF_TMP, int WAR){
 			_BUF_TMP[BUF_LEN+1] = '\0';
 			//printf(";;;%s;;;",_BUF_TMP+COPY_S_PTR+1);
 			printf("%s",_BUF_TMP+COPY_S_PTR+1);
+			(*_BRK_REMAIN)--;
 			_BUF_HEAD[COPY_S_PTR] = '\0';
 			RETURN_LEN = COPY_S_PTR;
 		}else{
 			//printf(";;;%s;;;",_BUF_TMP);
 			printf("%s",_BUF_TMP);
+			if(*_BRK_REMAIN > 0){
+				printf("%s","(");
+				(*_BRK_REMAIN)--;
+			}
 			_BUF_TMP[0] = '\0';
 			_BUF_HEAD[0] = '\0';
 			RETURN_LEN = 0;
@@ -190,6 +209,7 @@ int main(int argc, char **argv){
 	int *SHLINK_POS;
 	int PTR_BACK = 0;
 	char *BUF_TMP;
+	int BRK_REMAIN = 0;
 	if((BUF_HEAD = malloc((size_t)sizeof(char)*(*opt).buff)) == NULL){
 		fprintf(stderr,"[FAILED] malloc() @ BUF_HEAD @ main .\n");
 		exit(1);
@@ -221,11 +241,14 @@ int main(int argc, char **argv){
 		if(PRINT_TRIG_ACC > 0 && c == ')'){
 			PRINT_TRIG = 1;
 		}
+		if(c == '('){
+			BRK_REMAIN++;
+		}
 		BUF_HEAD[BUF_PTR] = c;
 		BUF_PTR++;
 		BUF_HEAD[BUF_PTR] = '\0';
 		if(PRINT_TRIG == 1){
-			PTR_BACK = print_BUF_HEAD(BUF_HEAD,SHLINK_POS,BUF_TMP,(*opt).war);
+			PTR_BACK = print_BUF_HEAD(BUF_HEAD,SHLINK_POS,BUF_TMP,&BRK_REMAIN,(*opt).war);
 			BUF_PTR = PTR_BACK;
 			BUF_HEAD[BUF_PTR+1] = '\0';
 		}
@@ -240,6 +263,8 @@ int main(int argc, char **argv){
 			(*SHLINK_POS) = 0;
 			PTR_BACK = 0;
 			BUF_TMP[0] = '\0';
+			BRK_REMAIN = 0;
+			if((*opt).war > 0){ fprintf(stderr,"\n"); }
 		}
 		
 	}
