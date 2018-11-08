@@ -73,6 +73,11 @@ void check_options(struct options *opt){
 int main(int argc, char **argv){
 	struct options *opt;
 	int ie = 0;
+	FILE *IN;
+	int is_open = 0;
+	int c;
+	int print_BUF_HEAD(char*);	// function prototype
+	int shlink_BUF_HEAD(char*);	// function prototype
 	opt = alloc_options();
 	init_options(opt);
 	get_options(argc-1, argv+1, opt);
@@ -94,5 +99,48 @@ int main(int argc, char **argv){
 	if(ie == 1){
 		exit(0);
 	}
+
+	// open file
+	if((IN = fopen((*opt).in,"r")) == NULL){
+		perror((*opt).in);
+		exit(1);
+	}
+	is_open = 1;
+
+	// function definition
+
+	// main function
+	int PRINT_TRIG_ACC;
+	int PRINT_TRIG;
+	char *BUF_HEAD;
+	int BUF_PTR;
+	int BUF_LEN;
+	if((BUF_HEAD = malloc((size_t)sizeof(char)*(*opt).buff)) == NULL){
+		fprintf(stderr,"[FAILED] malloc() @ main.\n");
+		exit(1);
+	}
+	PRINT_TRIG_ACC = 1;
+	BUF_HEAD[0] = '\0';
+	BUF_PTR = 0;
+	while((c = fgetc(IN)) != EOF){
+		BUF_HEAD[BUF_PTR] = c;
+		BUF_HEAD[BUF_PTR+1] = '\0';
+		BUF_PTR++;
+		//printf("%s\n",BUF_HEAD);
+		//putc(c,stdout);
+	}
+
+	// close file
+	if(is_open > 0){
+		fclose(IN);
+	}
+
+	/* test */
+	printf("%s\n",BUF_HEAD);
+	//printf("%s\n",BUF_HEAD+1);
+	/* test */
+
+
+	// finish
 	return(0);
 }
