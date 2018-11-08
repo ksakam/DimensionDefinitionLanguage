@@ -90,6 +90,11 @@ int print_BUF_HEAD(char *_BUF_HEAD, int *_SHLINK_POS, char *_BUF_TMP, int WAR){
 	if(WAR > 0){ fprintf(stderr,":::%d:::\n",BUF_LEN); }
 	if(WAR > 0){ fprintf(stderr,"::REMAIN:%s:::\n",_BUF_TMP); }
 	if(_BUF_HEAD[BUF_LEN-1] == ',' && _BUF_HEAD[0] == '('){
+
+		//  UNDER CONSTRUCTION
+		// TODO: condition match 
+		// search COPY_S_PTR
+
 		if(WAR > 0){ fprintf(stderr,"PP&AC\n"); }
 		_BUF_TMP[BUF_LEN-1] = '(';	//Be carefull !!
 		//printf(";;;%s;;;",_BUF_TMP+1);
