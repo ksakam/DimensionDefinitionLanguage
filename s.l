@@ -4,7 +4,7 @@
 int  yywrap(void) { return 1; }
 %}
 %%
-\$[0-9]+		return ARG;
+\$[\$#0-9a-zA-Z]*	return ARGEX;
 \[[0-9,]*\]		return DIM;
 ,			return LIST;
 \(			return FUNC_S;
