@@ -35,20 +35,7 @@ dimension_expression
 	| arg RULE list				{printf(":In->Out:");}
 	| list RULE arg				{printf(":In->Out:");}
 	| list RULE list			{printf(":In->Out:");}
-	| label arg				{printf(":Dataset:");}
-	| label list				{printf(":Dataset:");}
-	| label arg RULE arg			{printf(":In->Out:");}
-	| label arg RULE list			{printf(":In->Out:");}
-	| label list RULE arg			{printf(":In->Out:");}
-	| label list RULE list			{printf(":In->Out:");}
 
-
-label
-	: LABEL NUM sps				{printf(":#:");}
-
-sps
-	: SP
-	| sps SP
 
 list
 	: arg func_b
