@@ -44,7 +44,7 @@ dimension_expression
 
 
 label
-	: LABEL NUM sps				{printf(":L:");}
+	: LABEL NUM sps				{printf(":#:");}
 
 sps
 	: SP

@@ -29,7 +29,7 @@ ref
 	| arg SET REF_S arg SET numalph REF_E
 	| arg SET REF_S ALPH SET arg REF_E
 	| arg SET REF_S arg SET arg REF_E
-	| arg SET REF_S LABEL SET NUM REF_E	{printf(":#:");}
+	| arg SET REF_S LABEL SET NUM REF_E	{printf(":RefL:");}
 
 dimension_expression
 	: list					{printf(":Dataset:");}
@@ -39,7 +39,7 @@ dimension_expression
 
 
 label
-	: LABEL NUM sps				{printf(":L:");}
+	: LABEL NUM sps				{printf(":#:");}
 
 sps
 	: SP
