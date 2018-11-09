@@ -32,7 +32,7 @@ void help(void){
 
 void status(void){
 	printf("STATUS:\n");
-	printf(" Under construction.\n");
+	printf(" Testing.\n");
 }
 
 struct options *alloc_options(void){
@@ -119,7 +119,6 @@ int print_BUF_HEAD(char *_BUF_HEAD, int *_SHLINK_POS, char *_BUF_TMP, int *_BRK_
 		/*
 		}
 		*/
-
 	}else if(_BUF_HEAD[BUF_LEN-1] == ',' && _BUF_HEAD[0] != '('){
 		if(BUF_LEN > 1){		// IF LEN > 1
 			if(WAR > 0){ fprintf(stderr,"AP&AC\n"); }
