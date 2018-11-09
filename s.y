@@ -7,7 +7,7 @@ extern char *yytext;
 // lexfile: llf.l
 %}
 
-%token DIM ARG FUNC_S FUNC_E RULE LIST END ERR
+%token ARGEX ALPH NUM DIM LIST FUNC_S FUNC_E RULE REF REF_S REF_E SET LABEL SP END ERR
 %right FUNC_S
 %right FUNC_E
 %left LIST
@@ -39,8 +39,8 @@ func
 
 
 arg
-	: ARG
-	| ARG DIM
+	: ARGEX
+	| ARGEX DIM
 
 %%
 int yyerror(char const *str)
