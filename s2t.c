@@ -160,8 +160,8 @@ int print_BUF_HEAD(char *_BUF_HEAD, int *_SHLINK_POS, char *_BUF_TMP, int *_BRK_
 		if(WAR > 0){ fprintf(stderr,"::REMAIN:%s:::\n",_BUF_TMP); }
 		// search COPY_S_PTR
 		for(i=BUF_LEN-1;i>=0;i--){
-			if(WAR > 1){ fprintf(stderr,"::i:%d:::",i); }
-			if(WAR > 1){ fprintf(stderr,"::c:%c:::\n",_BUF_TMP[i]); }
+			if(WAR > 1){ fprintf(stderr,"  ::i:%d:::",i); }
+			if(WAR > 1){ fprintf(stderr,"  ::c:%c:::\n",_BUF_TMP[i]); }
 			if(_BUF_TMP[i] == '('){
 				COPY_S_PTR = i;
 				break;
