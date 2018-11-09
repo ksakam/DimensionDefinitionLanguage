@@ -7,7 +7,7 @@
 // TODO: print simple ARG
 
 // protopype
-int print_BUF_HEAD(char *, int *, char *, int *, int);
+int print_BUF_HEAD(char *, int *, char *, int *, int, int);
 int shlink_BUF_HEAD(char *, int *, char *);
 
 struct options {
@@ -84,7 +84,7 @@ void check_options(struct options *opt){
 }
 
 // function definition
-int print_BUF_HEAD(char *_BUF_HEAD, int *_SHLINK_POS, char *_BUF_TMP, int *_BRK_REMAIN, int WAR){
+int print_BUF_HEAD(char *_BUF_HEAD, int *_SHLINK_POS, char *_BUF_TMP, int *_BRK_REMAIN, int _LIST_LV, int WAR){
 	int RETURN_LEN = 0;
 	int BUF_LEN = 0;
 	int COPY_S_PTR = 0;
@@ -92,13 +92,13 @@ int print_BUF_HEAD(char *_BUF_HEAD, int *_SHLINK_POS, char *_BUF_TMP, int *_BRK_
 	_BUF_TMP[0] = '\0';
 	strcpy(_BUF_TMP,_BUF_HEAD);
 	BUF_LEN = strlen(_BUF_TMP);
-	if(WAR > 0){ fprintf(stderr,":::%d:::\n",BUF_LEN); }
-	if(WAR > 0){ fprintf(stderr,"::REMAIN:%s:::\n",_BUF_TMP); }
 	if(_BUF_HEAD[BUF_LEN-1] == ',' && _BUF_HEAD[0] == '('){
-		if(WAR > 0){ fprintf(stderr,"PP&AC\n"); }
+		if(WAR > 0){ fprintf(stderr," -- PP&AC\n"); }
+		if(WAR > 0){ fprintf(stderr,"::BRK_R:%d:::\n",*_BRK_REMAIN); }
+		if(WAR > 0){ fprintf(stderr,"::B_LEN:%d:::\n",BUF_LEN); }
+		if(WAR > 0){ fprintf(stderr,"::REMAIN:%s:::\n",_BUF_TMP); }
 		_BUF_TMP[BUF_LEN-1] = '(';	//Be carefull !!
 		//printf(";;;%s;;;",_BUF_TMP+1);
-		if(WAR > 0){ fprintf(stderr,"::BRK_R:%d:::\n",*_BRK_REMAIN); }
 		/*
 		if(*_BRK_REMAIN < 2){
 			//printf("%s",_BUF_TMP+(*_BRK_REMAIN));
@@ -112,6 +112,7 @@ int print_BUF_HEAD(char *_BUF_HEAD, int *_SHLINK_POS, char *_BUF_TMP, int *_BRK_
 			//printf("%s",_BUF_TMP+(*_BRK_REMAIN));
 			//printf(";01;%s;;",_BUF_TMP+(*_BRK_REMAIN));
 			printf("%s",_BUF_TMP+(*_BRK_REMAIN));
+			if(WAR > 0){ fprintf(stderr,"::POUT:%s:::\n",_BUF_TMP+(*_BRK_REMAIN)); }
 			(*_BRK_REMAIN)--;
 			_BUF_HEAD[0] = '\0';
 			_BUF_TMP[0] = '\0';
@@ -120,31 +121,38 @@ int print_BUF_HEAD(char *_BUF_HEAD, int *_SHLINK_POS, char *_BUF_TMP, int *_BRK_
 		}
 		*/
 	}else if(_BUF_HEAD[BUF_LEN-1] == ',' && _BUF_HEAD[0] != '('){
-		if(BUF_LEN > 1){		// IF LEN > 1
-			if(WAR > 0){ fprintf(stderr,"AP&AC\n"); }
-			if(WAR > 0){ fprintf(stderr,"::BL:%d:::\n",BUF_LEN); }
-			//printf(";;;%s;;;",_BUF_TMP);
-			//printf(";02;%s;;",_BUF_TMP);
+		if(BUF_LEN != 1){		// IF LEN > 1
+			if(WAR > 0){ fprintf(stderr," -- AP&AC\n"); }
+			if(WAR > 0){ fprintf(stderr,"::BRK_R:%d:::\n",*_BRK_REMAIN); }
+			if(WAR > 0){ fprintf(stderr,"::B_LEN:%d:::\n",BUF_LEN); }
+			if(WAR > 0){ fprintf(stderr,"::REMAIN:%s:::\n",_BUF_TMP); }
+			if(WAR > 0){ fprintf(stderr,"::POUT:%s:::\n",_BUF_TMP); }
 			printf("%s",_BUF_TMP);
 			_BUF_HEAD[0] = '\0';
 			_BUF_TMP[0] = '\0';
 			RETURN_LEN = 0;
 		}else{
-			if(WAR > 0){ fprintf(stderr,"NP&AC\n"); }
-			if(WAR > 0){ fprintf(stderr,"::BL:%d:::\n",BUF_LEN); }
+			if(WAR > 0){ fprintf(stderr," -- NP&AC\n"); }
+			if(WAR > 0){ fprintf(stderr,"::BRK_R:%d:::\n",*_BRK_REMAIN); }
+			if(WAR > 0){ fprintf(stderr,"::B_LEN:%d:::\n",BUF_LEN); }
+			if(WAR > 0){ fprintf(stderr,"::REMAIN:%s:::\n",_BUF_TMP); }
 			//printf(";;;%s;;;",_BUF_TMP);
 			//printf(";02;%s;;",_BUF_TMP);
 			//printf("%s",_BUF_TMP);
+			printf("%s",_BUF_TMP);
 			_BUF_HEAD[0] = '\0';
 			_BUF_TMP[0] = '\0';
 			RETURN_LEN = 0;
 		}
 	}else if(_BUF_HEAD[BUF_LEN-1] == ')'){
-		if(WAR > 0){ fprintf(stderr,"PP&PC\n"); }
+		if(WAR > 0){ fprintf(stderr," -- PP&PC\n"); }
+		if(WAR > 0){ fprintf(stderr,"::BRK_R:%d:::\n",*_BRK_REMAIN); }
+		if(WAR > 0){ fprintf(stderr,"::B_LEN:%d:::\n",BUF_LEN); }
+		if(WAR > 0){ fprintf(stderr,"::REMAIN:%s:::\n",_BUF_TMP); }
 		// search COPY_S_PTR
 		for(i=BUF_LEN-1;i>=0;i--){
-			if(WAR > 0){ fprintf(stderr,"::i:%d:::",i); }
-			if(WAR > 0){ fprintf(stderr,"::c:%c:::\n",_BUF_TMP[i]); }
+			if(WAR > 1){ fprintf(stderr,"::i:%d:::",i); }
+			if(WAR > 1){ fprintf(stderr,"::c:%c:::\n",_BUF_TMP[i]); }
 			if(_BUF_TMP[i] == '('){
 				COPY_S_PTR = i;
 				break;
@@ -159,6 +167,7 @@ int print_BUF_HEAD(char *_BUF_HEAD, int *_SHLINK_POS, char *_BUF_TMP, int *_BRK_
 			_BUF_TMP[BUF_LEN+1] = '\0';
 			//printf(";;;%s;;;",_BUF_TMP+COPY_S_PTR+1);
 			printf("%s",_BUF_TMP+COPY_S_PTR+1);
+			if(WAR > 0){ fprintf(stderr,"::POUT:%s:::\n",_BUF_TMP+COPY_S_PTR+1); }
 			(*_BRK_REMAIN)--;
 			_BUF_HEAD[COPY_S_PTR] = '\0';
 			RETURN_LEN = COPY_S_PTR;
@@ -167,6 +176,7 @@ int print_BUF_HEAD(char *_BUF_HEAD, int *_SHLINK_POS, char *_BUF_TMP, int *_BRK_
 			printf("%s",_BUF_TMP);
 			if(*_BRK_REMAIN > 0){
 				printf("%s","(");
+				if(WAR > 0){ fprintf(stderr,"::POUT:%s:::\n","("); }
 				(*_BRK_REMAIN)--;
 			}
 			_BUF_TMP[0] = '\0';
@@ -188,6 +198,7 @@ int main(int argc, char **argv){
 	FILE *IN;
 	int is_open = 0;
 	int c;
+	int COUNT = 0;
 	opt = alloc_options();
 	init_options(opt);
 	get_options(argc-1, argv+1, opt);
@@ -226,6 +237,7 @@ int main(int argc, char **argv){
 	int PTR_BACK = 0;
 	char *BUF_TMP;
 	int BRK_REMAIN = 0;
+	int LIST_LV = 0;
 	if((BUF_HEAD = malloc((size_t)sizeof(char)*(*opt).buff)) == NULL){
 		fprintf(stderr,"[FAILED] malloc() @ BUF_HEAD @ main .\n");
 		exit(1);
@@ -244,6 +256,14 @@ int main(int argc, char **argv){
 
 	PRINT_TRIG_ACC = 1;
 	while((c = fgetc(IN)) != EOF){
+		COUNT++;
+		if(c == '('){
+			LIST_LV++;
+		}
+		if(c == ')'){
+			LIST_LV--;
+		}
+		if((*opt).war > 0){ fprintf(stderr,"::COUNTER:%d:::\n",COUNT); }
 		PRINT_TRIG = 0;
 		if(c == '['){
 			PRINT_TRIG_ACC--;
@@ -264,13 +284,14 @@ int main(int argc, char **argv){
 		BUF_PTR++;
 		BUF_HEAD[BUF_PTR] = '\0';
 		if(PRINT_TRIG == 1){
-			PTR_BACK = print_BUF_HEAD(BUF_HEAD,SHLINK_POS,BUF_TMP,&BRK_REMAIN,(*opt).war);
+			PTR_BACK = print_BUF_HEAD(BUF_HEAD,SHLINK_POS,BUF_TMP,&BRK_REMAIN,LIST_LV,(*opt).war);
 			BUF_PTR = PTR_BACK;
 			BUF_HEAD[BUF_PTR+1] = '\0';
 		}
 		if(c == '\n'){
 			//printf(";;;%s;;;","\n");
 			//printf("%s","\n");
+			LIST_LV = 0;
 			printf("%s",BUF_HEAD);
 			PRINT_TRIG_ACC = 1;
 			PRINT_TRIG = 0;
