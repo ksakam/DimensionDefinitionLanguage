@@ -1,4 +1,5 @@
 #!/bin/bash
+# checker
 ##t
 echo t
 lex t.l
@@ -9,7 +10,7 @@ mv y.output t.output
 
 ##etf
 echo et
-lex et.l
+lex t.l
 yacc -dv et.y
 gcc44 y.tab.c lex.yy.c -lfl -ll
 mv a.out et
@@ -17,7 +18,7 @@ mv y.output et.output
 
 ##eet
 echo eet
-lex et.l
+lex t.l
 yacc -dv eet.y
 gcc44 y.tab.c lex.yy.c -lfl -ll
 mv a.out eet
@@ -75,7 +76,7 @@ mv y.output s.output
 
 ##es
 echo es
-lex es.l
+lex s.l
 yacc -dv es.y
 gcc44 y.tab.c lex.yy.c -lfl -ll
 mv a.out es
@@ -83,10 +84,13 @@ mv y.output es.output
 
 ##ees
 echo ees
-lex es.l
+lex s.l
 yacc -dv ees.y
 gcc44 y.tab.c lex.yy.c -lfl -ll
 mv a.out ees
 mv y.output ees.output
 
+# converter
+echo s2t
+gcc s2t.c -o s2t
 
