@@ -16,8 +16,6 @@ line_list
 line
 	: dimension_expression END 	{printf(":END:\n");}
 
-
-
 dimension_expression
 	: arg					{printf(":Dataset:");}
 	| list					{printf(":Dataset:");}
