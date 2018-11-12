@@ -20,8 +20,6 @@ line_list
 line
 	: dimension_expression END 	{printf(":END:\n");}
 
-
-
 dimension_expression
 	: arg				{printf(":Dataset:");}
 	| list				{printf(":Dataset:");}
@@ -29,7 +27,6 @@ dimension_expression
 	| arg RULE list			{printf(":In->Out:");}
 	| list RULE arg			{printf(":In->Out:");}
 	| list RULE list		{printf(":In->Out:");}
-
 
 list
 	: FUNC_S func FUNC_E
