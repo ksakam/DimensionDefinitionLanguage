@@ -25,15 +25,17 @@ dimension_expression
 	| list RULE list			{printf(":In->Out:");}
 
 list
-	: arg func_b
+	: func_b
+	| list func_b
 
 func_b
-	: FUNC_S argm FUNC_E
+	: arg FUNC_S argm FUNC_E
 
 argm
 	: args
 	| args FUNC_S argm FUNC_E
 	| args FUNC_S argm FUNC_E LIST argm
+	| args FUNC_S argm FUNC_E argm
 
 args
 	: arg
