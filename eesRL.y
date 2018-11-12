@@ -49,7 +49,6 @@ dimension_expression
 	| label list RULE arg		{printf(":In->Out:");}
 	| label list RULE list		{printf(":In->Out:");}
 
-
 label
 	: LABEL NUM sps			{printf(":#:");}
 
@@ -61,13 +60,11 @@ list
 	: FUNC_S func FUNC_E
 	| list list
 
-
 func
 	: arg
 	| FUNC_S func FUNC_E
 	| func LIST func
 	| func func
-
 
 arg
 	: ARGEX

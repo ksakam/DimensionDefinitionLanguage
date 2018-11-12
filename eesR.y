@@ -43,18 +43,15 @@ dimension_expression
 	| list RULE arg			{printf(":In->Out:");}
 	| list RULE list		{printf(":In->Out:");}
 
-
 list
 	: FUNC_S func FUNC_E
 	| list list
-
 
 func
 	: arg
 	| FUNC_S func FUNC_E
 	| func LIST func
 	| func func
-
 
 arg
 	: ARGEX
