@@ -1,3 +1,2 @@
 #!/usr/bin/wolframscript -function
-f=Import;
-Function[f[#1,"Text"]]
+Function[ExportString[Get[#1],"ExpressionJSON"]]
