@@ -26,10 +26,8 @@ dimension_expression
 	| list RULE arg				{printf(":In->Out:");}
 	| list RULE list			{printf(":In->Out:");}
 
-
 list
 	: arg func_b
-
 
 func_b
 	: FUNC_S argm FUNC_E

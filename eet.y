@@ -16,13 +16,9 @@ line_list
 line
 	: dimension_expression END 	{printf(":END:\n");}
 
-
-
-
 dimension_expression
 	: list					{printf(":Dataset:");}
 	| list RULE list			{printf(":In->Out:");}
-
 
 list
 	: arg
@@ -34,7 +30,6 @@ list
 arg
 	: ARGEX
 	| ARGEX DIM
-
 
 %%
 int yyerror(char const *str)
