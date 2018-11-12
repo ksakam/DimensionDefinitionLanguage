@@ -31,12 +31,10 @@ dimension_expression
 list
 	: FUNC_S func FUNC_E
 
-
 func
 	: arg
 	| FUNC_S func FUNC_E
 	| func LIST func
-
 
 arg
 	: ARGEX

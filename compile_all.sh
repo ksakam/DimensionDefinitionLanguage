@@ -24,6 +24,22 @@ gcc44 y.tab.c lex.yy.c -lfl -ll
 mv a.out eet
 mv y.output eet.output
 
+##eetR
+echo eetR
+lex t.l
+yacc -dv eetR.y
+gcc44 y.tab.c lex.yy.c -lfl -ll
+mv a.out eetR
+mv y.output eetR.output
+
+##eetRL
+echo eetRL
+lex t.l
+yacc -dv eetRL.y
+gcc44 y.tab.c lex.yy.c -lfl -ll
+mv a.out eetRL
+mv y.output eetRL.output
+
 
 ##mlf
 echo mlf
@@ -89,6 +105,22 @@ yacc -dv ees.y
 gcc44 y.tab.c lex.yy.c -lfl -ll
 mv a.out ees
 mv y.output ees.output
+
+##eesR
+echo eesR
+lex s.l
+yacc -dv eesR.y
+gcc44 y.tab.c lex.yy.c -lfl -ll
+mv a.out eesR
+mv y.output eesR.output
+
+##eesRL
+echo eesRL
+lex s.l
+yacc -dv eesRL.y
+gcc44 y.tab.c lex.yy.c -lfl -ll
+mv a.out eesRL
+mv y.output eesRL.output
 
 # converter
 echo s2t
