@@ -59,14 +59,14 @@ sps
 
 list
 	: FUNC_S func FUNC_E
-	| list list
+	// | list list
 
 
 func
 	: arg
 	| FUNC_S func FUNC_E
 	| func LIST func
-	| func func
+	// | func func
 
 
 arg
