@@ -50,6 +50,7 @@ arg
 numalph
 	: NUM
 	| ALPH
+	| numalph numalph
 
 %%
 int yyerror(char const *str)
