@@ -8,8 +8,9 @@ extern char *yytext;
 %}
 
 %token DIM ARGEX ALPH NUM FUNC_S FUNC_E RULE LIST REF REF_S REF_E SET LABEL SP END ERR
+%left ARGEX
 %right FUNC_S
-%right FUNC_E
+%left FUNC_E
 %left LIST
 
 %%
