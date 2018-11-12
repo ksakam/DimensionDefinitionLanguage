@@ -1,2 +1,2 @@
 #!/usr/bin/wolframscript -function
-list=Get[#1]&
+Function[Import[#1,"Text"]]
