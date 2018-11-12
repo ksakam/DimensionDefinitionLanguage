@@ -19,21 +19,8 @@ line_list
 
 line
 	: dimension_expression END 	{printf(":END:\n");}
-	| dimension_expression_ref END 	{printf(":END:\n");}
 
-dimension_expression_ref
-	: dimension_expression REF refs	{printf(":Ref:");}
 
-refs
-	: ref
-	| refs LIST ref
-
-ref
-	: arg SET REF_S ALPH SET numalph REF_E
-	| arg SET REF_S arg SET numalph REF_E
-	| arg SET REF_S ALPH SET arg REF_E
-	| arg SET REF_S arg SET arg REF_E
-	| arg SET REF_S LABEL SET NUM REF_E	{printf(":RefL:");}
 
 dimension_expression
 	: arg				{printf(":Dataset:");}
@@ -42,20 +29,8 @@ dimension_expression
 	| arg RULE list			{printf(":In->Out:");}
 	| list RULE arg			{printf(":In->Out:");}
 	| list RULE list		{printf(":In->Out:");}
-	| label arg			{printf(":Dataset:");}
-	| label list			{printf(":Dataset:");}
-	| label arg RULE arg		{printf(":In->Out:");}
-	| label arg RULE list		{printf(":In->Out:");}
-	| label list RULE arg		{printf(":In->Out:");}
-	| label list RULE list		{printf(":In->Out:");}
 
 
-label
-	: LABEL NUM sps			{printf(":#:");}
-
-sps
-	: SP
-	| sps SP
 
 list
 	: FUNC_S func FUNC_E
@@ -73,9 +48,6 @@ arg
 	: ARGEX
 	| ARGEX DIM
 
-numalph
-	: NUM
-	| ALPH
 
 %%
 int yyerror(char const *str)
