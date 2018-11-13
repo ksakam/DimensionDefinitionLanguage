@@ -295,7 +295,8 @@ int main(int argc, char **argv){
 		if(PRINT_TRIG == 1){
 			PTR_BACK = print_BUF_HEAD(BUF_HEAD,SHLINK_POS,BUF_TMP,&BRK_REMAIN,LIST_LV,(*opt).war);
 			BUF_PTR = PTR_BACK;
-			BUF_HEAD[BUF_PTR+1] = '\0';
+			//BUF_HEAD[BUF_PTR+1] = '\0';
+			BUF_HEAD[BUF_PTR] = '\0';
 		}
 		if(c == '\n'){
 			//printf(";;;%s;;;","\n");
