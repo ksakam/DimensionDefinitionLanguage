@@ -7,7 +7,7 @@
 // TODO: print simple ARG
 
 // protopype
-int print_BUF_HEAD(char *, char *, char *, int *, int, int);
+int print_BUF_HEAD(char, char *, char *, char *, int *, int, int);
 int scan_EMP_BODY(char *, int);
 int search_pos_BRK_S_LAST(char *, int);
 
@@ -119,7 +119,7 @@ int search_pos_BRK_S_LAST(char *_BUF, int WAR){
 	return(pos);
 }
 
-int print_BUF_HEAD(char *_BUF_HEAD, char *_BUF_PRINT, char *_BUF_TMP, int *_BRK_REMAIN, int _LIST_LV, int WAR){
+int print_BUF_HEAD(char C, char *_BUF_HEAD, char *_BUF_PRINT, char *_BUF_TMP, int *_BRK_REMAIN, int _LIST_LV, int WAR){
 	int RETURN_LEN = 0;
 	int BUF_LEN = 0;
 	int BUF_HEAD_PTR = 0;
@@ -127,6 +127,8 @@ int print_BUF_HEAD(char *_BUF_HEAD, char *_BUF_PRINT, char *_BUF_TMP, int *_BRK_
 	int EMP_BODY = 0;
 	int BRK_S_LAST = 0;
 	int i;
+	char *CAR;
+	char *CDR;
 	_BUF_PRINT[0] = '\0';
 	strcpy(_BUF_PRINT,_BUF_HEAD);
 	BUF_LEN = strlen(_BUF_PRINT);
@@ -247,7 +249,7 @@ int main(int argc, char **argv){
 		if(PRINT_TRIG > 0){
 			if((*opt).war > 0){ fprintf(stderr,":::PRINT:::\n"); }
 			if((*opt).war > 0){ fprintf(stderr,"  ::BUF_REMAINN:%s:::\n",BUF_HEAD); }
-			BUF_PTR = print_BUF_HEAD(BUF_HEAD,BUF_PRINT,BUF_TMP,&BRK_REMAIN,LIST_LV,(*opt).war);
+			BUF_PTR = print_BUF_HEAD(c,BUF_HEAD,BUF_PRINT,BUF_TMP,&BRK_REMAIN,LIST_LV,(*opt).war);
 			BUF_HEAD[BUF_PTR+1] = '\0';
 		}
 		if(c == '\n'){
