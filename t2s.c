@@ -7,7 +7,7 @@
 // TODO: print simple ARG
 
 // protopype
-int print_BUF_HEAD(char, char *, char *, char *, int *, int, int);
+int print_BUF_HEAD(int, char, char *, char *, char *, int *, int, int);
 int scan_EMP_BODY(char *, int);
 int search_pos_BRK_S_LAST(char *, int);
 
@@ -33,8 +33,7 @@ void help(void){
 
 void status(void){
 	printf("STATUS:\n");
-	printf(" Under construction.\n");
-	printf("   - print_BUF_HEAD()\n");
+	printf(" To be reconstruct.\n");
 }
 
 struct options *alloc_options(void){
@@ -133,7 +132,7 @@ int search_pos_BRK_S_FIRST(char *_BUF, int WAR){
 	return(pos);
 }
 
-int print_BUF_HEAD(char C, char *_BUF_HEAD, char *_BUF_PRINT, char *_BUF_TMP, int *_BRK_REMAIN, int _LIST_LV, int WAR){
+int print_BUF_HEAD(int _TRIG, char C, char *_BUF_HEAD, char *_BUF_PRINT, char *_BUF_TMP, int *_BRK_REMAIN, int _LIST_LV, int WAR){
 	int RETURN_LEN = 0;
 	int BUF_LEN = 0;
 	int BUF_HEAD_PTR = 0;
@@ -174,7 +173,7 @@ int print_BUF_HEAD(char C, char *_BUF_HEAD, char *_BUF_PRINT, char *_BUF_TMP, in
 			RETURN_LEN = 0;
 			_BUF_HEAD[0] = '\0';
 			_BUF_PRINT[0] = '\0';
-			if(WAR > 0){ fprintf(stderr,"::::\n",BRK_S_LAST); }
+			if(WAR > 0){ fprintf(stderr,"::::\n"); }
 		}else{
 			if(BRK_S_LAST != -1){
 				printf("%s","(");
@@ -195,6 +194,7 @@ int print_BUF_HEAD(char C, char *_BUF_HEAD, char *_BUF_PRINT, char *_BUF_TMP, in
 			}
 		}
 	}else if(C == '('){
+		if(EMP_BODY < 1){
 		printf("%s","(");
 		_BUF_PRINT[BRK_S_LAST] = ',';
 		printf("%s",_BUF_PRINT);
@@ -202,9 +202,10 @@ int print_BUF_HEAD(char C, char *_BUF_HEAD, char *_BUF_PRINT, char *_BUF_TMP, in
 		RETURN_LEN = 0;
 		_BUF_HEAD[0] = '\0';
 		_BUF_PRINT[0] = '\0';
-
+		}
 	}else if(C == ')'){
-		if(BRK_S_LAST != -1){
+		if(WAR > 0){ fprintf(stderr,"::BRK_S_LAST:%d::\n",BRK_S_LAST); }
+		if(BRK_S_LAST > 0){
 			printf("%s","(");
 			_BUF_PRINT[BRK_S_LAST] = ',';
 			printf("%s",_BUF_PRINT);
@@ -303,25 +304,30 @@ int main(int argc, char **argv){
 			PRINT_TRIG_ACC++;
 		}
 		if(PRINT_TRIG_ACC > 0 && LIST_LV==1 && c == ','){
+			if((*opt).war > 0){ fprintf(stderr,":::printCASE:1:::\n"); }
 			PRINT_TRIG = 1;
 		}
 		if(PRINT_TRIG_ACC > 0 && LIST_LV==1 && c == '('){
+			if((*opt).war > 0){ fprintf(stderr,":::printCASE:2:::\n"); }
 			//PRINT_TRIG = 1;
 		}
 		if(PRINT_TRIG_ACC > 0 && LIST_LV!=1 && c == '('){
+			if((*opt).war > 0){ fprintf(stderr,":::printCASE:3:::\n"); }
 			PRINT_TRIG = 1;
 		}
 		if(PRINT_TRIG_ACC > 0 && LIST_LV==0 && c == ')'){
-			//PRINT_TRIG = 1;
+			if((*opt).war > 0){ fprintf(stderr,":::printCASE:4:::\n"); }
+			PRINT_TRIG = 4;
 		}
 		if(PRINT_TRIG_ACC > 0 && LIST_LV>0 && c == ')'){
+			if((*opt).war > 0){ fprintf(stderr,":::printCASE:5:::\n"); }
 			PRINT_TRIG = 1;
 		}
 
 		if(c == '('){
 			BRK_REMAIN++;
 		}
-		if((*opt).war > 0){ fprintf(stderr,"::COUNTER:%d:CHAR:%c::\n",COUNT,c); }
+		if((*opt).war > 0){ fprintf(stderr,"-- ::COUNTER:%d:CHAR:%c::\n",COUNT,c); }
 		if((*opt).war > 0){ fprintf(stderr,"::TRIG_ACC:%d:TRIG:%d::\n",PRINT_TRIG_ACC,PRINT_TRIG); }
 		if((*opt).war > 0){ fprintf(stderr,"::LIST_LV:%d:::\n",LIST_LV); }
 		BUF_HEAD[BUF_PTR] = c;
@@ -330,7 +336,7 @@ int main(int argc, char **argv){
 		if(PRINT_TRIG > 0){
 			if((*opt).war > 0){ fprintf(stderr,":::PRINT:::\n"); }
 			if((*opt).war > 0){ fprintf(stderr,"  ::BUF_REMAINN:%s:::\n",BUF_HEAD); }
-			BUF_PTR = print_BUF_HEAD(c,BUF_HEAD,BUF_PRINT,BUF_TMP,&BRK_REMAIN,LIST_LV,(*opt).war);
+			BUF_PTR = print_BUF_HEAD(PRINT_TRIG,c,BUF_HEAD,BUF_PRINT,BUF_TMP,&BRK_REMAIN,LIST_LV,(*opt).war);
 			BUF_HEAD[BUF_PTR+1] = '\0';
 		}
 		if(c == '\n'){
