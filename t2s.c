@@ -83,16 +83,16 @@ void check_options(struct options *opt){
 }
 
 // function definition
-int print_BUF_HEAD(char *_BUF_HEAD, char *_BUF_TMP, int *_BRK_REMAIN, int _LIST_LV, int WAR){
+int print_BUF_HEAD(char *_BUF_HEAD, char *_BUF_PRINT, int *_BRK_REMAIN, int _LIST_LV, int WAR){
 	int RETURN_LEN = 0;
 	int BUF_LEN = 0;
 	int BUF_HEAD_PTR = 0;
 	int BUF_END_PTR = 0;
 	int i;
-	_BUF_TMP[0] = '\0';
-	strcpy(_BUF_TMP,_BUF_HEAD);
-	BUF_LEN = strlen(_BUF_TMP);
-	printf("%s",_BUF_TMP+BUF_HEAD_PTR);
+	_BUF_PRINT[0] = '\0';
+	strcpy(_BUF_PRINT,_BUF_HEAD);
+	BUF_LEN = strlen(_BUF_PRINT);
+	printf("%s",_BUF_PRINT+BUF_HEAD_PTR);
 	return(RETURN_LEN);
 }
 
@@ -138,7 +138,7 @@ int main(int argc, char **argv){
 	int PRINT_TRIG = 0;
 	char *BUF_HEAD;
 	int BUF_PTR = 0;
-	char *BUF_TMP;
+	char *BUF_PRINT;
 	int BRK_REMAIN = 0;
 	int LIST_LV = 0;
 	if((BUF_HEAD = malloc((size_t)sizeof(char)*(*opt).buff)) == NULL){
@@ -146,11 +146,11 @@ int main(int argc, char **argv){
 		exit(1);
 	}
 	BUF_HEAD[0] = '\0';
-	if((BUF_TMP = malloc((size_t)sizeof(char)*(*opt).buff)) == NULL){
-		fprintf(stderr,"[FAILED] malloc() @ BUF_TMP @ main .\n");
+	if((BUF_PRINT = malloc((size_t)sizeof(char)*(*opt).buff)) == NULL){
+		fprintf(stderr,"[FAILED] malloc() @ BUF_PRINT @ main .\n");
 		exit(1);
 	}
-	BUF_TMP[0] = '\0';
+	BUF_PRINT[0] = '\0';
 	PRINT_TRIG_ACC = 1;
 	while((c = fgetc(IN)) != EOF){
 		COUNT++;
@@ -184,7 +184,7 @@ int main(int argc, char **argv){
 		BUF_PTR++;
 		BUF_HEAD[BUF_PTR] = '\0';
 		if(PRINT_TRIG > 0){
-			BUF_PTR = print_BUF_HEAD(BUF_HEAD,BUF_TMP,&BRK_REMAIN,LIST_LV,(*opt).war);
+			BUF_PTR = print_BUF_HEAD(BUF_HEAD,BUF_PRINT,&BRK_REMAIN,LIST_LV,(*opt).war);
 			BUF_HEAD[BUF_PTR+1] = '\0';
 		}
 		if(c == '\n'){
@@ -194,7 +194,7 @@ int main(int argc, char **argv){
 			PRINT_TRIG = 0;
 			BUF_HEAD[0] = '\0';
 			BUF_PTR = 0;
-			BUF_TMP[0] = '\0';
+			BUF_PRINT[0] = '\0';
 			BRK_REMAIN = 0;
 			if((*opt).war > 0){ fprintf(stderr,"\n"); }
 		}
