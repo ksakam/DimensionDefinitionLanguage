@@ -204,11 +204,21 @@ int print_BUF_HEAD(char C, char *_BUF_HEAD, char *_BUF_PRINT, char *_BUF_TMP, in
 		_BUF_PRINT[0] = '\0';
 
 	}else if(C == ')'){
-		printf("%s",_BUF_PRINT);
-		BUF_HEAD_PTR = 0;
-		RETURN_LEN = 0;
-		_BUF_HEAD[0] = '\0';
-		_BUF_PRINT[0] = '\0';
+		if(BRK_S_LAST != -1){
+			printf("%s","(");
+			_BUF_PRINT[BRK_S_LAST] = ',';
+			printf("%s",_BUF_PRINT);
+			BUF_HEAD_PTR = 0;
+			RETURN_LEN = 0;
+			_BUF_HEAD[0] = '\0';
+			_BUF_PRINT[0] = '\0';
+		}else{
+			printf("%s",_BUF_PRINT);
+			BUF_HEAD_PTR = 0;
+			RETURN_LEN = 0;
+			_BUF_HEAD[0] = '\0';
+			_BUF_PRINT[0] = '\0';
+		}
 	}
 
 	return(RETURN_LEN);
