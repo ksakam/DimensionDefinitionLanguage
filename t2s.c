@@ -109,12 +109,14 @@ int search_pos_BRK_S_LAST(char *_BUF, int WAR){
 	int pos = 0;
 	int len_BUF = 0;
 	int i;
+	len_BUF = strlen(_BUF);
+	if(WAR > 1){ fprintf(stderr,"    ::len_BUF:%d:::\n",len_BUF); }
 	for(i=0;i<len_BUF;i++){
-		if(_BUF[i] == '('){
+		if(*_BUF+i == '('){
 			pos = i;
 		}
 	}
-	return(i);
+	return(pos);
 }
 
 int print_BUF_HEAD(char *_BUF_HEAD, char *_BUF_PRINT, char *_BUF_TMP, int *_BRK_REMAIN, int _LIST_LV, int WAR){
