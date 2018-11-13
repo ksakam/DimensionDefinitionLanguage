@@ -171,6 +171,9 @@ int main(int argc, char **argv){
 		if(PRINT_TRIG_ACC > 0 && c == ','){
 			PRINT_TRIG = 1;
 		}
+		if(PRINT_TRIG_ACC > 0 && c == '('){
+			PRINT_TRIG = 1;
+		}
 		if(PRINT_TRIG_ACC > 0 && c == ')'){
 			PRINT_TRIG = 1;
 		}
@@ -180,7 +183,7 @@ int main(int argc, char **argv){
 		BUF_HEAD[BUF_PTR] = c;
 		BUF_PTR++;
 		BUF_HEAD[BUF_PTR] = '\0';
-		if(PRINT_TRIG == 1){
+		if(PRINT_TRIG > 0){
 			BUF_PTR = print_BUF_HEAD(BUF_HEAD,BUF_TMP,&BRK_REMAIN,LIST_LV,(*opt).war);
 			BUF_HEAD[BUF_PTR+1] = '\0';
 		}
