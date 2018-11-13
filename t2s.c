@@ -226,11 +226,11 @@ int main(int argc, char **argv){
 		if(PRINT_TRIG_ACC > 0 && LIST_LV!=1 && c == '('){
 			PRINT_TRIG = 1;
 		}
-		if(PRINT_TRIG_ACC > 0 && LIST_LV>0 && c == ')'){
-			PRINT_TRIG = 1;
-		}
 		if(PRINT_TRIG_ACC > 0 && LIST_LV==0 && c == ')'){
 			//PRINT_TRIG = 1;
+		}
+		if(PRINT_TRIG_ACC > 0 && LIST_LV>0 && c == ')'){
+			PRINT_TRIG = 1;
 		}
 
 		if(c == '('){
