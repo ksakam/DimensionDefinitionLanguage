@@ -8,8 +8,8 @@
 
 // protopype
 int print_BUF_HEAD(char *, char *, char *, int *, int, int);
-int scan_EMP_BODY(char *);
-int search_pos_BRK_S_LAST(char *);
+int scan_EMP_BODY(char *, int);
+int search_pos_BRK_S_LAST(char *, int);
 
 struct options {
 	int help;
@@ -86,7 +86,7 @@ void check_options(struct options *opt){
 }
 
 // function definition
-int scan_EMP_BODY(char *_BUF){
+int scan_EMP_BODY(char *_BUF, int WAR){
 	int count = 0;
 	int len_BUF = 0;
 	char miniBUF[2];
@@ -104,7 +104,7 @@ int scan_EMP_BODY(char *_BUF){
 	return(count);
 }
 
-int search_pos_BRK_S_LAST(char *_BUF){
+int search_pos_BRK_S_LAST(char *_BUF, int WAR){
 	//UNDER CONSTRUCTION
 	int pos = 0;
 	int len_BUF = 0;
@@ -122,11 +122,20 @@ int print_BUF_HEAD(char *_BUF_HEAD, char *_BUF_PRINT, char *_BUF_TMP, int *_BRK_
 	int BUF_LEN = 0;
 	int BUF_HEAD_PTR = 0;
 	int BUF_END_PTR = 0;
+	int EMP_BODY = 0;
+	int BRK_S_LAST = 0;
 	int i;
 	_BUF_PRINT[0] = '\0';
 	strcpy(_BUF_PRINT,_BUF_HEAD);
 	BUF_LEN = strlen(_BUF_PRINT);
+	EMP_BODY = scan_EMP_BODY(_BUF_PRINT,WAR);
+	if(WAR > 0){ fprintf(stderr,"  ::EMP:%d:::\n",EMP_BODY); }
+	BRK_S_LAST = search_pos_BRK_S_LAST(_BUF_PRINT,WAR);
+	if(WAR > 0){ fprintf(stderr,"  ::BRK_S:%d:::\n",BRK_S_LAST); }
+	
 	printf("%s",_BUF_PRINT+BUF_HEAD_PTR);
+	RETURN_LEN = 0;
+
 	return(RETURN_LEN);
 }
 
@@ -196,7 +205,6 @@ int main(int argc, char **argv){
 	while((c = fgetc(IN)) != EOF){
 		COUNT++;
 		PRINT_TRIG = 0;
-		if((*opt).war > 0){ fprintf(stderr,"::COUNTER:%d:::\n",COUNT); }
 		if(c == '('){
 			LIST_LV++;
 		}
@@ -212,19 +220,31 @@ int main(int argc, char **argv){
 		if(PRINT_TRIG_ACC > 0 && LIST_LV==1 && c == ','){
 			PRINT_TRIG = 1;
 		}
+		if(PRINT_TRIG_ACC > 0 && LIST_LV==1 && c == '('){
+			//PRINT_TRIG = 1;
+		}
 		if(PRINT_TRIG_ACC > 0 && LIST_LV!=1 && c == '('){
 			PRINT_TRIG = 1;
 		}
-		if(PRINT_TRIG_ACC > 0 && c == ')'){
+		if(PRINT_TRIG_ACC > 0 && LIST_LV>0 && c == ')'){
 			PRINT_TRIG = 1;
 		}
+		if(PRINT_TRIG_ACC > 0 && LIST_LV==0 && c == ')'){
+			PRINT_TRIG = 1;
+		}
+
 		if(c == '('){
 			BRK_REMAIN++;
 		}
+		if((*opt).war > 0){ fprintf(stderr,"::COUNTER:%d:CHAR:%c::\n",COUNT,c); }
+		if((*opt).war > 0){ fprintf(stderr,"::TRIG_ACC:%d:TRIG:%d::\n",PRINT_TRIG_ACC,PRINT_TRIG); }
+		if((*opt).war > 0){ fprintf(stderr,"::LIST_LV:%d:::\n",LIST_LV); }
 		BUF_HEAD[BUF_PTR] = c;
 		BUF_PTR++;
 		BUF_HEAD[BUF_PTR] = '\0';
 		if(PRINT_TRIG > 0){
+			if((*opt).war > 0){ fprintf(stderr,":::PRINT:::\n"); }
+			if((*opt).war > 0){ fprintf(stderr,"  ::BUF_REMAINN:%s:::\n",BUF_HEAD); }
 			BUF_PTR = print_BUF_HEAD(BUF_HEAD,BUF_PRINT,BUF_TMP,&BRK_REMAIN,LIST_LV,(*opt).war);
 			BUF_HEAD[BUF_PTR+1] = '\0';
 		}
@@ -237,8 +257,9 @@ int main(int argc, char **argv){
 			BUF_PTR = 0;
 			BUF_PRINT[0] = '\0';
 			BRK_REMAIN = 0;
-			if((*opt).war > 0){ fprintf(stderr,"\n"); }
+			//if((*opt).war > 0){ fprintf(stderr,"\n"); }
 		}
+		PRINT_TRIG = 0;
 	}
 
 	// close file
