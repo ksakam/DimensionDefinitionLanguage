@@ -8,6 +8,8 @@
 
 // protopype
 int print_BUF_HEAD(char *, char *, char *, int *, int, int);
+int scan_EMP_BODY(char *);
+int search_pos_BRK_S_LAST(char *);
 
 struct options {
 	int help;
@@ -84,6 +86,37 @@ void check_options(struct options *opt){
 }
 
 // function definition
+int scan_EMP_BODY(char *_BUF){
+	int count = 0;
+	int len_BUF = 0;
+	char miniBUF[2];
+	int i;
+	len_BUF = strlen(_BUF);
+	miniBUF[0] = '\0';
+	miniBUF[1] = _BUF[0];
+	for(i=1;i<len_BUF;i++){
+		miniBUF[0] = miniBUF[1];
+		miniBUF[1] = _BUF[i];
+		if(miniBUF[0]=='(' && miniBUF[1]==')'){
+			count++;
+		}
+	}
+	return(count);
+}
+
+int search_pos_BRK_S_LAST(char *_BUF){
+	//UNDER CONSTRUCTION
+	int pos = 0;
+	int len_BUF = 0;
+	int i;
+	for(i=0;i<len_BUF;i++){
+		if(_BUF[i] == '('){
+			pos = i;
+		}
+	}
+	return(i);
+}
+
 int print_BUF_HEAD(char *_BUF_HEAD, char *_BUF_PRINT, char *_BUF_TMP, int *_BRK_REMAIN, int _LIST_LV, int WAR){
 	int RETURN_LEN = 0;
 	int BUF_LEN = 0;
@@ -176,10 +209,10 @@ int main(int argc, char **argv){
 		if(c == ']'){
 			PRINT_TRIG_ACC++;
 		}
-		if(PRINT_TRIG_ACC > 0 && c == ','){
+		if(PRINT_TRIG_ACC > 0 && LIST_LV==1 && c == ','){
 			PRINT_TRIG = 1;
 		}
-		if(PRINT_TRIG_ACC > 0 && c == '('){
+		if(PRINT_TRIG_ACC > 0 && LIST_LV!=1 && c == '('){
 			PRINT_TRIG = 1;
 		}
 		if(PRINT_TRIG_ACC > 0 && c == ')'){
