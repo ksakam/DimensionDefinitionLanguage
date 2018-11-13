@@ -249,8 +249,10 @@ int main(int argc, char **argv){
 			BUF_HEAD[BUF_PTR+1] = '\0';
 		}
 		if(c == '\n'){
-			LIST_LV = 0;
+			if((*opt).war > 0){ fprintf(stderr,":::PRINT:::\n"); }
+			if((*opt).war > 0){ fprintf(stderr,"  ::BUF_REMAINN:%s:::\n",BUF_HEAD); }
 			printf("%s",BUF_HEAD);
+			LIST_LV = 0;
 			PRINT_TRIG_ACC = 1;
 			PRINT_TRIG = 0;
 			BUF_HEAD[0] = '\0';
