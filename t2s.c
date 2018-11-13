@@ -7,7 +7,7 @@
 // TODO: print simple ARG
 
 // protopype
-int print_BUF_HEAD(char *, char *, int *, int, int);
+int print_BUF_HEAD(char *, char *, char *, int *, int, int);
 
 struct options {
 	int help;
@@ -83,7 +83,7 @@ void check_options(struct options *opt){
 }
 
 // function definition
-int print_BUF_HEAD(char *_BUF_HEAD, char *_BUF_PRINT, int *_BRK_REMAIN, int _LIST_LV, int WAR){
+int print_BUF_HEAD(char *_BUF_HEAD, char *_BUF_PRINT, char *_BUF_TMP, int *_BRK_REMAIN, int _LIST_LV, int WAR){
 	int RETURN_LEN = 0;
 	int BUF_LEN = 0;
 	int BUF_HEAD_PTR = 0;
@@ -141,6 +141,7 @@ int main(int argc, char **argv){
 	char *BUF_PRINT;
 	int BRK_REMAIN = 0;
 	int LIST_LV = 0;
+	char *BUF_TMP;
 	if((BUF_HEAD = malloc((size_t)sizeof(char)*(*opt).buff)) == NULL){
 		fprintf(stderr,"[FAILED] malloc() @ BUF_HEAD @ main .\n");
 		exit(1);
@@ -151,6 +152,12 @@ int main(int argc, char **argv){
 		exit(1);
 	}
 	BUF_PRINT[0] = '\0';
+	if((BUF_TMP = malloc((size_t)sizeof(char)*(*opt).buff)) == NULL){
+		fprintf(stderr,"[FAILED] malloc() @ BUF_TMP @ main .\n");
+		exit(1);
+	}
+	BUF_TMP[0] = '\0';
+
 	PRINT_TRIG_ACC = 1;
 	while((c = fgetc(IN)) != EOF){
 		COUNT++;
@@ -184,7 +191,7 @@ int main(int argc, char **argv){
 		BUF_PTR++;
 		BUF_HEAD[BUF_PTR] = '\0';
 		if(PRINT_TRIG > 0){
-			BUF_PTR = print_BUF_HEAD(BUF_HEAD,BUF_PRINT,&BRK_REMAIN,LIST_LV,(*opt).war);
+			BUF_PTR = print_BUF_HEAD(BUF_HEAD,BUF_PRINT,BUF_TMP,&BRK_REMAIN,LIST_LV,(*opt).war);
 			BUF_HEAD[BUF_PTR+1] = '\0';
 		}
 		if(c == '\n'){
