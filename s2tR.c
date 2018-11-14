@@ -99,6 +99,7 @@ int print_BUF_HEAD(char *_BUF_HEAD, int *_SHLINK_POS, char *_BUF_TMP, int *_BRK_
 		if(WAR > 0){ fprintf(stderr,"::B_LEN:%d:::\n",BUF_LEN); }
 		if(WAR > 0){ fprintf(stderr,"::REMAIN:%s:::\n",_BUF_TMP); }
 		_BUF_TMP[BUF_LEN-1] = '(';	//Be carefull !!
+		_BUF_TMP[BUF_LEN] = '\0';	//Be carefull !!
 		//printf(";;;%s;;;",_BUF_TMP+1);
 		/*
 		if(*_BRK_REMAIN < 2){
