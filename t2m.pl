@@ -1,7 +1,13 @@
 #!/usr/bin/perl
+@str = ();
+print "{";
 while(<>){
+	chomp;
 	$_ =~ s/\[/\[DIM,/g;
 	$_ =~ s/\(/\[/g;
 	$_ =~ s/\)/\]/g;
-	print "$_";
+	push(@str,$_);
 }
+$strout = join(", ",@str);
+print $strout;
+print "}";
