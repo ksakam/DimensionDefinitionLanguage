@@ -29,6 +29,8 @@ void help(void){
 }
 
 void status(void){
+	printf("DESCRIPTION:\n");
+	printf(" converts S form to T form, NOT applicable to purefunction.\n");
 	printf("STATUS:\n");
 	printf(" Testing.\n");
 }
