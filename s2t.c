@@ -3,6 +3,12 @@
 #include <string.h>
 #define LEN 1024
 #define BUFF_LEN 1024
+#ifndef max
+#define max(a,b) (((a)>(b))?(a):(b))
+#endif
+#ifndef min
+#define min(a,b) (((a)<(b))?(a):(b))
+#endif
 //  UNDER CONSTRUCTION
 // TODO: print simple ARG
 
@@ -19,7 +25,7 @@ struct options {
 
 void help(void){
 	printf("USAGE:\n");
-	printf(" t2s [-h] [-s] [-c] buff=<size(int)> in=<input file> w=<print warnning>.\n");
+	printf(" s2t [-h] [-s] [-c] buff=<size(int)> in=<input file> w=<print warnning>.\n");
 	printf("  -h : help.\n");
 	printf("  -s : stat.\n");
 	printf("  -c : check args.\n");
@@ -152,6 +158,22 @@ int count_BRK_E(char *_BUF, int WAR){
 	}
 	return(count);
 }
+int max_BRK_S_C(char *_BUF, int WAR){
+	int count = 0;
+	int count_max = 0;
+	int len_BUF = 0;
+	int i;
+	len_BUF = strlen(_BUF);
+	for(i=0;i<len_BUF;i++){
+		if(_BUF[i] == '('){
+			count++;
+			count_max = max(count_max,count);
+		}else{
+			count = 0;
+		}
+	}
+	return(count_max);
+}
 
 int print_BUF_HEAD(int _TRIG, char C, char *_BUF_HEAD, char *_BUF_PRINT, char *_BUF_TMP, int *_BRK_REMAIN, int _LIST_LV, int WAR){
 	int BUF_HEAD_PTR = 0;
@@ -161,6 +183,7 @@ int print_BUF_HEAD(int _TRIG, char C, char *_BUF_HEAD, char *_BUF_PRINT, char *_
 	int BRK_S_LAST = 0;
 	int BRK_S_FIRST = 0;
 	int BRK_S_COUNT = 0;
+	int MAX_BRK_SC = 0;
 	int RETURN_LEN = 0;
 	int i;
 	char *CAR;
@@ -176,157 +199,23 @@ int print_BUF_HEAD(int _TRIG, char C, char *_BUF_HEAD, char *_BUF_PRINT, char *_
 	if(WAR > 0){ fprintf(stderr,"  ::BRK_S_FIRST:%d:::\n",BRK_S_FIRST); }
 	BRK_S_COUNT = count_BRK_S(_BUF_PRINT,WAR);
 	if(WAR > 0){ fprintf(stderr,"  ::BRK_S_COUNT:%d:::\n",BRK_S_COUNT); }
+	MAX_BRK_SC = max_BRK_S_C(_BUF_PRINT,WAR);
 	// print
 	if(C == ','){
-		if(EMP_BODY > 0){
-			if(WAR > 0){ fprintf(stderr,"  ::::",BRK_S_LAST); }
-			printf("%s","(");
-			if(WAR > 0){ fprintf(stderr,":%s","("); }
-			for(i=0;i<EMP_BODY;i++){
-				printf("%s","(");
-				if(WAR > 0){ fprintf(stderr,":%s","("); }
-			}
-			_BUF_PRINT[BRK_S_FIRST] = '\0';
-			 printf("%s",_BUF_PRINT);
-			if(WAR > 0){ fprintf(stderr,":%s",_BUF_PRINT); }
-			for(i=0;i<EMP_BODY;i++){
-				printf("%s",")");
-			}
-			_BUF_PRINT[BRK_S_LAST] = ',';
-			printf("%s",_BUF_PRINT+BRK_S_LAST);
-			if(WAR > 0){ fprintf(stderr,":%s",_BUF_PRINT+BRK_S_LAST); }
-			BUF_HEAD_PTR = 0;
-			RETURN_LEN = 0;
-			_BUF_HEAD[0] = '\0';
-			_BUF_PRINT[0] = '\0';
-			if(WAR > 0){ fprintf(stderr,"::::\n"); }
-		}else if(EMP_BODY == 0 && BRK_S_COUNT > 0){
-			printf("%s","(");
-			_BUF_PRINT[BRK_S_LAST] = ',';
 			printf("%s",_BUF_PRINT);
-			BUF_HEAD_PTR = 0;
-			RETURN_LEN = 0;
-			_BUF_HEAD[0] = '\0';
-			_BUF_PRINT[0] = '\0';
-
-		}else{
-			/*
-			if(BRK_S_LAST != -1){
-				printf("%s","(");
-				_BUF_PRINT[BRK_S_LAST] = '\0';
-				printf("%s",_BUF_PRINT);
-				_BUF_PRINT[BRK_S_LAST] = ',';
-				printf("%s",_BUF_PRINT+BRK_S_LAST);
-				BUF_HEAD_PTR = 0;
-				RETURN_LEN = 0;
-				_BUF_HEAD[0] = '\0';
-				_BUF_PRINT[0] = '\0';
-			}else{
-			*/
-				printf("%s",_BUF_PRINT);
-				BUF_HEAD_PTR = 0;
-				RETURN_LEN = 0;
-				_BUF_HEAD[0] = '\0';
-				_BUF_PRINT[0] = '\0';
-			/*
-			}
- 			*/
-		}
-	}else if(C == ')'){
-		if(EMP_BODY > 0){
-			RETURN_LEN = BUF_LEN;
-		}else{
-			if(BRK_S_COUNT == 0){
-				printf("%s",_BUF_PRINT);
-				BUF_HEAD_PTR = 0;
-				RETURN_LEN = 0;
-				_BUF_HEAD[0] = '\0';
-				_BUF_PRINT[0] = '\0';
-	
-			}else if(BRK_S_COUNT == 1){
-				printf("%s","(");
-				_BUF_PRINT[BRK_S_LAST] = ',';
-				printf("%s",_BUF_PRINT);
-				BUF_HEAD_PTR = 0;
-				RETURN_LEN = 0;
-				_BUF_HEAD[0] = '\0';
-				_BUF_PRINT[0] = '\0';
-	
-			}else{
-				printf("%s","(");
-				_BUF_PRINT[BRK_S_LAST] = ',';
-				for(i=0;i<BUF_LEN;i++){
-					if(_BUF_PRINT[i] == '('){
-						printf("%s",",(");
-					}else{
-						printf("%c",_BUF_PRINT[i]);
-					}
-				}
-				BUF_HEAD_PTR = 0;
-				RETURN_LEN = 0;
-				_BUF_HEAD[0] = '\0';
-				_BUF_PRINT[0] = '\0';
-	
-			}
-		}
+			if(WAR > 0){ fprintf(stderr,":::POUT:%s:::\n",_BUF_PRINT); }
+			//BUF_HEAD_PTR = 0;
+			//RETURN_LEN = 0;
+			//_BUF_HEAD[0] = '\0';
+			//_BUF_PRINT[0] = '\0';
 	}else if(C == '\n'){
-		if(EMP_BODY > 0){
-			if(WAR > 0){ fprintf(stderr,"  ::::",BRK_S_LAST); }
-			printf("%s","(");
-			if(WAR > 0){ fprintf(stderr,":%s","("); }
-			for(i=0;i<EMP_BODY;i++){
-				printf("%s","(");
-				if(WAR > 0){ fprintf(stderr,":%s","("); }
-			}
-			_BUF_PRINT[BRK_S_FIRST] = '\0';
-			 printf("%s",_BUF_PRINT);
-			if(WAR > 0){ fprintf(stderr,":%s",_BUF_PRINT); }
-			for(i=0;i<EMP_BODY;i++){
-				printf("%s",")");
-			}
-			_BUF_PRINT[BRK_S_LAST] = ',';
-			printf("%s",_BUF_PRINT+BRK_S_LAST);
-			if(WAR > 0){ fprintf(stderr,":%s",_BUF_PRINT+BRK_S_LAST); }
-			BUF_HEAD_PTR = 0;
-			RETURN_LEN = 0;
-			_BUF_HEAD[0] = '\0';
-			_BUF_PRINT[0] = '\0';
-			if(WAR > 0){ fprintf(stderr,"::::\n"); }
+			printf("%s",_BUF_PRINT);
+			if(WAR >0){ fprintf(stderr,":::POUT:%s:::\n",_BUF_PRINT); }
+			//BUF_HEAD_PTR = 0;
+			//RETURN_LEN = 0;
+			//_BUF_HEAD[0] = '\0';
+			//_BUF_PRINT[0] = '\0';
 
-		}else{
-			if(BRK_S_COUNT == 0){
-				printf("%s",_BUF_PRINT);
-				BUF_HEAD_PTR = 0;
-				RETURN_LEN = 0;
-				_BUF_HEAD[0] = '\0';
-				_BUF_PRINT[0] = '\0';
-	
-			}else if(BRK_S_COUNT == 1){
-				printf("%s","(");
-				_BUF_PRINT[BRK_S_LAST] = ',';
-				printf("%s",_BUF_PRINT);
-				BUF_HEAD_PTR = 0;
-				RETURN_LEN = 0;
-				_BUF_HEAD[0] = '\0';
-				_BUF_PRINT[0] = '\0';
-	
-			}else{
-				printf("%s","(");
-				_BUF_PRINT[BRK_S_LAST] = ',';
-				for(i=0;i<BUF_LEN;i++){
-					if(_BUF_PRINT[i] == '('){
-						printf("%s",",(");
-					}else{
-						printf("%c",_BUF_PRINT[i]);
-					}
-				}
-				BUF_HEAD_PTR = 0;
-				RETURN_LEN = 0;
-				_BUF_HEAD[0] = '\0';
-				_BUF_PRINT[0] = '\0';
-	
-			}
-		}
 	}
 	return(RETURN_LEN);
 }
@@ -409,11 +298,11 @@ int main(int argc, char **argv){
 		if(c == ']'){
 			PRINT_TRIG_ACC++;
 		}
-		if(PRINT_TRIG_ACC > 0 && LIST_LV > 0 && c == ','){
+		if(PRINT_TRIG_ACC > 0 && c == ','){
 			if((*opt).war > 0){ fprintf(stderr,":::printCASE:1:::\n"); }
 			PRINT_TRIG = 1;
 		}
-		if(PRINT_TRIG_ACC > 0 && LIST_LV > 1 && c == ')'){
+		if(PRINT_TRIG_ACC > 0 && c == '\n'){
 			if((*opt).war > 0){ fprintf(stderr,":::printCASE:2:::\n"); }
 			PRINT_TRIG = 2;
 		}
@@ -430,11 +319,11 @@ int main(int argc, char **argv){
 			BUF_HEAD[BUF_PTR] = '\0';
 		}
 		if(c == '\n'){
-			if((*opt).war > 0){ fprintf(stderr,":::PRINT-\\n:::\n"); }
-			if((*opt).war > 0){ fprintf(stderr,"  ::BUF_REMAINN:%s:::\n",BUF_HEAD); }
-			BUF_HEAD[BUF_PTR-1] = '\0';
-			BUF_PTR = print_BUF_HEAD(PRINT_TRIG,c,BUF_HEAD,BUF_PRINT,BUF_TMP,&BRK_REMAIN,LIST_LV,(*opt).war);
-			printf("%s","\n");
+			//if((*opt).war > 0){ fprintf(stderr,":::PRINT-\\n:::\n"); }
+			//if((*opt).war > 0){ fprintf(stderr,"::BUF_REMAINN:%s:::\n",BUF_HEAD); }
+			//BUF_PTR = print_BUF_HEAD(PRINT_TRIG,c,BUF_HEAD,BUF_PRINT,BUF_TMP,&BRK_REMAIN,LIST_LV,(*opt).war);
+			//BUF_HEAD[BUF_PTR] = '\0';
+			//printf("%s","\n");
 			LIST_LV = 0;
 			PRINT_TRIG_ACC = 1;
 			PRINT_TRIG = 0;
