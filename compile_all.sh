@@ -125,6 +125,9 @@ mv y.output eesRL.output
 # converter
 echo s2t
 gcc s2t.c -o s2t
+echo s2tR
+gcc s2tR.c -o s2t
+
 echo t2sP
 gcc t2sP.c -o t2sP
 
