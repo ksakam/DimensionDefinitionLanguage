@@ -7,9 +7,6 @@
 // TODO: print simple ARG
 
 // protopype
-int print_BUF_HEAD(int, char, char *, char *, char *, int *, int, int);
-int scan_EMP_BODY(char *, int);
-int search_pos_BRK_S_LAST(char *, int);
 
 struct options {
 	int help;
@@ -131,15 +128,40 @@ int search_pos_BRK_S_FIRST(char *_BUF, int WAR){
 	if(WAR > 2){ fprintf(stderr,"    ::FIRST:%d:::\n",pos); }
 	return(pos);
 }
+int count_BRK_S(char *_BUF, int WAR){
+	int count = 0;
+	int len_BUF = 0;
+	int i;
+	len_BUF = strlen(_BUF);
+	for(i=0;i<len_BUF;i++){
+		if(_BUF[i] == '('){
+			count++;
+		}
+	}
+	return(count);
+}
+int count_BRK_E(char *_BUF, int WAR){
+	int count = 0;
+	int len_BUF = 0;
+	int i;
+	len_BUF = strlen(_BUF);
+	for(i=0;i<len_BUF;i++){
+		if(_BUF[i] == ')'){
+			count++;
+		}
+	}
+	return(count);
+}
 
 int print_BUF_HEAD(int _TRIG, char C, char *_BUF_HEAD, char *_BUF_PRINT, char *_BUF_TMP, int *_BRK_REMAIN, int _LIST_LV, int WAR){
-	int RETURN_LEN = 0;
-	int BUF_LEN = 0;
 	int BUF_HEAD_PTR = 0;
 	int BUF_END_PTR = 0;
+	int BUF_LEN = 0;
 	int EMP_BODY = 0;
 	int BRK_S_LAST = 0;
 	int BRK_S_FIRST = 0;
+	int BRK_S_COUNT = 0;
+	int RETURN_LEN = 0;
 	int i;
 	char *CAR;
 	char *CDR;
@@ -149,9 +171,13 @@ int print_BUF_HEAD(int _TRIG, char C, char *_BUF_HEAD, char *_BUF_PRINT, char *_
 	EMP_BODY = scan_EMP_BODY(_BUF_PRINT,WAR);
 	if(WAR > 0){ fprintf(stderr,"  ::EMP:%d:::\n",EMP_BODY); }
 	BRK_S_LAST = search_pos_BRK_S_LAST(_BUF_PRINT,WAR);
-	if(WAR > 0){ fprintf(stderr,"  ::BRK_S:%d:::\n",BRK_S_LAST); }
+	if(WAR > 0){ fprintf(stderr,"  ::BRK_S_LAST:%d:::\n",BRK_S_LAST); }
 	BRK_S_FIRST = search_pos_BRK_S_FIRST(_BUF_PRINT,WAR);
-	if(C == ','){ //OK?
+	if(WAR > 0){ fprintf(stderr,"  ::BRK_S_FIRST:%d:::\n",BRK_S_FIRST); }
+	BRK_S_COUNT = count_BRK_S(_BUF_PRINT,WAR);
+	if(WAR > 0){ fprintf(stderr,"  ::BRK_S_COUNT:%d:::\n",BRK_S_COUNT); }
+	// print
+	if(C == ','){
 		if(EMP_BODY > 0){
 			if(WAR > 0){ fprintf(stderr,"  ::::",BRK_S_LAST); }
 			printf("%s","(");
@@ -175,6 +201,7 @@ int print_BUF_HEAD(int _TRIG, char C, char *_BUF_HEAD, char *_BUF_PRINT, char *_
 			_BUF_PRINT[0] = '\0';
 			if(WAR > 0){ fprintf(stderr,"::::\n"); }
 		}else{
+			/*
 			if(BRK_S_LAST != -1){
 				printf("%s","(");
 				_BUF_PRINT[BRK_S_LAST] = '\0';
@@ -186,26 +213,25 @@ int print_BUF_HEAD(int _TRIG, char C, char *_BUF_HEAD, char *_BUF_PRINT, char *_
 				_BUF_HEAD[0] = '\0';
 				_BUF_PRINT[0] = '\0';
 			}else{
+			*/
 				printf("%s",_BUF_PRINT);
 				BUF_HEAD_PTR = 0;
 				RETURN_LEN = 0;
 				_BUF_HEAD[0] = '\0';
 				_BUF_PRINT[0] = '\0';
+			/*
 			}
-		}
-	}else if(C == '('){
-		if(EMP_BODY < 1){
-		printf("%s","(");
-		_BUF_PRINT[BRK_S_LAST] = ',';
-		printf("%s",_BUF_PRINT);
-		BUF_HEAD_PTR = 0;
-		RETURN_LEN = 0;
-		_BUF_HEAD[0] = '\0';
-		_BUF_PRINT[0] = '\0';
+ 			*/
 		}
 	}else if(C == ')'){
-		if(WAR > 0){ fprintf(stderr,"::BRK_S_LAST:%d::\n",BRK_S_LAST); }
-		if(BRK_S_LAST > 0){
+		if(BRK_S_COUNT == 0){
+			printf("%s",_BUF_PRINT);
+			BUF_HEAD_PTR = 0;
+			RETURN_LEN = 0;
+			_BUF_HEAD[0] = '\0';
+			_BUF_PRINT[0] = '\0';
+
+		}else if(BRK_S_COUNT == 1){
 			printf("%s","(");
 			_BUF_PRINT[BRK_S_LAST] = ',';
 			printf("%s",_BUF_PRINT);
@@ -213,12 +239,41 @@ int print_BUF_HEAD(int _TRIG, char C, char *_BUF_HEAD, char *_BUF_PRINT, char *_
 			RETURN_LEN = 0;
 			_BUF_HEAD[0] = '\0';
 			_BUF_PRINT[0] = '\0';
+
 		}else{
+			printf("%s","(");
+			_BUF_PRINT[BRK_S_LAST] = ',';
+			for(i=0;i<BUF_LEN;i++){
+				if(_BUF_PRINT[i] == '('){
+					printf("%s",",(");
+				}else{
+					printf("%c",_BUF_PRINT[i]);
+				}
+			}
+			BUF_HEAD_PTR = 0;
+			RETURN_LEN = 0;
+			_BUF_HEAD[0] = '\0';
+			_BUF_PRINT[0] = '\0';
+
+		}
+	}else if(C == '\n'){
+		if(BRK_S_COUNT == 0){
 			printf("%s",_BUF_PRINT);
 			BUF_HEAD_PTR = 0;
 			RETURN_LEN = 0;
 			_BUF_HEAD[0] = '\0';
 			_BUF_PRINT[0] = '\0';
+
+		}else if(BRK_S_COUNT == 1){
+			printf("%s","(");
+			_BUF_PRINT[BRK_S_LAST] = ',';
+			printf("%s",_BUF_PRINT);
+			BUF_HEAD_PTR = 0;
+			RETURN_LEN = 0;
+			_BUF_HEAD[0] = '\0';
+			_BUF_PRINT[0] = '\0';
+
+		}else{
 		}
 	}
 
@@ -303,29 +358,13 @@ int main(int argc, char **argv){
 		if(c == ']'){
 			PRINT_TRIG_ACC++;
 		}
-		if(PRINT_TRIG_ACC > 0 && LIST_LV==1 && c == ','){
+		if(PRINT_TRIG_ACC > 0 && LIST_LV > 0 && c == ','){
 			if((*opt).war > 0){ fprintf(stderr,":::printCASE:1:::\n"); }
 			PRINT_TRIG = 1;
 		}
-		if(PRINT_TRIG_ACC > 0 && LIST_LV==1 && c == '('){
+		if(PRINT_TRIG_ACC > 0 && LIST_LV > 1 && c == ')'){
 			if((*opt).war > 0){ fprintf(stderr,":::printCASE:2:::\n"); }
-			//PRINT_TRIG = 1;
-		}
-		if(PRINT_TRIG_ACC > 0 && LIST_LV!=1 && c == '('){
-			if((*opt).war > 0){ fprintf(stderr,":::printCASE:3:::\n"); }
-			PRINT_TRIG = 1;
-		}
-		if(PRINT_TRIG_ACC > 0 && LIST_LV==0 && c == ')'){
-			if((*opt).war > 0){ fprintf(stderr,":::printCASE:4:::\n"); }
-			PRINT_TRIG = 4;
-		}
-		if(PRINT_TRIG_ACC > 0 && LIST_LV>0 && c == ')'){
-			if((*opt).war > 0){ fprintf(stderr,":::printCASE:5:::\n"); }
-			PRINT_TRIG = 1;
-		}
-
-		if(c == '('){
-			BRK_REMAIN++;
+			PRINT_TRIG = 2;
 		}
 		if((*opt).war > 0){ fprintf(stderr,"-- ::COUNTER:%d:CHAR:%c::\n",COUNT,c); }
 		if((*opt).war > 0){ fprintf(stderr,"::TRIG_ACC:%d:TRIG:%d::\n",PRINT_TRIG_ACC,PRINT_TRIG); }
@@ -334,15 +373,17 @@ int main(int argc, char **argv){
 		BUF_PTR++;
 		BUF_HEAD[BUF_PTR] = '\0';
 		if(PRINT_TRIG > 0){
-			if((*opt).war > 0){ fprintf(stderr,":::PRINT:::\n"); }
+			if((*opt).war > 0){ fprintf(stderr,":::PRINT-TRIG:::\n"); }
 			if((*opt).war > 0){ fprintf(stderr,"  ::BUF_REMAINN:%s:::\n",BUF_HEAD); }
 			BUF_PTR = print_BUF_HEAD(PRINT_TRIG,c,BUF_HEAD,BUF_PRINT,BUF_TMP,&BRK_REMAIN,LIST_LV,(*opt).war);
-			BUF_HEAD[BUF_PTR+1] = '\0';
+			BUF_HEAD[BUF_PTR] = '\0';
 		}
 		if(c == '\n'){
-			if((*opt).war > 0){ fprintf(stderr,":::PRINT:::\n"); }
+			if((*opt).war > 0){ fprintf(stderr,":::PRINT-\\n:::\n"); }
 			if((*opt).war > 0){ fprintf(stderr,"  ::BUF_REMAINN:%s:::\n",BUF_HEAD); }
-			printf("%s",BUF_HEAD);
+			BUF_HEAD[BUF_PTR-1] = '\0';
+			BUF_PTR = print_BUF_HEAD(PRINT_TRIG,c,BUF_HEAD,BUF_PRINT,BUF_TMP,&BRK_REMAIN,LIST_LV,(*opt).war);
+			printf("%s","\n");
 			LIST_LV = 0;
 			PRINT_TRIG_ACC = 1;
 			PRINT_TRIG = 0;
