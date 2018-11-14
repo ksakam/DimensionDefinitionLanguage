@@ -202,19 +202,63 @@ int print_BUF_HEAD(int _TRIG, char C, char *_BUF_HEAD, char *_BUF_PRINT, char *_
 	MAX_BRK_SC = max_BRK_S_C(_BUF_PRINT,WAR);
 	// print
 	if(C == ','){
+		if(BRK_S_COUNT > 0){
+			if(WAR > 0){ fprintf(stderr,"  :::COND:01:::\n"); }
+			if(WAR > 0){ fprintf(stderr,"  :::POUT:"); }
+			_BUF_PRINT[BUF_LEN-1] = '(';
+			for(i=BRK_S_LAST+1;i<BUF_LEN;i++){
+				if(_BUF_PRINT[i] == ')'){
+					printf("(%c",_BUF_PRINT[i]);
+					if(WAR > 0){ fprintf(stderr,"(%c",_BUF_PRINT[i]); }
+				}else{
+					printf("%c",_BUF_PRINT[i]);
+					if(WAR > 0){ fprintf(stderr,"%c",_BUF_PRINT[i]); }
+				}
+			}
+			if(WAR > 0){ fprintf(stderr,":::\n"); }
+			//printf("%s",_BUF_PRINT);
+			BUF_HEAD_PTR = 0;
+			RETURN_LEN = 0;
+			_BUF_HEAD[0] = '\0';
+			_BUF_PRINT[0] = '\0';
+		}else{
+			if(WAR > 0){ fprintf(stderr,"  :::COND:02:::\n"); }
 			printf("%s",_BUF_PRINT);
-			if(WAR > 0){ fprintf(stderr,":::POUT:%s:::\n",_BUF_PRINT); }
-			//BUF_HEAD_PTR = 0;
-			//RETURN_LEN = 0;
-			//_BUF_HEAD[0] = '\0';
-			//_BUF_PRINT[0] = '\0';
+		}
 	}else if(C == '\n'){
+		if(BRK_S_COUNT > 0){
+			int brk_s_print = BRK_S_COUNT;
+			if(WAR > 0){ fprintf(stderr,"  :::COND:03:::\n"); }
+			if(WAR > 0){ fprintf(stderr,"  :::POUT:"); }
+			_BUF_PRINT[BUF_LEN-1] = '\0';	// \n -> \0
+			for(i=BRK_S_LAST+1;i<BUF_LEN;i++){
+				if(_BUF_PRINT[i] == ')' && brk_s_print > 0){
+					printf("(%c",_BUF_PRINT[i]);
+					brk_s_print--;
+					if(WAR > 0){ fprintf(stderr,"(%c",_BUF_PRINT[i]); }
+				}else{
+					printf("%c",_BUF_PRINT[i]);
+					if(WAR > 0){ fprintf(stderr,"%c",_BUF_PRINT[i]); }
+				}
+			}
+			if(WAR > 0){ fprintf(stderr,":::\n"); }
+			//printf("%s",_BUF_PRINT);
+			BUF_HEAD_PTR = 0;
+			RETURN_LEN = 0;
+			_BUF_HEAD[0] = '\0';
+			_BUF_PRINT[0] = '\0';
+
+		}else{
+			if(WAR > 0){ fprintf(stderr,"  :::COND:04:::\n"); }
+			_BUF_PRINT[BUF_LEN-1] = '\0';	// \n -> \0
 			printf("%s",_BUF_PRINT);
-			if(WAR >0){ fprintf(stderr,":::POUT:%s:::\n",_BUF_PRINT); }
-			//BUF_HEAD_PTR = 0;
-			//RETURN_LEN = 0;
-			//_BUF_HEAD[0] = '\0';
-			//_BUF_PRINT[0] = '\0';
+			if(WAR >0){ fprintf(stderr,"  :::POUT:%s:::\n",_BUF_PRINT); }
+			BUF_HEAD_PTR = 0;
+			RETURN_LEN = 0;
+			_BUF_HEAD[0] = '\0';
+			_BUF_PRINT[0] = '\0';
+		}
+		printf("\n");
 
 	}
 	return(RETURN_LEN);
