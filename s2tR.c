@@ -115,6 +115,7 @@ int print_BUF_HEAD(char _TRIG_CHAR, char _PREV_T_CHAR, char _PREV_CHAR, int _TRI
 		if(WAR > 0){ fprintf(stderr,"::LIST_LV:%d:::\n",_LIST_LV); }
 		if(WAR > 0){ fprintf(stderr,"::BRK_R:%d:::\n",*_BRK_REMAIN); }
 		if(WAR > 0){ fprintf(stderr,"::B_LEN:%d:::\n",BUF_LEN); }
+		if(WAR > 0){ fprintf(stderr,"::P_T_CHAR:%c:::\n",_PREV_T_CHAR); }
 		if(WAR > 0){ fprintf(stderr,"::P_CHAR:%c:::\n",_PREV_CHAR); }
 		if(WAR > 0){ fprintf(stderr,"::REMAIN:%s:::\n",_BUF_TMP); }
 		_BUF_TMP[BUF_LEN-1] = '(';	//Be carefull !!
@@ -133,9 +134,10 @@ int print_BUF_HEAD(char _TRIG_CHAR, char _PREV_T_CHAR, char _PREV_CHAR, int _TRI
 		*/
 			//printf("%s",_BUF_TMP+BRK_S_LAST);
 			//if(_PREV_CHAR == ')'){
-			if(_BRK_E_COUNT > 0 && _PREV_T_CHAR != ',' && _PREV_CHAR != ')'){
-				printf("%s",",");
-			}
+			//if(_BRK_E_COUNT > 0 && _PREV_T_CHAR != ',' && _PREV_CHAR != ')'){
+				//printf("%s",",");
+				//printf("%s",",");
+			//}
 			printf("%s",_BUF_TMP+(*_BRK_REMAIN));
 			(*_BRK_REMAIN)--;
 			if(WAR > 0){ fprintf(stderr,"  ::POUT:%s:::\n",_BUF_TMP+(*_BRK_REMAIN)); }
@@ -151,6 +153,7 @@ int print_BUF_HEAD(char _TRIG_CHAR, char _PREV_T_CHAR, char _PREV_CHAR, int _TRI
 			if(WAR > 0){ fprintf(stderr,"::LIST_LV:%d:::\n",_LIST_LV); }
 			if(WAR > 0){ fprintf(stderr,"::BRK_R:%d:::\n",*_BRK_REMAIN); }
 			if(WAR > 0){ fprintf(stderr,"::B_LEN:%d:::\n",BUF_LEN); }
+			if(WAR > 0){ fprintf(stderr,"::P_T_CHAR:%c:::\n",_PREV_T_CHAR); }
 			if(WAR > 0){ fprintf(stderr,"::P_CHAR:%c:::\n",_PREV_CHAR); }
 			if(WAR > 0){ fprintf(stderr,"::REMAIN:%s:::\n",_BUF_TMP); }
 			if(WAR > 0){ fprintf(stderr,"::POUT:%s:::\n",_BUF_TMP); }
