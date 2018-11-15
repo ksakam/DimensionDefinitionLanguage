@@ -127,8 +127,6 @@ echo s2t
 gcc s2t.c -o s2t
 echo s2tR
 gcc s2tR.c -o s2tR
-echo s2tEE
-gcc s2tEE.c -o s2tEE
 
 echo t2s
 gcc t2s.c -o t2s
