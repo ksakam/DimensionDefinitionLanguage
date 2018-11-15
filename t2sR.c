@@ -99,6 +99,27 @@ int scan_EMP_BODY(char *_BUF, int WAR){
 	}
 	return(count);
 }
+int search_pos_EMP_BODY_S_FIRST(char *_BUF, int WAR){
+	//int count = 0;
+	int pos = -1;
+	int len_BUF = 0;
+	char miniBUF[2];
+	int i;
+	len_BUF = strlen(_BUF);
+	miniBUF[0] = '\0';
+	miniBUF[1] = _BUF[0];
+	for(i=1;i<len_BUF;i++){
+		miniBUF[0] = miniBUF[1];
+		miniBUF[1] = _BUF[i];
+		if(miniBUF[0]=='(' && miniBUF[1]==')'){
+			//count++;
+			pos = i-1;
+			break;
+		}
+	}
+	return(pos);
+
+}
 int search_pos_BRK_S_LAST(char *_BUF, int WAR){
 	int pos = -1;
 	int len_BUF = 0;
@@ -158,6 +179,7 @@ int print_BUF_HEAD(int _TRIG, char C, char *_BUF_HEAD, char *_BUF_PRINT, char *_
 	int BUF_END_PTR = 0;
 	int BUF_LEN = 0;
 	int EMP_BODY = 0;
+	int EMP_BODY_S_FIRST = -1;
 	int BRK_S_LAST = 0;
 	int BRK_S_FIRST = 0;
 	int BRK_S_COUNT = 0;
@@ -170,6 +192,8 @@ int print_BUF_HEAD(int _TRIG, char C, char *_BUF_HEAD, char *_BUF_PRINT, char *_
 	BUF_LEN = strlen(_BUF_PRINT);
 	EMP_BODY = scan_EMP_BODY(_BUF_PRINT,WAR);
 	if(WAR > 0){ fprintf(stderr,"  ::EMP:%d:::\n",EMP_BODY); }
+	EMP_BODY_S_FIRST = search_pos_EMP_BODY_S_FIRST(_BUF_PRINT,WAR);
+	if(WAR > 0){ fprintf(stderr,"  ::EMP_S:%d:::\n",EMP_BODY_S_FIRST); }
 	BRK_S_LAST = search_pos_BRK_S_LAST(_BUF_PRINT,WAR);
 	if(WAR > 0){ fprintf(stderr,"  ::BRK_S_LAST:%d:::\n",BRK_S_LAST); }
 	BRK_S_FIRST = search_pos_BRK_S_FIRST(_BUF_PRINT,WAR);
@@ -254,7 +278,7 @@ int print_BUF_HEAD(int _TRIG, char C, char *_BUF_HEAD, char *_BUF_PRINT, char *_
 			*/
 
 		}else{
-			if(WAR > 0){ fprintf(stderr,"  :::COND:03:::\n"); }
+			if(WAR > 0){ fprintf(stderr,"  :::COND:08:::\n"); }
 			/*
 			if(BRK_S_LAST != -1){
 				printf("%s","(");
@@ -279,11 +303,11 @@ int print_BUF_HEAD(int _TRIG, char C, char *_BUF_HEAD, char *_BUF_PRINT, char *_
 		}
 	}else if(C == ')'){
 		if(EMP_BODY > 0){
-			if(WAR > 0){ fprintf(stderr,"  :::COND:04:::\n"); }
+			if(WAR > 0){ fprintf(stderr,"  :::COND:09:::\n"); }
 			RETURN_LEN = BUF_LEN;
 		}else{
 			if(BRK_S_COUNT == 0){
-				if(WAR > 0){ fprintf(stderr,"  :::COND:05:::\n"); }
+				if(WAR > 0){ fprintf(stderr,"  :::COND:10:::\n"); }
 				printf("%s",_BUF_PRINT);
 				BUF_HEAD_PTR = 0;
 				RETURN_LEN = 0;
@@ -291,7 +315,7 @@ int print_BUF_HEAD(int _TRIG, char C, char *_BUF_HEAD, char *_BUF_PRINT, char *_
 				_BUF_PRINT[0] = '\0';
 	
 			}else if(BRK_S_COUNT == 1){
-				if(WAR > 0){ fprintf(stderr,"  :::COND:06:::\n"); }
+				if(WAR > 0){ fprintf(stderr,"  :::COND:11:::\n"); }
 				printf("%s","(");
 				_BUF_PRINT[BRK_S_LAST] = ',';
 				printf("%s",_BUF_PRINT);
@@ -301,7 +325,7 @@ int print_BUF_HEAD(int _TRIG, char C, char *_BUF_HEAD, char *_BUF_PRINT, char *_
 				_BUF_PRINT[0] = '\0';
 	
 			}else{
-				if(WAR > 0){ fprintf(stderr,"  :::COND:07:::\n"); }
+				if(WAR > 0){ fprintf(stderr,"  :::COND:12:::\n"); }
 				printf("%s","(");
 				_BUF_PRINT[BRK_S_LAST] = ',';
 				for(i=0;i<BUF_LEN;i++){
@@ -319,17 +343,52 @@ int print_BUF_HEAD(int _TRIG, char C, char *_BUF_HEAD, char *_BUF_PRINT, char *_
 			}
 		}
 	}else if(C == '\n'){
-		if(EMP_BODY > 0){
-			if(WAR > 0){ fprintf(stderr,"  :::COND:08:::\n"); }
-			if(WAR > 0){ fprintf(stderr,"  ::::",BRK_S_LAST); }
+		if(EMP_BODY > 0 && BRK_S_FIRST < EMP_BODY_S_FIRST){
+			if(WAR > 0){ fprintf(stderr,"  :::COND:13:::\n"); }
+			if(WAR > 0){ fprintf(stderr,"  :::BUF_in_print:%s:::\n",_BUF_PRINT); }
 			printf("%s","(");
+			for(i=0;i<BRK_S_FIRST;i++){
+				printf("%c",_BUF_PRINT[i]);
+			}
+			printf("%s",",");
 			if(WAR > 0){ fprintf(stderr,":%s","("); }
 			for(i=0;i<EMP_BODY;i++){
 				printf("%s","(");
 				if(WAR > 0){ fprintf(stderr,":%s","("); }
 			}
+			//_BUF_PRINT[BRK_S_FIRST] = '\0';
+			_BUF_PRINT[BRK_S_FIRST+i] = '\0';
+			//printf("%s",_BUF_PRINT);
+			printf("%s",_BUF_PRINT+BRK_S_FIRST);
+			if(WAR > 0){ fprintf(stderr,":%s",_BUF_PRINT); }
+			for(i=0;i<EMP_BODY;i++){
+				printf("%s",")");
+			}
+			_BUF_PRINT[BRK_S_LAST] = ',';
+			printf("%s",_BUF_PRINT+BRK_S_LAST);
+			if(WAR > 0){ fprintf(stderr,":%s",_BUF_PRINT+BRK_S_LAST); }
+			BUF_HEAD_PTR = 0;
+			RETURN_LEN = 0;
+			_BUF_HEAD[0] = '\0';
+			_BUF_PRINT[0] = '\0';
+			if(WAR > 0){ fprintf(stderr,"::::\n"); }
+		}else if(EMP_BODY > 0 && BRK_S_FIRST >= EMP_BODY_S_FIRST){
+			if(WAR > 0){ fprintf(stderr,"  :::COND:14:::\n"); }
+			if(WAR > 0){ fprintf(stderr,"  :::BUF_in_print:%s:::\n",_BUF_PRINT); }
+			printf("%s","(");
+			//for(i=0;i<BRK_S_FIRST;i++){
+			//	printf("%c",_BUF_PRINT[i]);
+			//}
+			//printf("%s",",");
+			if(WAR > 0){ fprintf(stderr,":%s","("); }
+			for(i=0;i<EMP_BODY;i++){
+				printf("%s","(");
+				if(WAR > 0){ fprintf(stderr,":%s","("); }
+			}
+			//_BUF_PRINT[BRK_S_FIRST+i] = '\0';
 			_BUF_PRINT[BRK_S_FIRST] = '\0';
-			 printf("%s",_BUF_PRINT);
+			printf("%s",_BUF_PRINT);
+			printf("%s",_BUF_PRINT+BRK_S_FIRST);
 			if(WAR > 0){ fprintf(stderr,":%s",_BUF_PRINT); }
 			for(i=0;i<EMP_BODY;i++){
 				printf("%s",")");
@@ -345,6 +404,7 @@ int print_BUF_HEAD(int _TRIG, char C, char *_BUF_HEAD, char *_BUF_PRINT, char *_
 
 		}else{
 			if(BRK_S_COUNT == 0){
+			if(WAR > 0){ fprintf(stderr,"  :::COND:15:::\n"); }
 				printf("%s",_BUF_PRINT);
 				BUF_HEAD_PTR = 0;
 				RETURN_LEN = 0;
@@ -352,6 +412,7 @@ int print_BUF_HEAD(int _TRIG, char C, char *_BUF_HEAD, char *_BUF_PRINT, char *_
 				_BUF_PRINT[0] = '\0';
 	
 			}else if(BRK_S_COUNT == 1){
+			if(WAR > 0){ fprintf(stderr,"  :::COND:16:::\n"); }
 				printf("%s","(");
 				_BUF_PRINT[BRK_S_LAST] = ',';
 				printf("%s",_BUF_PRINT);
@@ -361,6 +422,7 @@ int print_BUF_HEAD(int _TRIG, char C, char *_BUF_HEAD, char *_BUF_PRINT, char *_
 				_BUF_PRINT[0] = '\0';
 	
 			}else{
+			if(WAR > 0){ fprintf(stderr,"  :::COND:17:::\n"); }
 				printf("%s","(");
 				_BUF_PRINT[BRK_S_LAST] = ',';
 				for(i=0;i<BUF_LEN;i++){
