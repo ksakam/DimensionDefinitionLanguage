@@ -99,7 +99,7 @@ int search_pos_BRK_S_LAST(char *_BUF, int WAR){
 }
 
 
-int print_BUF_HEAD(char _TRIG_CHAR, char _PREV_CHAR, int _TRIG, int _BRK_E_COUNT, char *_BUF_HEAD, int *_SHLINK_POS, char *_BUF_TMP, int *_BRK_REMAIN, int _LIST_LV, int WAR){
+int print_BUF_HEAD(char _TRIG_CHAR, char _PREV_T_CHAR, char _PREV_CHAR, int _TRIG, int _BRK_E_COUNT, char *_BUF_HEAD, int *_SHLINK_POS, char *_BUF_TMP, int *_BRK_REMAIN, int _LIST_LV, int WAR){
 	int RETURN_LEN = 0;
 	int BUF_LEN = 0;
 	int COPY_S_PTR = 0;
@@ -133,7 +133,7 @@ int print_BUF_HEAD(char _TRIG_CHAR, char _PREV_CHAR, int _TRIG, int _BRK_E_COUNT
 		*/
 			//printf("%s",_BUF_TMP+BRK_S_LAST);
 			//if(_PREV_CHAR == ')'){
-			if(_BRK_E_COUNT > 0 && _PREV_CHAR != ','){
+			if(_BRK_E_COUNT > 0 && _PREV_T_CHAR != ',' && _PREV_CHAR != ')'){
 				printf("%s",",");
 			}
 			printf("%s",_BUF_TMP+(*_BRK_REMAIN));
@@ -326,7 +326,7 @@ int main(int argc, char **argv){
 		BUF_PTR++;
 		BUF_HEAD[BUF_PTR] = '\0';
 		if(PRINT_TRIG > 0){
-			BUF_PTR = print_BUF_HEAD(TRIG_CHAR,PREV_T_CHAR,PRINT_TRIG,BRK_E_COUNT,BUF_HEAD,SHLINK_POS,BUF_TMP,&BRK_REMAIN,LIST_LV,(*opt).war);
+			BUF_PTR = print_BUF_HEAD(TRIG_CHAR,PREV_T_CHAR,PREV_CHAR,PRINT_TRIG,BRK_E_COUNT,BUF_HEAD,SHLINK_POS,BUF_TMP,&BRK_REMAIN,LIST_LV,(*opt).war);
 			//BUF_HEAD[BUF_PTR+1] = '\0';
 			BUF_HEAD[BUF_PTR] = '\0';
 			PREV_T_CHAR = c;
@@ -346,7 +346,7 @@ int main(int argc, char **argv){
 			BRK_E_COUNT = 0;
 			if((*opt).war > 0){ fprintf(stderr,"\n"); }
 		}
-	PREV_CHAR = c;	
+		PREV_CHAR = c;	
 	}
 
 	// close file
