@@ -109,7 +109,7 @@ int print_BUF_HEAD(char _TRIG_CHAR, char _PREV_CHAR, int _TRIG, int _BRK_E_COUNT
 	strcpy(_BUF_TMP,_BUF_HEAD);
 	BUF_LEN = strlen(_BUF_TMP);
 	BRK_S_LAST =  search_pos_BRK_S_LAST(_BUF_HEAD,WAR);
-	if(WAR > 0){ fprintf(stderr," - TRIG:%d:C%c - \n",_TRIG,_TRIG_CHAR); }
+	if(WAR > 0){ fprintf(stderr," - TRIG:%d:C:%c - \n",_TRIG,_TRIG_CHAR); }
 	if(_BUF_HEAD[BUF_LEN-1] == ',' && _BUF_HEAD[0] == '('){
 		if(WAR > 0){ fprintf(stderr," -- CASE:1 -- \n"); }
 		if(WAR > 0){ fprintf(stderr,"::LIST_LV:%d:::\n",_LIST_LV); }
@@ -133,7 +133,7 @@ int print_BUF_HEAD(char _TRIG_CHAR, char _PREV_CHAR, int _TRIG, int _BRK_E_COUNT
 		*/
 			//printf("%s",_BUF_TMP+BRK_S_LAST);
 			//if(_PREV_CHAR == ')'){
-			if(_BRK_E_COUNT > 0){
+			if(_BRK_E_COUNT > 0 && _PREV_CHAR != ','){
 				printf("%s",",");
 			}
 			printf("%s",_BUF_TMP+(*_BRK_REMAIN));
