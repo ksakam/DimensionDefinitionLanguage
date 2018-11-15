@@ -1,0 +1,6 @@
+#S2T
+cat test.s test.es test.ees testPF.s | ./ees
+cat test.s test.es test.ees | ./s2tR in=/dev/stdin | ./eet
+#T2S
+cat test.t test.et test.eet testPF.t| ./eet
+
