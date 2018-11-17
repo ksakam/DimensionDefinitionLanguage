@@ -89,40 +89,46 @@ void check_options(struct options *opt){
 int print_CHAR(FILE *_IN, int *_DLM_ACC, int WAR){
 	int RC = 0;
 	int C;
+	int DLM_ACC = 1;;
 	int ARG_COUNT = 0;
-	C = fgetc(_IN);
+	while(C = fgetc(_IN)){
 
-	if(C == '['){
-		(*_DLM_ACC)--;
-	}
-	if(C == ']'){
-		(*_DLM_ACC)++;
-	}
-	if(C == ',' && (*_DLM_ACC) > 0){
-		ARG_COUNT++;
-	}
-	if(WAR > 0){ fprintf(stderr,"\n:::DLM:%d::ARG:%d:::",*_DLM_ACC,ARG_COUNT); }
-
-	if(C == '('){
-		//printf("\n  :::R:::");
-		//putchar(C);
-		RC = print_CHAR(_IN,_DLM_ACC,WAR);
-	}else if(C == ','){
-		if(*_DLM_ACC <= 0){
-			//putchar('(');
-			putchar(C);
-		}else if(*_DLM_ACC > 0){
-			putchar('(');
+		if(C == '['){
+			DLM_ACC--;
 		}
-	}else if(C == ')'){
-		putchar(C);
-		return(C);
-	}else if(C == EOF){
-		return(C);
-	}else{
-		putchar(C);
-	}
+		if(C == ']'){
+			DLM_ACC++;
+		}
+		if(C == ',' && DLM_ACC > 0){
+			ARG_COUNT++;
+		}
+		if(WAR > 0){ fprintf(stderr,"\n:::DLM:%d::ARG:%d:::C:%c:::",DLM_ACC,ARG_COUNT,C); }
+	
+		if(C == '('){
+			//printf("\n  :::R:::");
+			//putchar(C);
+			if(WAR > 0){ fprintf(stderr,"\n  :::+R:::"); }
+			RC = print_CHAR(_IN,_DLM_ACC,WAR);
+		}else if(C == ','){
+			if(DLM_ACC <= 0){
+				//putchar('(');
+				putchar(C);
+			}else if(DLM_ACC > 0 && ARG_COUNT <= 1){
+				putchar('(');
+			}else{
+				putchar(C);
+			}
+		}else if(C == ')'){
+			putchar(C);
+			if(WAR > 0){ fprintf(stderr,"\n  :::-R:::"); }
+			return(C);
+		}else if(C == EOF){
+			return(C);
+		}else{
+			putchar(C);
+		}
 	//return(C);
+	}
 }
 
 
