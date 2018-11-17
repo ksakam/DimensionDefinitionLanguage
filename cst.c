@@ -85,7 +85,7 @@ void check_options(struct options *opt){
 
 // function definition
 
-int print_CHAR(FILE *_IN, int *_DLM_ACC, int *_R_COUNT, int *_BRK_REMAIN, int WAR){
+int print_CHAR(FILE *_IN, int *_LIST_LV, int *_DLM_ACC, int *_R_COUNT, int *_BRK_REMAIN, int WAR){
 	int RC = 0;
 	int C;
 	int DLM_ACC = 1;;
@@ -101,6 +101,12 @@ int print_CHAR(FILE *_IN, int *_DLM_ACC, int *_R_COUNT, int *_BRK_REMAIN, int WA
 		if(C == ',' && DLM_ACC > 0){
 			ARG_COUNT++;
 		}
+		if(C == '('){
+			(*_LIST_LV)++;
+		}
+		if(C == ')'){
+			(*_LIST_LV)--;
+		}
 	
 		if(C == '('){
 			//printf("\n  :::R:::");
@@ -110,40 +116,43 @@ int print_CHAR(FILE *_IN, int *_DLM_ACC, int *_R_COUNT, int *_BRK_REMAIN, int WA
 			//if(ARG_COUNT == 0){
 				(*_BRK_REMAIN)++;
 			//}
-			if(WAR > 0){ fprintf(stderr,"\n:::DLM:%d::ARG:%d:::R:%d:::BRK:%d:::C:%c:::",DLM_ACC,ARG_COUNT,*_R_COUNT,*_BRK_REMAIN,C); }
-			RC = print_CHAR(_IN,_DLM_ACC,_R_COUNT,_BRK_REMAIN,WAR);
+			if(WAR > 0){ fprintf(stderr,"\n:::LV:%d:::DLM:%d::ARG:%d:::R:%d:::BRK:%d:::C:%c:::",*_LIST_LV,DLM_ACC,ARG_COUNT,*_R_COUNT,*_BRK_REMAIN,C); }
+			RC = print_CHAR(_IN,_LIST_LV,_DLM_ACC,_R_COUNT,_BRK_REMAIN,WAR);
 		}else if(C == ','){
 			if(DLM_ACC <= 0){
 				//putchar('(');
-				if(WAR > 0){ fprintf(stderr,"\n:::DLM:%d::ARG:%d:::R:%d:::BRK:%d:::C:%c:::",DLM_ACC,ARG_COUNT,*_R_COUNT,*_BRK_REMAIN,C); }
+				if(WAR > 0){ fprintf(stderr,"\n:::LV:%d:::DLM:%d::ARG:%d:::R:%d:::BRK:%d:::C:%c:::",*_LIST_LV,DLM_ACC,ARG_COUNT,*_R_COUNT,*_BRK_REMAIN,C); }
 				putchar(C);
 			}else if(DLM_ACC > 0 && ARG_COUNT <= 1){
-				if(WAR > 0){ fprintf(stderr,"\n:::DLM:%d::ARG:%d:::R:%d:::BRK:%d:::C:%c:::",DLM_ACC,ARG_COUNT,*_R_COUNT,*_BRK_REMAIN,C); }
+				if(WAR > 0){ fprintf(stderr,"\n:::LV:%d:::DLM:%d::ARG:%d:::R:%d:::BRK:%d:::C:%c:::",*_LIST_LV,DLM_ACC,ARG_COUNT,*_R_COUNT,*_BRK_REMAIN,C); }
 				putchar('(');
 				(*_BRK_REMAIN)--;
 			}else{
-				if(WAR > 0){ fprintf(stderr,"\n:::DLM:%d::ARG:%d:::R:%d:::BRK:%d:::C:%c:::",DLM_ACC,ARG_COUNT,*_R_COUNT,*_BRK_REMAIN,C); }
+				if(WAR > 0){ fprintf(stderr,"\n:::LV:%d:::DLM:%d::ARG:%d:::R:%d:::BRK:%d:::C:%c:::",*_LIST_LV,DLM_ACC,ARG_COUNT,*_R_COUNT,*_BRK_REMAIN,C); }
 				putchar(C);
 			}
 		}else if(C == ')'){
-			if(WAR > 0){ fprintf(stderr,"\n:::DLM:%d::ARG:%d:::R:%d:::BRK:%d:::C:%c:::",DLM_ACC,ARG_COUNT,*_R_COUNT,*_BRK_REMAIN,C); }
-			if(*_BRK_REMAIN > 0){
+			if(*_BRK_REMAIN > 0 && ARG_COUNT == 0){
+			//if(*_BRK_REMAIN > 0){
 				putchar('(');
 				(*_BRK_REMAIN)--;
 			}
+			if(WAR > 0){ fprintf(stderr,"\n:::LV:%d:::DLM:%d::ARG:%d:::R:%d:::BRK:%d:::C:%c:::",*_LIST_LV,DLM_ACC,ARG_COUNT,*_R_COUNT,*_BRK_REMAIN,C); }
 			putchar(C);
 			if(WAR > 0){ fprintf(stderr,"\n  :::-R:::"); }
 			(*_R_COUNT)++;
 			return(C);
 		}else if(C == '\n'){
-			if(WAR > 0){ fprintf(stderr,"\n:::DLM:%d::ARG:%d:::R:%d:::BRK:%d:::C:%c:::",DLM_ACC,ARG_COUNT,*_R_COUNT,*_BRK_REMAIN,C); }
 			putchar(C);
+			(*_R_COUNT) = 0;
+			if(WAR > 0){ fprintf(stderr,"\n -EOL- :::LV:%d:::DLM:%d::ARG:%d:::R:%d:::BRK:%d:::C:%c:::",*_LIST_LV,DLM_ACC,ARG_COUNT,*_R_COUNT,*_BRK_REMAIN,C); }
+			return(C);
 		}else if(C == EOF){
 			(*_R_COUNT)++;
-			if(WAR > 0){ fprintf(stderr,"\n:::DLM:%d::ARG:%d:::R:%d:::BRK:%d:::C:%c:::",DLM_ACC,ARG_COUNT,*_R_COUNT,*_BRK_REMAIN,C); }
+			if(WAR > 0){ fprintf(stderr,"\n:::LV:%d:::DLM:%d::ARG:%d:::R:%d:::BRK:%d:::C:%c:::",*_LIST_LV,DLM_ACC,ARG_COUNT,*_R_COUNT,*_BRK_REMAIN,C); }
 			return(C);
 		}else{
-			if(WAR > 0){ fprintf(stderr,"\n:::DLM:%d::ARG:%d:::R:%d:::BRK:%d:::C:%c:::",DLM_ACC,ARG_COUNT,*_R_COUNT,*_BRK_REMAIN,C); }
+			if(WAR > 0){ fprintf(stderr,"\n:::LV:%d:::DLM:%d::ARG:%d:::R:%d:::BRK:%d:::C:%c:::",*_LIST_LV,DLM_ACC,ARG_COUNT,*_R_COUNT,*_BRK_REMAIN,C); }
 			putchar(C);
 		}
 	//return(C);
@@ -191,9 +200,10 @@ int main(int argc, char **argv){
 	int DLM_ACC = 1;
 	int R_COUNT = 0;
 	int BRK_REMAIN = 0;
+	int LIST_LV = 0;
 	while(c != EOF){
 	//while((c = fgetc(IN)) != EOF){
-		c = print_CHAR(IN,&DLM_ACC,&R_COUNT,&BRK_REMAIN,(*opt).war);
+		c = print_CHAR(IN,&LIST_LV,&DLM_ACC,&R_COUNT,&BRK_REMAIN,(*opt).war);
 	
 	}
 
