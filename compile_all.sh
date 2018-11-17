@@ -123,16 +123,18 @@ mv a.out eesRL
 mv y.output eesRL.output
 
 # converter
+##S2T
 echo s2t
 gcc s2t.c -o s2t
 echo s2tR
 gcc s2tR.c -o s2tR
-
+echo cst
+gcc cst.c -o cst
+echo cstR
+gcc cstR.c -o cstR
+##T2S
 echo t2s
 gcc t2s.c -o t2s
-
 echo t2sR
 gcc t2sR.c -o t2sR
 
-echo cstR
-gcc cstR.c -o cstR
