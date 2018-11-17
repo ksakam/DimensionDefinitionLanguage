@@ -120,17 +120,18 @@ int print_CHAR(FILE *_IN, int *_DLM_ACC, int *_R_COUNT, int *_BRK_REMAIN, int WA
 			}else if(DLM_ACC > 0 && ARG_COUNT <= 1){
 				if(WAR > 0){ fprintf(stderr,"\n:::DLM:%d::ARG:%d:::R:%d:::BRK:%d:::C:%c:::",DLM_ACC,ARG_COUNT,*_R_COUNT,*_BRK_REMAIN,C); }
 				putchar('(');
+				(*_BRK_REMAIN)--;
 			}else{
 				if(WAR > 0){ fprintf(stderr,"\n:::DLM:%d::ARG:%d:::R:%d:::BRK:%d:::C:%c:::",DLM_ACC,ARG_COUNT,*_R_COUNT,*_BRK_REMAIN,C); }
 				putchar(C);
 			}
 		}else if(C == ')'){
 			if(WAR > 0){ fprintf(stderr,"\n:::DLM:%d::ARG:%d:::R:%d:::BRK:%d:::C:%c:::",DLM_ACC,ARG_COUNT,*_R_COUNT,*_BRK_REMAIN,C); }
-			if(*_BRK_REMAIN > 1){
+			if(*_BRK_REMAIN > 0){
 				putchar('(');
+				(*_BRK_REMAIN)--;
 			}
 			putchar(C);
-			(*_BRK_REMAIN)--;
 			if(WAR > 0){ fprintf(stderr,"\n  :::-R:::"); }
 			(*_R_COUNT)++;
 			return(C);
