@@ -134,4 +134,5 @@ gcc t2s.c -o t2s
 echo t2sR
 gcc t2sR.c -o t2sR
 
-
+echo cstR
+gcc cstR.c -o cstR
