@@ -31,6 +31,7 @@ void help(void){
 void status(void){
 	printf("STATUS:\n");
 	printf(" bug to operate empty-body.\n");
+	printf(" bug to operate pure-function.\n");
 }
 
 struct options *alloc_options(void){
