@@ -30,7 +30,7 @@ void help(void){
 
 void status(void){
 	printf("STATUS:\n");
-	printf(" To be reconstruct.\n");
+	printf(" bug to operate empty-body.\n");
 }
 
 struct options *alloc_options(void){
