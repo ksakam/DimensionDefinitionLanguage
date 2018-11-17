@@ -111,12 +111,12 @@ int print_CHAR(FILE *_IN, int *_LIST_LV, int *_DLM_ACC, int *_R_COUNT, int *_BRK
 		if(C == '('){
 			//printf("\n  :::R:::");
 			//putchar(C);
-			if(WAR > 0){ fprintf(stderr,"\n  :::+R:::"); }
-			(*_R_COUNT)++;
 			//if(ARG_COUNT == 0){
-				(*_BRK_REMAIN)++;
+			(*_BRK_REMAIN)++;
 			//}
 			if(WAR > 0){ fprintf(stderr,"\n:::LV:%d:::DLM:%d::ARG:%d:::R:%d:::BRK:%d:::C:%c:::",*_LIST_LV,DLM_ACC,ARG_COUNT,*_R_COUNT,*_BRK_REMAIN,C); }
+			if(WAR > 0){ fprintf(stderr,"\n  :::+R:::"); }
+			(*_R_COUNT)++;
 			RC = print_CHAR(_IN,_LIST_LV,_DLM_ACC,_R_COUNT,_BRK_REMAIN,WAR);
 		}else if(C == ','){
 			if(DLM_ACC <= 0){
@@ -140,16 +140,16 @@ int print_CHAR(FILE *_IN, int *_LIST_LV, int *_DLM_ACC, int *_R_COUNT, int *_BRK
 			if(WAR > 0){ fprintf(stderr,"\n:::LV:%d:::DLM:%d::ARG:%d:::R:%d:::BRK:%d:::C:%c:::",*_LIST_LV,DLM_ACC,ARG_COUNT,*_R_COUNT,*_BRK_REMAIN,C); }
 			putchar(C);
 			if(WAR > 0){ fprintf(stderr,"\n  :::-R:::"); }
-			(*_R_COUNT)++;
+			(*_R_COUNT)--;
 			return(C);
 		}else if(C == '\n'){
 			putchar(C);
-			(*_R_COUNT) = 0;
 			if(WAR > 0){ fprintf(stderr,"\n -EOL- :::LV:%d:::DLM:%d::ARG:%d:::R:%d:::BRK:%d:::C:%c:::",*_LIST_LV,DLM_ACC,ARG_COUNT,*_R_COUNT,*_BRK_REMAIN,C); }
+			(*_R_COUNT) = 0;
 			return(C);
 		}else if(C == EOF){
-			(*_R_COUNT)++;
 			if(WAR > 0){ fprintf(stderr,"\n:::LV:%d:::DLM:%d::ARG:%d:::R:%d:::BRK:%d:::C:%c:::",*_LIST_LV,DLM_ACC,ARG_COUNT,*_R_COUNT,*_BRK_REMAIN,C); }
+			(*_R_COUNT)--;
 			return(C);
 		}else{
 			if(WAR > 0){ fprintf(stderr,"\n:::LV:%d:::DLM:%d::ARG:%d:::R:%d:::BRK:%d:::C:%c:::",*_LIST_LV,DLM_ACC,ARG_COUNT,*_R_COUNT,*_BRK_REMAIN,C); }
