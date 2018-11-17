@@ -88,7 +88,7 @@ void check_options(struct options *opt){
 int print_CHAR(FILE *_IN, int *_LIST_LV, int *_DLM_ACC, int *_R_COUNT, int *_BRK_REMAIN, int WAR){
 	int RC = 0;
 	int C;
-	int DLM_ACC = 1;;
+	int DLM_ACC = 1;
 	int ARG_COUNT = 0;
 	while(C = fgetc(_IN)){
 
