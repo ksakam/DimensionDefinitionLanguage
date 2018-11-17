@@ -9,7 +9,6 @@
 #ifndef min
 #define min(a,b) (((a)<(b))?(a):(b))
 #endif
-//  UNDER CONSTRUCTION
 
 struct options {
 	int help;
@@ -22,7 +21,7 @@ struct options {
 
 void help(void){
 	printf("USAGE:\n");
-	printf(" s2t [-h] [-s] [-c] buff=<size(int)> in=<input file> w=<print warnning>.\n");
+	printf(" cstR [-h] [-s] [-c] buff=<size(int)> in=<input file> w=<print warnning>.\n");
 	printf("  -h : help.\n");
 	printf("  -s : stat.\n");
 	printf("  -c : check args.\n");
@@ -33,7 +32,7 @@ void help(void){
 
 void status(void){
 	printf("STATUS:\n");
-	printf(" To be reconstruct.\n");
+	printf(" Testing.\n");
 }
 
 struct options *alloc_options(void){
@@ -122,6 +121,8 @@ int print_CHAR(FILE *_IN, int *_DLM_ACC, int WAR){
 			putchar(C);
 			if(WAR > 0){ fprintf(stderr,"\n  :::-R:::"); }
 			return(C);
+		}else if(C == '\n'){
+			putchar(C);
 		}else if(C == EOF){
 			return(C);
 		}else{
