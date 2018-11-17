@@ -122,7 +122,7 @@ int print_CHAR(FILE *_IN, int *_DLM_ACC, int WAR){
 			if(WAR > 0){ fprintf(stderr,"\n  :::-R:::"); }
 			return(C);
 		}else if(C == '\n'){
-			;
+			putchar(C);
 		}else if(C == EOF){
 			return(C);
 		}else{
