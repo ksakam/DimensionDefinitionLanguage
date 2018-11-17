@@ -35,6 +35,7 @@ list
 
 func
 	: arg
+	| LIST
 	| FUNC_S func FUNC_E
 	| func LIST func
 	| func func
