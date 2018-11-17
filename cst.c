@@ -107,9 +107,9 @@ int print_CHAR(FILE *_IN, int *_DLM_ACC, int *_R_COUNT, int *_BRK_REMAIN, int WA
 			//putchar(C);
 			if(WAR > 0){ fprintf(stderr,"\n  :::+R:::"); }
 			(*_R_COUNT)++;
-			if(ARG_COUNT == 0){
+			//if(ARG_COUNT == 0){
 				(*_BRK_REMAIN)++;
-			}
+			//}
 			if(WAR > 0){ fprintf(stderr,"\n:::DLM:%d::ARG:%d:::R:%d:::BRK:%d:::C:%c:::",DLM_ACC,ARG_COUNT,*_R_COUNT,*_BRK_REMAIN,C); }
 			RC = print_CHAR(_IN,_DLM_ACC,_R_COUNT,_BRK_REMAIN,WAR);
 		}else if(C == ','){
