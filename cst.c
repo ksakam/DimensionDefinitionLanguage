@@ -21,7 +21,7 @@ struct options {
 
 void help(void){
 	printf("USAGE:\n");
-	printf(" cstR [-h] [-s] [-c] buff=<size(int)> in=<input file> w=<print warnning>.\n");
+	printf(" cst [-h] [-s] [-c] buff=<size(int)> in=<input file> w=<print warnning>.\n");
 	printf("  -h : help.\n");
 	printf("  -s : stat.\n");
 	printf("  -c : check args.\n");
