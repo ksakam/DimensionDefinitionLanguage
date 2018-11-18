@@ -204,11 +204,31 @@ int print_BUF_HEAD(int _TRIG, char C, char *_BUF_HEAD, char *_BUF_PRINT, char *_
 	// print
 	if(C == ','){
 		if(WAR > 0){ fprintf(stderr,"  ::BUF:%s:::\n",_BUF_PRINT); }
+		for(i=0;i<BRK_S_COUNT;i++){
+			putchar('(');
+		}
+		for(i=0;i<BUF_LEN;i++){
+			if(_BUF_PRINT[i] == '('){
+				printf("%c",',');
+			}else{
+				printf("%c",_BUF_PRINT[i]);
+			}
+		}
 		_BUF_PRINT[0] = '\0';
 		_BUF_HEAD[0] = '\0';
 		RETURN_LEN = 0;
 	}else if(C == '\n'){
 		if(WAR > 0){ fprintf(stderr,"  ::BUF:%s:::\n",_BUF_PRINT); }
+		for(i=0;i<BRK_S_COUNT;i++){
+			putchar('(');
+		}
+		for(i=0;i<BUF_LEN;i++){
+			if(_BUF_PRINT[i] == '('){
+				printf("%c",',');
+			}else{
+				printf("%c",_BUF_PRINT[i]);
+			}
+		}
 		_BUF_PRINT[0] = '\0';
 		_BUF_HEAD[0] = '\0';
 		RETURN_LEN = 0;
