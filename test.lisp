@@ -1,1 +1,2 @@
-(b c)
+#!/usr/bin/lisp -batch
+'(b c)
