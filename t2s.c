@@ -175,10 +175,11 @@ int count_BRK_E(char *_BUF, int WAR){
 	return(count);
 }
 
-int print_BUF_HEAD(int _TRIG, char C, char *_BUF_HEAD, char *_BUF_PRINT, char *_BUF_TMP, int *_BRK_REMAIN, int _LIST_LV, char *BUF_OUT, int WAR){
+int print_BUF_HEAD(int _TRIG, char C, char *_BUF_HEAD, char *_BUF_PRINT, char *_BUF_TMP, int *_BRK_REMAIN, int _LIST_LV, char *_BUF_OUT, int WAR){
 	int BUF_HEAD_PTR = 0;
 	int BUF_END_PTR = 0;
 	int BUF_LEN = 0;
+	int BUF_OUT_LEN = 0;
 	int EMP_BODY = 0;
 	int EMP_BODY_S_FIRST = -1;
 	int BRK_S_LAST = 0;
@@ -191,6 +192,7 @@ int print_BUF_HEAD(int _TRIG, char C, char *_BUF_HEAD, char *_BUF_PRINT, char *_
 	_BUF_PRINT[0] = '\0';
 	strcpy(_BUF_PRINT,_BUF_HEAD);
 	BUF_LEN = strlen(_BUF_PRINT);
+	BUF_OUT_LEN = strlen(_BUF_OUT);
 	EMP_BODY = scan_EMP_BODY(_BUF_PRINT,WAR);
 	//if(WAR > 0){ fprintf(stderr,"  ::EMP:%d:::\n",EMP_BODY); }
 	EMP_BODY_S_FIRST = search_pos_EMP_BODY_S_FIRST(_BUF_PRINT,WAR);
