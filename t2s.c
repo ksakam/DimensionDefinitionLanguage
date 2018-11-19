@@ -175,7 +175,7 @@ int count_BRK_E(char *_BUF, int WAR){
 	return(count);
 }
 
-int print_BUF_HEAD(int _TRIG, char C, char *_BUF_HEAD, char *_BUF_PRINT, char *_BUF_TMP, int *_BRK_REMAIN, int _LIST_LV, int WAR){
+int print_BUF_HEAD(int _TRIG, char C, char *_BUF_HEAD, char *_BUF_PRINT, char *_BUF_TMP, int *_BRK_REMAIN, int _LIST_LV, char *BUF_OUT, int WAR){
 	int BUF_HEAD_PTR = 0;
 	int BUF_END_PTR = 0;
 	int BUF_LEN = 0;
@@ -192,7 +192,7 @@ int print_BUF_HEAD(int _TRIG, char C, char *_BUF_HEAD, char *_BUF_PRINT, char *_
 	strcpy(_BUF_PRINT,_BUF_HEAD);
 	BUF_LEN = strlen(_BUF_PRINT);
 	EMP_BODY = scan_EMP_BODY(_BUF_PRINT,WAR);
-	if(WAR > 0){ fprintf(stderr,"  ::EMP:%d:::\n",EMP_BODY); }
+	//if(WAR > 0){ fprintf(stderr,"  ::EMP:%d:::\n",EMP_BODY); }
 	EMP_BODY_S_FIRST = search_pos_EMP_BODY_S_FIRST(_BUF_PRINT,WAR);
 	if(WAR > 0){ fprintf(stderr,"  ::EMP_S:%d:::\n",EMP_BODY_S_FIRST); }
 	BRK_S_LAST = search_pos_BRK_S_LAST(_BUF_PRINT,WAR);
@@ -201,11 +201,13 @@ int print_BUF_HEAD(int _TRIG, char C, char *_BUF_HEAD, char *_BUF_PRINT, char *_
 	if(WAR > 0){ fprintf(stderr,"  ::BRK_S_FIRST:%d:::\n",BRK_S_FIRST); }
 	BRK_S_COUNT = count_BRK_S(_BUF_PRINT,WAR);
 	if(WAR > 0){ fprintf(stderr,"  ::BRK_S_COUNT:%d:::\n",BRK_S_COUNT); }
+	if(WAR > 0){ fprintf(stderr,"  ::BRK_REMAIN:%d:::\n",*_BRK_REMAIN); }
 	// print
 	if(C == ','){
 		if(WAR > 0){ fprintf(stderr,"  ::BUF:%s:::\n",_BUF_PRINT); }
 		for(i=0;i<BRK_S_COUNT;i++){
 			putchar('(');
+			(*_BRK_REMAIN)--;
 		}
 		for(i=0;i<BUF_LEN;i++){
 			if(_BUF_PRINT[i] == '('){
@@ -221,6 +223,7 @@ int print_BUF_HEAD(int _TRIG, char C, char *_BUF_HEAD, char *_BUF_PRINT, char *_
 		if(WAR > 0){ fprintf(stderr,"  ::BUF:%s:::\n",_BUF_PRINT); }
 		for(i=0;i<BRK_S_COUNT;i++){
 			putchar('(');
+			(*_BRK_REMAIN)--;
 		}
 		for(i=0;i<BUF_LEN;i++){
 			if(_BUF_PRINT[i] == '('){
@@ -282,6 +285,7 @@ int main(int argc, char **argv){
 	int BRK_REMAIN = 0;
 	int LIST_LV = 0;
 	char *BUF_TMP;
+	char *BUF_OUT;
 	if((BUF_HEAD = malloc((size_t)sizeof(char)*(*opt).buff)) == NULL){
 		fprintf(stderr,"[FAILED] malloc() @ BUF_HEAD @ main .\n");
 		exit(1);
@@ -297,6 +301,11 @@ int main(int argc, char **argv){
 		exit(1);
 	}
 	BUF_TMP[0] = '\0';
+	if((BUF_OUT = malloc((size_t)sizeof(char)*(*opt).buff)) == NULL){
+		fprintf(stderr,"[FAILED] malloc() @ BUF_TMP @ main .\n");
+		exit(1);
+	}
+	BUF_OUT[0] = '\0';
 
 	PRINT_TRIG_ACC = 1;
 	while((c = fgetc(IN)) != EOF){
@@ -304,6 +313,7 @@ int main(int argc, char **argv){
 		PRINT_TRIG = 0;
 		if(c == '('){
 			LIST_LV++;
+			BRK_REMAIN++;
 		}
 		if(c == ')'){
 			LIST_LV--;
@@ -328,7 +338,7 @@ int main(int argc, char **argv){
 		if(PRINT_TRIG > 0){
 			if((*opt).war > 0){ fprintf(stderr,"  :::PRINT-TRIG:::\n"); }
 			if((*opt).war > 0){ fprintf(stderr,"  :::BUF_REMAINN:%s:::\n",BUF_HEAD); }
-			BUF_PTR = print_BUF_HEAD(PRINT_TRIG,c,BUF_HEAD,BUF_PRINT,BUF_TMP,&BRK_REMAIN,LIST_LV,(*opt).war);
+			BUF_PTR = print_BUF_HEAD(PRINT_TRIG,c,BUF_HEAD,BUF_PRINT,BUF_TMP,&BRK_REMAIN,LIST_LV,BUF_OUT,(*opt).war);
 			BUF_HEAD[BUF_PTR] = '\0';
 		}
 		if(c == '\n'){
