@@ -10,7 +10,7 @@ extern char *yytext;
 %left ARGEX
 %right FUNC_S
 %left FUNC_E
-%left LIST
+%right LIST
 
 %%
 line_list
