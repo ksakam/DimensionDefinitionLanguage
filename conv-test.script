@@ -2,8 +2,8 @@
 cat test.s | ./s
 cat test.es | ./s
 #T
-cat test.t | ./eet
-cat test.et | ./eet
+cat test.t | ./t
+cat test.et | ./t
 
 
 #S2T
