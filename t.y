@@ -29,6 +29,7 @@ list
 
 func_l
 	: FUNC_S argm FUNC_E
+	| FUNC_S FUNC_E
 	| func_l func_l
 
 argm
