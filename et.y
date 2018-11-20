@@ -39,7 +39,7 @@ func_l
 argm
 	: args
 	| args func_l
-	| args func_l LIST argm
+	| argm LIST argm
 
 args
 	: arg
