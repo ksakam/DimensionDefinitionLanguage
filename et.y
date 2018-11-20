@@ -7,6 +7,10 @@ extern char *yytext;
 %}
 
 %token DIM ARGEX FUNC_S FUNC_E RULE LIST REF ALPH NUM REF_S REF_E SET SP LABEL END ERR
+%left ARGEX
+%right FUNC_S
+%left FUNC_E
+%left LIST
 
 %%
 line_list
@@ -25,17 +29,17 @@ dimension_expression
 	| list RULE list			{printf(":In->Out:");}
 
 list
-	: func_b
-	| list func_b
+	: arg func_l
 
-func_b
-	: arg FUNC_S argm FUNC_E
+func_l
+	: FUNC_S argm FUNC_E
+	| FUNC_S FUNC_E
+	| func_l func_l
 
 argm
 	: args
-	| args FUNC_S argm FUNC_E
-	| args FUNC_S argm FUNC_E LIST argm
-	| args FUNC_S argm FUNC_E argm
+	| args func_l
+	| args func_l LIST argm
 
 args
 	: arg
