@@ -1,3 +1,11 @@
+#S
+cat test.s | ./s
+cat test.es | ./s
+#T
+cat test.t | ./eet
+cat test.et | ./eet
+
+
 #S2T
 cat test.s | ./s
 cat test.s | ./cst in=/dev/stdin > test.s.t
