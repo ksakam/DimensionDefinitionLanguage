@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 @str = ();
-print "{\n ";
+print "{\n";
 while(<>){
 	chomp;
 	$_ =~ s/\[/\[DIM,/g;
@@ -8,6 +8,6 @@ while(<>){
 	$_ =~ s/\)/\]/g;
 	push(@str,$_);
 }
-$strout = join(",\n ",@str);
+$strout = join(",\n",@str);
 print $strout;
 print " \n}\n";
