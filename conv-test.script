@@ -1,8 +1,10 @@
-#S2TR
-cat test.s | ./ees
-cat test.s | ./cstR in=/dev/stdin | ./eet
-#T2SR
+#S2T
+cat test.s | ./s
+cat test.s | ./cst in=/dev/stdin > test.s.t
+diff test.t test.s.t
+
+cat test.es | ./s
+cat test.es | ./cst in=/dev/stdin > test.es.et
+diff test.et test.es.et
 
 #T2S
-cat test.t test.et test.eet testPF.t| ./eet
-cat test.t test.et  | ./t2sR in=/dev/stdin | ./ees
