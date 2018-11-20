@@ -10,4 +10,4 @@ while(<>){
 }
 $strout = join(",\n",@str);
 print $strout;
-print " \n}\n";
+print "\n}\n";
