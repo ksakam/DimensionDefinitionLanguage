@@ -7,6 +7,9 @@ cat test.es | ./s
 
 #T2S
 #T2J
+cat test.s.t | t2mM.pl | mM2j.swl > test.s.t.mM.j
+cat test.s.t.mM.j | j2mM.swl | mM2t.pl > test.s.t.mM.j.mM.t
+diff test.s.t test.s.t.mM.j.mM.t
 #T2M
 
 #S2T
