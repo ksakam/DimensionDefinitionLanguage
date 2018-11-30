@@ -37,3 +37,5 @@ diff test.s.t.mM test.s.t.mM.j.mM
 
 
 #M2T
+cat test.s.t.mM | ./mM2t.pl > test.s.t.mM.t
+diff test.s.t test.s.t.mM.t
