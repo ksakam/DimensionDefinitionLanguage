@@ -1,19 +1,23 @@
-#S
-cat test.s | ./s
-cat test.es | ./s
 #T
 cat test.t | ./t
 cat test.et | ./t
+#S
+cat test.s | ./s
+cat test.es | ./s
 
+#T2S
+#T2J
+#T2M
 
 #S2T
 cat test.s | ./s
 cat test.s | ./cst in=/dev/stdin > test.s.t
 diff test.t test.s.t
-
+---
 cat test.es | ./s
 cat test.es | ./cst in=/dev/stdin > test.es.et
 diff test.et test.es.et
+
 
 #J2M ##1
 cat test.s | ./cst in=/dev/stdin | t2mM.pl > test.s.t.mM
@@ -31,6 +35,5 @@ cat test.s.t.mM | mM2j.swl > test.s.t.mM.j
 cat test.s.t.mM.j | j2mM.swl > test.s.t.mM.j.mM
 diff test.s.t.mM test.s.t.mM.j.mM
 
-#T2S
 
-
+#M2T
