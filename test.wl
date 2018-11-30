@@ -1,2 +1,3 @@
 #!/usr/local/bin/math -script
-Print[6*7]
+s = Import["!tee", "Text"];
+Print[s];
