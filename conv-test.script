@@ -22,10 +22,14 @@ j2mM.wl test.s.t.mM.j > test.s.t.mM.j.mM
 diff test.s.t.mM test.s.t.mM.j.mM
 #J2M ##2
 cat test.s | ./cst in=/dev/stdin | t2mM.pl > test.s.t.mM
-cat test.s.t.mM | mM2j.wl > test.s.t.mM.j
-j2mM.wl test.s.t.mM.j > test.s.t.mM.j.mM
+cat test.s.t.mM | mM2j.swl > test.s.t.mM.j
+cat test.s.t.mM.j | j2mM.swl > test.s.t.mM.j.mM
 diff test.s.t.mM test.s.t.mM.j.mM
 
+#M2J ##2
+cat test.s.t.mM | mM2j.swl > test.s.t.mM.j
+cat test.s.t.mM.j | j2mM.swl > test.s.t.mM.j.mM
+diff test.s.t.mM test.s.t.mM.j.mM
 
 #T2S
 
