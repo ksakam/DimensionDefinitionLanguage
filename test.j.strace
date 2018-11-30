@@ -1,0 +1,2182 @@
+execve("./j2m.wl", ["./j2m.wl", "test.j"], [/* 83 vars */]) = 0
+brk(0)                                  = 0x2114000
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f97b5e46000
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+open("/usr/local/lib64/perl5/Alien/wxWidgets/gtk_2_8_12_uni/lib/tls/x86_64/libpthread.so.0", O_RDONLY) = -1 ENOENT (No such file or directory)
+stat("/usr/local/lib64/perl5/Alien/wxWidgets/gtk_2_8_12_uni/lib/tls/x86_64", 0x7ffe7f609e10) = -1 ENOENT (No such file or directory)
+open("/usr/local/lib64/perl5/Alien/wxWidgets/gtk_2_8_12_uni/lib/tls/libpthread.so.0", O_RDONLY) = -1 ENOENT (No such file or directory)
+stat("/usr/local/lib64/perl5/Alien/wxWidgets/gtk_2_8_12_uni/lib/tls", 0x7ffe7f609e10) = -1 ENOENT (No such file or directory)
+open("/usr/local/lib64/perl5/Alien/wxWidgets/gtk_2_8_12_uni/lib/x86_64/libpthread.so.0", O_RDONLY) = -1 ENOENT (No such file or directory)
+stat("/usr/local/lib64/perl5/Alien/wxWidgets/gtk_2_8_12_uni/lib/x86_64", 0x7ffe7f609e10) = -1 ENOENT (No such file or directory)
+open("/usr/local/lib64/perl5/Alien/wxWidgets/gtk_2_8_12_uni/lib/libpthread.so.0", O_RDONLY) = -1 ENOENT (No such file or directory)
+stat("/usr/local/lib64/perl5/Alien/wxWidgets/gtk_2_8_12_uni/lib", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+open("/usr/local/bamtools/lib/bamtools/tls/x86_64/libpthread.so.0", O_RDONLY) = -1 ENOENT (No such file or directory)
+stat("/usr/local/bamtools/lib/bamtools/tls/x86_64", 0x7ffe7f609e10) = -1 ENOENT (No such file or directory)
+open("/usr/local/bamtools/lib/bamtools/tls/libpthread.so.0", O_RDONLY) = -1 ENOENT (No such file or directory)
+stat("/usr/local/bamtools/lib/bamtools/tls", 0x7ffe7f609e10) = -1 ENOENT (No such file or directory)
+open("/usr/local/bamtools/lib/bamtools/x86_64/libpthread.so.0", O_RDONLY) = -1 ENOENT (No such file or directory)
+stat("/usr/local/bamtools/lib/bamtools/x86_64", 0x7ffe7f609e10) = -1 ENOENT (No such file or directory)
+open("/usr/local/bamtools/lib/bamtools/libpthread.so.0", O_RDONLY) = -1 ENOENT (No such file or directory)
+stat("/usr/local/bamtools/lib/bamtools", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+open("/usr/local/arb/LIBLINK/tls/x86_64/libpthread.so.0", O_RDONLY) = -1 ENOENT (No such file or directory)
+stat("/usr/local/arb/LIBLINK/tls/x86_64", 0x7ffe7f609e10) = -1 ENOENT (No such file or directory)
+open("/usr/local/arb/LIBLINK/tls/libpthread.so.0", O_RDONLY) = -1 ENOENT (No such file or directory)
+stat("/usr/local/arb/LIBLINK/tls", 0x7ffe7f609e10) = -1 ENOENT (No such file or directory)
+open("/usr/local/arb/LIBLINK/x86_64/libpthread.so.0", O_RDONLY) = -1 ENOENT (No such file or directory)
+stat("/usr/local/arb/LIBLINK/x86_64", 0x7ffe7f609e10) = -1 ENOENT (No such file or directory)
+open("/usr/local/arb/LIBLINK/libpthread.so.0", O_RDONLY) = -1 ENOENT (No such file or directory)
+stat("/usr/local/arb/LIBLINK", 0x7ffe7f609e10) = -1 ENOENT (No such file or directory)
+open("/usr/local/Python/lib/tls/x86_64/libpthread.so.0", O_RDONLY) = -1 ENOENT (No such file or directory)
+stat("/usr/local/Python/lib/tls/x86_64", 0x7ffe7f609e10) = -1 ENOENT (No such file or directory)
+open("/usr/local/Python/lib/tls/libpthread.so.0", O_RDONLY) = -1 ENOENT (No such file or directory)
+stat("/usr/local/Python/lib/tls", 0x7ffe7f609e10) = -1 ENOENT (No such file or directory)
+open("/usr/local/Python/lib/x86_64/libpthread.so.0", O_RDONLY) = -1 ENOENT (No such file or directory)
+stat("/usr/local/Python/lib/x86_64", 0x7ffe7f609e10) = -1 ENOENT (No such file or directory)
+open("/usr/local/Python/lib/libpthread.so.0", O_RDONLY) = -1 ENOENT (No such file or directory)
+stat("/usr/local/Python/lib", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+open("/usr/local/lib64/tls/x86_64/libpthread.so.0", O_RDONLY) = -1 ENOENT (No such file or directory)
+stat("/usr/local/lib64/tls/x86_64", 0x7ffe7f609e10) = -1 ENOENT (No such file or directory)
+open("/usr/local/lib64/tls/libpthread.so.0", O_RDONLY) = -1 ENOENT (No such file or directory)
+stat("/usr/local/lib64/tls", 0x7ffe7f609e10) = -1 ENOENT (No such file or directory)
+open("/usr/local/lib64/x86_64/libpthread.so.0", O_RDONLY) = -1 ENOENT (No such file or directory)
+stat("/usr/local/lib64/x86_64", 0x7ffe7f609e10) = -1 ENOENT (No such file or directory)
+open("/usr/local/lib64/libpthread.so.0", O_RDONLY) = -1 ENOENT (No such file or directory)
+stat("/usr/local/lib64", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+open("/usr/local/gridscheduler/lib/linux-x64/tls/x86_64/libpthread.so.0", O_RDONLY) = -1 ENOENT (No such file or directory)
+stat("/usr/local/gridscheduler/lib/linux-x64/tls/x86_64", 0x7ffe7f609e10) = -1 ENOENT (No such file or directory)
+open("/usr/local/gridscheduler/lib/linux-x64/tls/libpthread.so.0", O_RDONLY) = -1 ENOENT (No such file or directory)
+stat("/usr/local/gridscheduler/lib/linux-x64/tls", 0x7ffe7f609e10) = -1 ENOENT (No such file or directory)
+open("/usr/local/gridscheduler/lib/linux-x64/x86_64/libpthread.so.0", O_RDONLY) = -1 ENOENT (No such file or directory)
+stat("/usr/local/gridscheduler/lib/linux-x64/x86_64", 0x7ffe7f609e10) = -1 ENOENT (No such file or directory)
+open("/usr/local/gridscheduler/lib/linux-x64/libpthread.so.0", O_RDONLY) = -1 ENOENT (No such file or directory)
+stat("/usr/local/gridscheduler/lib/linux-x64", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+open("/usr/lib64/mpich/lib/tls/x86_64/libpthread.so.0", O_RDONLY) = -1 ENOENT (No such file or directory)
+stat("/usr/lib64/mpich/lib/tls/x86_64", 0x7ffe7f609e10) = -1 ENOENT (No such file or directory)
+open("/usr/lib64/mpich/lib/tls/libpthread.so.0", O_RDONLY) = -1 ENOENT (No such file or directory)
+stat("/usr/lib64/mpich/lib/tls", 0x7ffe7f609e10) = -1 ENOENT (No such file or directory)
+open("/usr/lib64/mpich/lib/x86_64/libpthread.so.0", O_RDONLY) = -1 ENOENT (No such file or directory)
+stat("/usr/lib64/mpich/lib/x86_64", 0x7ffe7f609e10) = -1 ENOENT (No such file or directory)
+open("/usr/lib64/mpich/lib/libpthread.so.0", O_RDONLY) = -1 ENOENT (No such file or directory)
+stat("/usr/lib64/mpich/lib", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+open("/usr/local/lib/blas/CBLAS-3.8.0/tls/x86_64/libpthread.so.0", O_RDONLY) = -1 ENOENT (No such file or directory)
+stat("/usr/local/lib/blas/CBLAS-3.8.0/tls/x86_64", 0x7ffe7f609e10) = -1 ENOENT (No such file or directory)
+open("/usr/local/lib/blas/CBLAS-3.8.0/tls/libpthread.so.0", O_RDONLY) = -1 ENOENT (No such file or directory)
+stat("/usr/local/lib/blas/CBLAS-3.8.0/tls", 0x7ffe7f609e10) = -1 ENOENT (No such file or directory)
+open("/usr/local/lib/blas/CBLAS-3.8.0/x86_64/libpthread.so.0", O_RDONLY) = -1 ENOENT (No such file or directory)
+stat("/usr/local/lib/blas/CBLAS-3.8.0/x86_64", 0x7ffe7f609e10) = -1 ENOENT (No such file or directory)
+open("/usr/local/lib/blas/CBLAS-3.8.0/libpthread.so.0", O_RDONLY) = -1 ENOENT (No such file or directory)
+stat("/usr/local/lib/blas/CBLAS-3.8.0", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+open("/usr/local/lib/lapack/CLAPACK-3.2.1/tls/x86_64/libpthread.so.0", O_RDONLY) = -1 ENOENT (No such file or directory)
+stat("/usr/local/lib/lapack/CLAPACK-3.2.1/tls/x86_64", 0x7ffe7f609e10) = -1 ENOENT (No such file or directory)
+open("/usr/local/lib/lapack/CLAPACK-3.2.1/tls/libpthread.so.0", O_RDONLY) = -1 ENOENT (No such file or directory)
+stat("/usr/local/lib/lapack/CLAPACK-3.2.1/tls", 0x7ffe7f609e10) = -1 ENOENT (No such file or directory)
+open("/usr/local/lib/lapack/CLAPACK-3.2.1/x86_64/libpthread.so.0", O_RDONLY) = -1 ENOENT (No such file or directory)
+stat("/usr/local/lib/lapack/CLAPACK-3.2.1/x86_64", 0x7ffe7f609e10) = -1 ENOENT (No such file or directory)
+open("/usr/local/lib/lapack/CLAPACK-3.2.1/libpthread.so.0", O_RDONLY) = -1 ENOENT (No such file or directory)
+stat("/usr/local/lib/lapack/CLAPACK-3.2.1", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+open("/etc/ld.so.cache", O_RDONLY)      = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=231535, ...}) = 0
+mmap(NULL, 231535, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f97b5e0d000
+close(3)                                = 0
+open("/lib64/libpthread.so.0", O_RDONLY) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0000^\300l:\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=146592, ...}) = 0
+mmap(0x3a6cc00000, 2212848, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x3a6cc00000
+mprotect(0x3a6cc17000, 2097152, PROT_NONE) = 0
+mmap(0x3a6ce17000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x17000) = 0x3a6ce17000
+mmap(0x3a6ce19000, 13296, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x3a6ce19000
+close(3)                                = 0
+open("/usr/local/lib64/perl5/Alien/wxWidgets/gtk_2_8_12_uni/lib/librt.so.1", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/usr/local/bamtools/lib/bamtools/librt.so.1", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/usr/local/Python/lib/librt.so.1", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/usr/local/lib64/librt.so.1", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/usr/local/gridscheduler/lib/linux-x64/librt.so.1", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/usr/lib64/mpich/lib/librt.so.1", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/usr/local/lib/blas/CBLAS-3.8.0/librt.so.1", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/usr/local/lib/lapack/CLAPACK-3.2.1/librt.so.1", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/lib64/librt.so.1", O_RDONLY)     = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\240!\200m:\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=47760, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f97b5e0c000
+mmap(0x3a6d800000, 2128816, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x3a6d800000
+mprotect(0x3a6d807000, 2093056, PROT_NONE) = 0
+mmap(0x3a6da06000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x6000) = 0x3a6da06000
+close(3)                                = 0
+open("/usr/local/lib64/perl5/Alien/wxWidgets/gtk_2_8_12_uni/lib/libdl.so.2", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/usr/local/bamtools/lib/bamtools/libdl.so.2", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/usr/local/Python/lib/libdl.so.2", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/usr/local/lib64/libdl.so.2", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/usr/local/gridscheduler/lib/linux-x64/libdl.so.2", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/usr/lib64/mpich/lib/libdl.so.2", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/usr/local/lib/blas/CBLAS-3.8.0/libdl.so.2", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/usr/local/lib/lapack/CLAPACK-3.2.1/libdl.so.2", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/lib64/libdl.so.2", O_RDONLY)     = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\340\r\200l:\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=23088, ...}) = 0
+mmap(0x3a6c800000, 2109696, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x3a6c800000
+mprotect(0x3a6c802000, 2097152, PROT_NONE) = 0
+mmap(0x3a6ca02000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x3a6ca02000
+close(3)                                = 0
+open("/usr/local/lib64/perl5/Alien/wxWidgets/gtk_2_8_12_uni/lib/libstdc++.so.6", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/usr/local/bamtools/lib/bamtools/libstdc++.so.6", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/usr/local/Python/lib/libstdc++.so.6", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/usr/local/lib64/libstdc++.so.6", O_RDONLY) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\360\274\10\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=11649469, ...}) = 0
+mmap(NULL, 3764640, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f97b5a74000
+mprotect(0x7f97b5bfc000, 2097152, PROT_NONE) = 0
+mmap(0x7f97b5dfc000, 49152, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x188000) = 0x7f97b5dfc000
+mmap(0x7f97b5e08000, 12704, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f97b5e08000
+close(3)                                = 0
+open("/usr/local/lib64/perl5/Alien/wxWidgets/gtk_2_8_12_uni/lib/libm.so.6", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/usr/local/bamtools/lib/bamtools/libm.so.6", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/usr/local/Python/lib/libm.so.6", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/usr/local/lib64/libm.so.6", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/usr/local/gridscheduler/lib/linux-x64/libm.so.6", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/usr/lib64/mpich/lib/libm.so.6", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/usr/local/lib/blas/CBLAS-3.8.0/libm.so.6", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/usr/local/lib/lapack/CLAPACK-3.2.1/libm.so.6", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/lib64/libm.so.6", O_RDONLY)      = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0`>\0m:\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=600048, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f97b5a73000
+mmap(0x3a6d000000, 2633912, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x3a6d000000
+mprotect(0x3a6d083000, 2093056, PROT_NONE) = 0
+mmap(0x3a6d282000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x82000) = 0x3a6d282000
+close(3)                                = 0
+open("/usr/local/lib64/perl5/Alien/wxWidgets/gtk_2_8_12_uni/lib/libgcc_s.so.1", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/usr/local/bamtools/lib/bamtools/libgcc_s.so.1", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/usr/local/Python/lib/libgcc_s.so.1", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/usr/local/lib64/libgcc_s.so.1", O_RDONLY) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\340)\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0644, st_size=753905, ...}) = 0
+mmap(NULL, 2186664, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f97b585d000
+mprotect(0x7f97b5873000, 2093056, PROT_NONE) = 0
+mmap(0x7f97b5a72000, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x15000) = 0x7f97b5a72000
+close(3)                                = 0
+open("/usr/local/lib64/perl5/Alien/wxWidgets/gtk_2_8_12_uni/lib/libc.so.6", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/usr/local/bamtools/lib/bamtools/libc.so.6", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/usr/local/Python/lib/libc.so.6", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/usr/local/lib64/libc.so.6", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/usr/local/gridscheduler/lib/linux-x64/libc.so.6", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/usr/lib64/mpich/lib/libc.so.6", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/usr/local/lib/blas/CBLAS-3.8.0/libc.so.6", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/usr/local/lib/lapack/CLAPACK-3.2.1/libc.so.6", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/lib64/libc.so.6", O_RDONLY)      = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0000\356Al:\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=1930416, ...}) = 0
+mmap(0x3a6c400000, 3750184, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x3a6c400000
+mprotect(0x3a6c58b000, 2093056, PROT_NONE) = 0
+mmap(0x3a6c78a000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x18a000) = 0x3a6c78a000
+mmap(0x3a6c790000, 14632, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x3a6c790000
+close(3)                                = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f97b585c000
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f97b585b000
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f97b5859000
+arch_prctl(ARCH_SET_FS, 0x7f97b5859760) = 0
+mprotect(0x3a6c78a000, 16384, PROT_READ) = 0
+mprotect(0x3a6d282000, 4096, PROT_READ) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f97b5858000
+mprotect(0x7f97b5dfc000, 40960, PROT_READ) = 0
+mprotect(0x3a6ca02000, 4096, PROT_READ) = 0
+mprotect(0x3a6da06000, 4096, PROT_READ) = 0
+mprotect(0x3a6ce17000, 4096, PROT_READ) = 0
+mprotect(0x3a6c220000, 4096, PROT_READ) = 0
+munmap(0x7f97b5e0d000, 231535)          = 0
+set_tid_address(0x7f97b5859a30)         = 19294
+set_robust_list(0x7f97b5859a40, 24)     = 0
+futex(0x7ffe7f60b72c, FUTEX_WAKE_PRIVATE, 1) = 0
+futex(0x7ffe7f60b72c, FUTEX_WAIT_BITSET_PRIVATE|FUTEX_CLOCK_REALTIME, 1, NULL, 7f97b5859760) = -1 EAGAIN (Resource temporarily unavailable)
+rt_sigaction(SIGRTMIN, {0x3a6cc05cb0, [], SA_RESTORER|SA_SIGINFO, 0x3a6cc0f7e0}, NULL, 8) = 0
+rt_sigaction(SIGRT_1, {0x3a6cc05d40, [], SA_RESTORER|SA_RESTART|SA_SIGINFO, 0x3a6cc0f7e0}, NULL, 8) = 0
+rt_sigprocmask(SIG_UNBLOCK, [RTMIN RT_1], NULL, 8) = 0
+getrlimit(RLIMIT_STACK, {rlim_cur=10240*1024, rlim_max=RLIM64_INFINITY}) = 0
+brk(0)                                  = 0x2114000
+brk(0x2146000)                          = 0x2146000
+futex(0x7f97b5e091fc, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+futex(0x7f97b5e09208, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+rt_sigaction(SIGINT, {SIG_IGN, [INT], SA_RESTORER|SA_RESTART, 0x3a6c432570}, {SIG_DFL, [], 0}, 8) = 0
+access("-function", R_OK)               = -1 ENOENT (No such file or directory)
+access("./j2m.wl", R_OK)                = 0
+open("./j2m.wl", O_RDONLY)              = 3
+read(3, "#!/usr/bin/wolframscript -functi"..., 8191) = 73
+close(3)                                = 0
+open("/usr/lib/locale/locale-archive", O_RDONLY) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=99170352, ...}) = 0
+mmap(NULL, 99170352, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f97af9c4000
+close(3)                                = 0
+open("./j2m.wl", O_RDONLY)              = 3
+read(3, "#!/usr/bin/wolframscript -functi"..., 8191) = 73
+read(3, "", 8191)                       = 0
+close(3)                                = 0
+stat("/home/kamano/.config/Wolfram/WolframScript", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+access("/home/kamano/.config/Wolfram/WolframScript/WolframScript.conf", R_OK|W_OK) = 0
+open("/home/kamano/.config/Wolfram/WolframScript/WolframScript.conf", O_RDONLY) = 3
+read(3, "//WOLFRAMSCRIPT_KERNELPATH=/usr/"..., 8191) = 159
+read(3, "", 8191)                       = 0
+close(3)                                = 0
+stat("/home/kamano/.cache/Wolfram/WolframScript", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+open("/home/kamano/.cache/Wolfram/WolframScript/WolframScriptTemporary/", O_RDONLY|O_NONBLOCK|O_DIRECTORY|O_CLOEXEC) = 3
+fcntl(3, F_GETFD)                       = 0x1 (flags FD_CLOEXEC)
+getdents(3, /* 3 entries */, 32768)     = 88
+stat("/home/kamano/.cache/Wolfram/WolframScript/WolframScriptTemporary/tmp_8DeBE8hP1p", {st_mode=S_IFREG|0644, st_size=118, ...}) = 0
+getdents(3, /* 0 entries */, 32768)     = 0
+close(3)                                = 0
+access("/home/kamano/.config/Wolfram/WolframScript/WolframScript.conf", R_OK|W_OK) = 0
+open("/home/kamano/.config/Wolfram/WolframScript/WolframScript.conf", O_RDONLY) = 3
+read(3, "//WOLFRAMSCRIPT_KERNELPATH=/usr/"..., 8191) = 159
+read(3, "", 8191)                       = 0
+close(3)                                = 0
+stat("/home/kamano/.cache/Wolfram/WolframScript", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+stat("/home/kamano/.cache/Wolfram/WolframScript/WolframScriptTemporary", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+open("/home/kamano/.cache/Wolfram/WolframScript/WolframScriptTemporary/tmp_WOTupTRxd3", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 3
+ioctl(0, SNDCTL_TMR_TIMEBASE or SNDRV_TIMER_IOCTL_NEXT_DEVICE or TCGETS, {B38400 opost isig icanon echo ...}) = 0
+close(3)                                = 0
+access("/home/kamano/.config/Wolfram/WolframScript/WolframScript.conf", R_OK|W_OK) = 0
+open("/home/kamano/.config/Wolfram/WolframScript/WolframScript.conf", O_RDONLY) = 3
+read(3, "//WOLFRAMSCRIPT_KERNELPATH=/usr/"..., 8191) = 159
+read(3, "", 8191)                       = 0
+close(3)                                = 0
+stat("/home/kamano/.cache/Wolfram/WolframScript", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+stat("/home/kamano/.cache/Wolfram/WolframScript/WolframScriptTemporary", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+access("/home/kamano/.config/Wolfram/WolframScript/WolframScript.conf", R_OK|W_OK) = 0
+open("/home/kamano/.config/Wolfram/WolframScript/WolframScript.conf", O_RDONLY) = 3
+read(3, "//WOLFRAMSCRIPT_KERNELPATH=/usr/"..., 8191) = 159
+read(3, "", 8191)                       = 0
+close(3)                                = 0
+futex(0x7f97b5a72b40, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+getcwd("/home/kamano/gitsrc/DimensionDefinitionLanguage", 128) = 48
+getcwd("/home/kamano/gitsrc/DimensionDefinitionLanguage", 128) = 48
+stat("/usr/bin/wolframscript", {st_mode=S_IFREG|0755, st_size=5809384, ...}) = 0
+lstat("/", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat("/usr", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat("/usr/bin", {st_mode=S_IFDIR|0755, st_size=135168, ...}) = 0
+lstat("/usr/bin/wolframscript", {st_mode=S_IFLNK|0777, st_size=44, ...}) = 0
+readlink("/usr/bin/wolframscript", "/opt/Wolfram/WolframScript/bin/w"..., 64) = 44
+lstat("/", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat("/opt", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat("/opt/Wolfram", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat("/opt/Wolfram/WolframScript", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat("/opt/Wolfram/WolframScript/bin", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat("/opt/Wolfram/WolframScript/bin/wolframscript", {st_mode=S_IFREG|0755, st_size=5809384, ...}) = 0
+access("/opt/Wolfram/WolframScript/bin/WolframKernel", X_OK) = -1 ENOENT (No such file or directory)
+access("/home/kamano/.pyenv/shims/WolframKernel", X_OK) = -1 ENOENT (No such file or directory)
+access("/home/kamano/.pyenv/bin/WolframKernel", X_OK) = -1 ENOENT (No such file or directory)
+access("/home/kamano/.rbenv/shims/WolframKernel", X_OK) = -1 ENOENT (No such file or directory)
+access("/usr/local/julia/julia-903644385b/bin/WolframKernel", X_OK) = -1 ENOENT (No such file or directory)
+access("/opt/Cytoscape_v3.5.0/WolframKernel", X_OK) = -1 ENOENT (No such file or directory)
+access("/home/kamano/anaconda3/bin/WolframKernel", X_OK) = -1 ENOENT (No such file or directory)
+access("/usr/local/ncbi-blast/bin/WolframKernel", X_OK) = -1 ENOENT (No such file or directory)
+access("/usr/local/fasta/bin/WolframKernel", X_OK) = -1 ENOENT (No such file or directory)
+access("/usr/local/SGA_0.9.37/bin/WolframKernel", X_OK) = -1 ENOENT (No such file or directory)
+access("/usr/local/PICRUST/scripts/WolframKernel", X_OK) = -1 ENOENT (No such file or directory)
+access("/usr/local/mfold/bin/WolframKernel", X_OK) = -1 ENOENT (No such file or directory)
+access("/usr/local/mfold_util/bin/WolframKernel", X_OK) = -1 ENOENT (No such file or directory)
+access("./WolframKernel", X_OK)         = -1 ENOENT (No such file or directory)
+access("/usr/local/trans-ABySS/bin/WolframKernel", X_OK) = -1 ENOENT (No such file or directory)
+access("/java/path/WolframKernel", X_OK) = -1 ENOENT (No such file or directory)
+access("/usr/local/abyss/bin/WolframKernel", X_OK) = -1 ENOENT (No such file or directory)
+access("/python/path/WolframKernel", X_OK) = -1 ENOENT (No such file or directory)
+access("/usr/local/trans-ABySS/WolframKernel", X_OK) = -1 ENOENT (No such file or directory)
+access("/usr/local/MISO/misopy/bin/WolframKernel", X_OK) = -1 ENOENT (No such file or directory)
+access("/usr/local/MISO/misopy/lib/python2.7/site-packages/WolframKernel", X_OK) = -1 ENOENT (No such file or directory)
+access("/usr/local/erange/WolframKernel", X_OK) = -1 ENOENT (No such file or directory)
+access("/usr/local/erange/cistematic/WolframKernel", X_OK) = -1 ENOENT (No such file or directory)
+access("/usr/local/erange/cistematic/genomes/WolframKernel", X_OK) = -1 ENOENT (No such file or directory)
+access("/usr/local/gmap/bin/WolframKernel", X_OK) = -1 ENOENT (No such file or directory)
+access("/usr/local/bwa/WolframKernel", X_OK) = -1 ENOENT (No such file or directory)
+access("/usr/local/arb/bin/WolframKernel", X_OK) = -1 ENOENT (No such file or directory)
+access("/usr/local/allpathslg/bin/WolframKernel", X_OK) = -1 ENOENT (No such file or directory)
+access("/usr/local/velvet/WolframKernel", X_OK) = -1 ENOENT (No such file or directory)
+access("/usr/local/trinityrnaseq/WolframKernel", X_OK) = -1 ENOENT (No such file or directory)
+access("/usr/local/tophat2/bin/WolframKernel", X_OK) = -1 ENOENT (No such file or directory)
+access("/usr/local/SOAP/SOAPdenovo2/WolframKernel", X_OK) = -1 ENOENT (No such file or directory)
+access("/usr/local/SOAP/soap2/WolframKernel", X_OK) = -1 ENOENT (No such file or directory)
+access("/usr/local/phylip/WolframKernel", X_OK) = -1 ENOENT (No such file or directory)
+access("/usr/local/MUMmer3/WolframKernel", X_OK) = -1 ENOENT (No such file or directory)
+access("/usr/local/mira/bin/WolframKernel", X_OK) = -1 ENOENT (No such file or directory)
+access("/usr/local/mira/bin/WolframKernel", X_OK) = -1 ENOENT (No such file or directory)
+access("/usr/local/maq/bin/WolframKernel", X_OK) = -1 ENOENT (No such file or directory)
+access("/usr/local/mafft/bin/WolframKernel", X_OK) = -1 ENOENT (No such file or directory)
+access("/usr/local/hmmer/bin/WolframKernel", X_OK) = -1 ENOENT (No such file or directory)
+access("/usr/local/fastx_toolkit/bin/WolframKernel", X_OK) = -1 ENOENT (No such file or directory)
+access("/usr/local/EMBOSS/bin/WolframKernel", X_OK) = -1 ENOENT (No such file or directory)
+access("/usr/local/Edena/bin/WolframKernel", X_OK) = -1 ENOENT (No such file or directory)
+access("/usr/local/cufflinks/bin/WolframKernel", X_OK) = -1 ENOENT (No such file or directory)
+access("/usr/local/clustalw/bin/WolframKernel", X_OK) = -1 ENOENT (No such file or directory)
+access("/usr/local/blat/bin/x86_64/WolframKernel", X_OK) = -1 ENOENT (No such file or directory)
+access("/usr/local/sratoolkit/bin/WolframKernel", X_OK) = -1 ENOENT (No such file or directory)
+access("/usr/local/samtools/WolframKernel", X_OK) = -1 ENOENT (No such file or directory)
+access("/usr/local/bwa/WolframKernel", X_OK) = -1 ENOENT (No such file or directory)
+access("/usr/local/bowtie2/WolframKernel", X_OK) = -1 ENOENT (No such file or directory)
+access("/usr/local/bowtie/WolframKernel", X_OK) = -1 ENOENT (No such file or directory)
+access("/usr/local/bfast/bin/WolframKernel", X_OK) = -1 ENOENT (No such file or directory)
+access("/usr/local/amos/bin/WolframKernel", X_OK) = -1 ENOENT (No such file or directory)
+access("/usr/local/ncbi/bin/WolframKernel", X_OK) = -1 ENOENT (No such file or directory)
+access("/usr/local/perl/bin/WolframKernel", X_OK) = -1 ENOENT (No such file or directory)
+access("/usr/local/R/bin/WolframKernel", X_OK) = -1 ENOENT (No such file or directory)
+access("/usr/java/default/bin/WolframKernel", X_OK) = -1 ENOENT (No such file or directory)
+access("/usr/local/apache-maven-3.0.4/bin/WolframKernel", X_OK) = -1 ENOENT (No such file or directory)
+access("/usr/local/Python/bin/WolframKernel", X_OK) = -1 ENOENT (No such file or directory)
+access("/usr/local/pvm3.4.6/lib/WolframKernel", X_OK) = -1 ENOENT (No such file or directory)
+access("/opt/maple2017/bin/WolframKernel", X_OK) = -1 ENOENT (No such file or directory)
+access("/home/usr/local/bin/WolframKernel", X_OK) = -1 ENOENT (No such file or directory)
+access("/usr/local/gridscheduler/bin/linux-x64/WolframKernel", X_OK) = -1 ENOENT (No such file or directory)
+access("/usr/lib64/qt-3.3/bin/WolframKernel", X_OK) = -1 ENOENT (No such file or directory)
+access("/usr/lib64/mpich/bin/WolframKernel", X_OK) = -1 ENOENT (No such file or directory)
+access("/usr/kerberos/sbin/WolframKernel", X_OK) = -1 ENOENT (No such file or directory)
+access("/usr/kerberos/bin/WolframKernel", X_OK) = -1 ENOENT (No such file or directory)
+access("/usr/local/bin/WolframKernel", X_OK) = 0
+access("/home/kamano/.config/Wolfram/WolframScript/WolframScript.conf", R_OK|W_OK) = 0
+open("/home/kamano/.config/Wolfram/WolframScript/WolframScript.conf", O_RDONLY) = 3
+read(3, "//WOLFRAMSCRIPT_KERNELPATH=/usr/"..., 8191) = 159
+read(3, "", 8191)                       = 0
+close(3)                                = 0
+open("/home/kamano/.config/Wolfram/WolframScript/WolframScript.conf", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 3
+write(3, "//WOLFRAMSCRIPT_KERNELPATH=/usr/"..., 159) = 159
+close(3)                                = 0
+stat("/tmp", {st_mode=S_IFDIR|S_ISVTX|0777, st_size=131072, ...}) = 0
+stat("/tmp", {st_mode=S_IFDIR|S_ISVTX|0777, st_size=131072, ...}) = 0
+stat("/tmp/MathLink", {st_mode=S_IFDIR|0777, st_size=20480, ...}) = 0
+stat("/tmp/MathLink", {st_mode=S_IFDIR|0777, st_size=20480, ...}) = 0
+stat("/tmp", {st_mode=S_IFDIR|S_ISVTX|0777, st_size=131072, ...}) = 0
+stat("/tmp", {st_mode=S_IFDIR|S_ISVTX|0777, st_size=131072, ...}) = 0
+stat("/tmp/MathLink", {st_mode=S_IFDIR|0777, st_size=20480, ...}) = 0
+stat("/tmp/MathLink", {st_mode=S_IFDIR|0777, st_size=20480, ...}) = 0
+mmap(NULL, 10489856, PROT_READ|PROT_WRITE|PROT_EXEC, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7f97aefc3000
+mprotect(0x7f97aefc3000, 4096, PROT_NONE) = 0
+clone(child_stack=0x7f97af9c2f90, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_tidptr=0x7f97af9c39d0, tls=0x7f97af9c3700, child_tidptr=0x7f97af9c39d0) = 19295
+open("/usr/share/locale/locale.alias", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=2512, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f97b5e45000
+read(3, "# Locale name alias data base.\n#"..., 4096) = 2512
+read(3, "", 4096)                       = 0
+close(3)                                = 0
+munmap(0x7f97b5e45000, 4096)            = 0
+open("/usr/share/locale/ja_JP.UTF-8/LC_MESSAGES/libc.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/usr/share/locale/ja_JP.utf8/LC_MESSAGES/libc.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/usr/share/locale/ja_JP/LC_MESSAGES/libc.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/usr/share/locale/ja.UTF-8/LC_MESSAGES/libc.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/usr/share/locale/ja.utf8/LC_MESSAGES/libc.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/usr/share/locale/ja/LC_MESSAGES/libc.mo", O_RDONLY) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=113064, ...}) = 0
+mmap(NULL, 113064, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f97b5e2a000
+close(3)                                = 0
+open("/usr/lib64/gconv/gconv-modules.cache", O_RDONLY) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=26060, ...}) = 0
+mmap(NULL, 26060, PROT_READ, MAP_SHARED, 3, 0) = 0x7f97b5e23000
+close(3)                                = 0
+futex(0x3a6c78f828, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+open("/usr/lib64/gconv/EUC-JP.so", O_RDONLY) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0`\7\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=17416, ...}) = 0
+mmap(NULL, 2109472, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f97ae3be000
+mprotect(0x7f97ae3c1000, 2093056, PROT_NONE) = 0
+mmap(0x7f97ae5c0000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7f97ae5c0000
+close(3)                                = 0
+open("/usr/lib64/gconv/tls/x86_64/libJIS.so", O_RDONLY) = -1 ENOENT (No such file or directory)
+stat("/usr/lib64/gconv/tls/x86_64", 0x7ffe7f609300) = -1 ENOENT (No such file or directory)
+open("/usr/lib64/gconv/tls/libJIS.so", O_RDONLY) = -1 ENOENT (No such file or directory)
+stat("/usr/lib64/gconv/tls", 0x7ffe7f609300) = -1 ENOENT (No such file or directory)
+open("/usr/lib64/gconv/x86_64/libJIS.so", O_RDONLY) = -1 ENOENT (No such file or directory)
+stat("/usr/lib64/gconv/x86_64", 0x7ffe7f609300) = -1 ENOENT (No such file or directory)
+open("/usr/lib64/gconv/libJIS.so", O_RDONLY) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0p\6\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=103168, ...}) = 0
+mmap(NULL, 2195480, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f97ae1a5000
+mprotect(0x7f97ae1bd000, 2093056, PROT_NONE) = 0
+mmap(0x7f97ae3bc000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x17000) = 0x7f97ae3bc000
+close(3)                                = 0
+mprotect(0x7f97ae3bc000, 4096, PROT_READ) = 0
+mprotect(0x7f97ae5c0000, 4096, PROT_READ) = 0
+getrlimit(RLIMIT_NOFILE, {rlim_cur=1024, rlim_max=4*1024}) = 0
+setrlimit(RLIMIT_NOFILE, {rlim_cur=4000, rlim_max=4*1024}) = 0
+mmap(NULL, 10489856, PROT_READ|PROT_WRITE|PROT_EXEC, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7f97ad7a4000
+mprotect(0x7f97ad7a4000, 4096, PROT_NONE) = 0
+clone(child_stack=0x7f97ae1a3f90, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_tidptr=0x7f97ae1a49d0, tls=0x7f97ae1a4700, child_tidptr=0x7f97ae1a49d0) = 19297
+mmap(NULL, 10489856, PROT_READ|PROT_WRITE|PROT_EXEC, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7f97acda3000
+mprotect(0x7f97acda3000, 4096, PROT_NONE) = 0
+clone(child_stack=0x7f97ad7a2f90, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_tidptr=0x7f97ad7a39d0, tls=0x7f97ad7a3700, child_tidptr=0x7f97ad7a39d0) = 19298
+mmap(NULL, 10489856, PROT_READ|PROT_WRITE|PROT_EXEC, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7f97ac3a2000
+mprotect(0x7f97ac3a2000, 4096, PROT_NONE) = 0
+clone(child_stack=0x7f97acda1f90, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_tidptr=0x7f97acda29d0, tls=0x7f97acda2700, child_tidptr=0x7f97acda29d0) = 19299
+uname({sys="Linux", node="n007", ...})  = 0
+open("/etc/resolv.conf", O_RDONLY)      = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=85, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f97b5e22000
+read(3, "; generated by /sbin/dhclient-sc"..., 4096) = 85
+read(3, "", 4096)                       = 0
+close(3)                                = 0
+munmap(0x7f97b5e22000, 4096)            = 0
+uname({sys="Linux", node="n007", ...})  = 0
+socket(PF_LOCAL, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, 0) = 3
+connect(3, {sa_family=AF_LOCAL, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+close(3)                                = 0
+socket(PF_LOCAL, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, 0) = 3
+connect(3, {sa_family=AF_LOCAL, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+close(3)                                = 0
+open("/etc/nsswitch.conf", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=1688, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f97b5e22000
+read(3, "#\n# /etc/nsswitch.conf\n#\n# An ex"..., 4096) = 1688
+read(3, "", 4096)                       = 0
+close(3)                                = 0
+munmap(0x7f97b5e22000, 4096)            = 0
+open("/usr/local/lib64/perl5/Alien/wxWidgets/gtk_2_8_12_uni/lib/libnss_files.so.2", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/usr/local/bamtools/lib/bamtools/libnss_files.so.2", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/usr/local/Python/lib/libnss_files.so.2", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/usr/local/lib64/libnss_files.so.2", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/usr/local/gridscheduler/lib/linux-x64/libnss_files.so.2", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/usr/lib64/mpich/lib/libnss_files.so.2", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/usr/local/lib/blas/CBLAS-3.8.0/libnss_files.so.2", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/usr/local/lib/lapack/CLAPACK-3.2.1/libnss_files.so.2", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/etc/ld.so.cache", O_RDONLY)      = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=231535, ...}) = 0
+mmap(NULL, 231535, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f97ac369000
+close(3)                                = 0
+open("/lib64/libnss_files.so.2", O_RDONLY) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\360!\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=66432, ...}) = 0
+mmap(NULL, 2151824, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f97ac15b000
+mprotect(0x7f97ac168000, 2093056, PROT_NONE) = 0
+mmap(0x7f97ac367000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xc000) = 0x7f97ac367000
+close(3)                                = 0
+mprotect(0x7f97ac367000, 4096, PROT_READ) = 0
+munmap(0x7f97ac369000, 231535)          = 0
+open("/etc/host.conf", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=9, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f97b5e22000
+read(3, "multi on\n", 4096)             = 9
+read(3, "", 4096)                       = 0
+close(3)                                = 0
+munmap(0x7f97b5e22000, 4096)            = 0
+futex(0x3a6c7923c4, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+open("/etc/hosts", O_RDONLY|O_CLOEXEC)  = 3
+fcntl(3, F_GETFD)                       = 0x1 (flags FD_CLOEXEC)
+fstat(3, {st_mode=S_IFREG|0644, st_size=643, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f97b5e22000
+read(3, "#local\n127.0.0.1\tlocalhost.local"..., 4096) = 643
+read(3, "", 4096)                       = 0
+close(3)                                = 0
+munmap(0x7f97b5e22000, 4096)            = 0
+rt_sigaction(SIGHUP, {0x7311c0, [], SA_RESTORER|SA_SIGINFO, 0x3a6cc0f7e0}, {SIG_DFL, [], 0}, 8) = 0
+rt_sigaction(SIGINT, {0x7311c0, [], SA_RESTORER|SA_SIGINFO, 0x3a6cc0f7e0}, {SIG_IGN, [INT], SA_RESTORER|SA_RESTART, 0x3a6c432570}, 8) = 0
+rt_sigaction(SIGABRT, {0x7311c0, [], SA_RESTORER|SA_SIGINFO, 0x3a6cc0f7e0}, {SIG_DFL, [], 0}, 8) = 0
+rt_sigaction(SIGBUS, {0x7311c0, [], SA_RESTORER|SA_SIGINFO, 0x3a6cc0f7e0}, {SIG_DFL, [], 0}, 8) = 0
+rt_sigaction(SIGSEGV, {0x7311c0, [], SA_RESTORER|SA_SIGINFO, 0x3a6cc0f7e0}, {SIG_DFL, [], 0}, 8) = 0
+rt_sigaction(SIGPIPE, {0x7311c0, [], SA_RESTORER|SA_SIGINFO, 0x3a6cc0f7e0}, {SIG_DFL, [], 0}, 8) = 0
+rt_sigaction(SIGTERM, {0x7311c0, [], SA_RESTORER|SA_SIGINFO, 0x3a6cc0f7e0}, {SIG_DFL, [], 0}, 8) = 0
+rt_sigaction(SIGCHLD, {0x7311c0, [], SA_RESTORER|SA_SIGINFO, 0x3a6cc0f7e0}, {SIG_DFL, [], 0}, 8) = 0
+rt_sigaction(SIGURG, {0x7311c0, [], SA_RESTORER|SA_SIGINFO, 0x3a6cc0f7e0}, {SIG_DFL, [], 0}, 8) = 0
+rt_sigaction(SIGIO, {0x7311c0, [], SA_RESTORER|SA_SIGINFO, 0x3a6cc0f7e0}, {SIG_DFL, [], 0}, 8) = 0
+rt_sigaction(SIGCHLD, {0x7311c0, [], SA_RESTORER|SA_SIGINFO, 0x3a6cc0f7e0}, {0x7311c0, [], SA_RESTORER|SA_SIGINFO, 0x3a6cc0f7e0}, 8) = 0
+stat("/usr/local/bin/WolframKernel", {st_mode=S_IFREG|0755, st_size=5035, ...}) = 0
+stat("/usr/local/bin/WolframKernel", {st_mode=S_IFREG|0755, st_size=5035, ...}) = 0
+getuid()                                = 502
+getgid()                                = 507
+stat("/tmp/MathLink", {st_mode=S_IFDIR|0777, st_size=20480, ...}) = 0
+open("/tmp/MathLink", O_RDONLY|O_NONBLOCK|O_DIRECTORY|O_CLOEXEC) = 3
+brk(0x216d000)                          = 0x216d000
+getdents(3, /* 80 entries */, 32768)    = 3168
+getdents(3, /* 0 entries */, 32768)     = 0
+close(3)                                = 0
+stat("/tmp/MathLink", {st_mode=S_IFDIR|0777, st_size=20480, ...}) = 0
+open("/tmp/MathLink", O_RDONLY|O_NONBLOCK|O_DIRECTORY|O_CLOEXEC) = 3
+getdents(3, /* 80 entries */, 32768)    = 3168
+getdents(3, /* 0 entries */, 32768)     = 0
+close(3)                                = 0
+stat("/tmp/MathLink", {st_mode=S_IFDIR|0777, st_size=20480, ...}) = 0
+open("/tmp/MathLink", O_RDONLY|O_NONBLOCK|O_DIRECTORY|O_CLOEXEC) = 3
+getdents(3, /* 80 entries */, 32768)    = 3168
+getdents(3, /* 0 entries */, 32768)     = 0
+close(3)                                = 0
+stat("/tmp/MathLink", {st_mode=S_IFDIR|0777, st_size=20480, ...}) = 0
+open("/tmp/MathLink", O_RDONLY|O_NONBLOCK|O_DIRECTORY|O_CLOEXEC) = 3
+getdents(3, /* 80 entries */, 32768)    = 3168
+getdents(3, /* 0 entries */, 32768)     = 0
+close(3)                                = 0
+stat("/tmp/MathLink", {st_mode=S_IFDIR|0777, st_size=20480, ...}) = 0
+open("/tmp/MathLink", O_RDONLY|O_NONBLOCK|O_DIRECTORY|O_CLOEXEC) = 3
+getdents(3, /* 80 entries */, 32768)    = 3168
+getdents(3, /* 0 entries */, 32768)     = 0
+close(3)                                = 0
+stat("/tmp/MathLink", {st_mode=S_IFDIR|0777, st_size=20480, ...}) = 0
+open("/tmp/MathLink", O_RDONLY|O_NONBLOCK|O_DIRECTORY|O_CLOEXEC) = 3
+getdents(3, /* 80 entries */, 32768)    = 3168
+getdents(3, /* 0 entries */, 32768)     = 0
+close(3)                                = 0
+stat("/tmp/MathLink", {st_mode=S_IFDIR|0777, st_size=20480, ...}) = 0
+open("/tmp/MathLink", O_RDONLY|O_NONBLOCK|O_DIRECTORY|O_CLOEXEC) = 3
+getdents(3, /* 80 entries */, 32768)    = 3168
+getdents(3, /* 0 entries */, 32768)     = 0
+close(3)                                = 0
+stat("/tmp/MathLink", {st_mode=S_IFDIR|0777, st_size=20480, ...}) = 0
+open("/tmp/MathLink", O_RDONLY|O_NONBLOCK|O_DIRECTORY|O_CLOEXEC) = 3
+getdents(3, /* 80 entries */, 32768)    = 3168
+getdents(3, /* 0 entries */, 32768)     = 0
+close(3)                                = 0
+stat("/tmp/MathLink", {st_mode=S_IFDIR|0777, st_size=20480, ...}) = 0
+open("/tmp/MathLink", O_RDONLY|O_NONBLOCK|O_DIRECTORY|O_CLOEXEC) = 3
+getdents(3, /* 80 entries */, 32768)    = 3168
+getdents(3, /* 0 entries */, 32768)     = 0
+close(3)                                = 0
+stat("/tmp/MathLink", {st_mode=S_IFDIR|0777, st_size=20480, ...}) = 0
+open("/tmp/MathLink", O_RDONLY|O_NONBLOCK|O_DIRECTORY|O_CLOEXEC) = 3
+getdents(3, /* 80 entries */, 32768)    = 3168
+getdents(3, /* 0 entries */, 32768)     = 0
+close(3)                                = 0
+stat("/tmp/MathLink", {st_mode=S_IFDIR|0777, st_size=20480, ...}) = 0
+open("/tmp/MathLink", O_RDONLY|O_NONBLOCK|O_DIRECTORY|O_CLOEXEC) = 3
+getdents(3, /* 80 entries */, 32768)    = 3168
+getdents(3, /* 0 entries */, 32768)     = 0
+close(3)                                = 0
+stat("/tmp/MathLink", {st_mode=S_IFDIR|0777, st_size=20480, ...}) = 0
+open("/tmp/MathLink", O_RDONLY|O_NONBLOCK|O_DIRECTORY|O_CLOEXEC) = 3
+getdents(3, /* 80 entries */, 32768)    = 3168
+getdents(3, /* 0 entries */, 32768)     = 0
+close(3)                                = 0
+stat("/tmp/MathLink", {st_mode=S_IFDIR|0777, st_size=20480, ...}) = 0
+open("/tmp/MathLink", O_RDONLY|O_NONBLOCK|O_DIRECTORY|O_CLOEXEC) = 3
+getdents(3, /* 80 entries */, 32768)    = 3168
+getdents(3, /* 0 entries */, 32768)     = 0
+close(3)                                = 0
+stat("/tmp/MathLink", {st_mode=S_IFDIR|0777, st_size=20480, ...}) = 0
+open("/tmp/MathLink", O_RDONLY|O_NONBLOCK|O_DIRECTORY|O_CLOEXEC) = 3
+getdents(3, /* 80 entries */, 32768)    = 3168
+getdents(3, /* 0 entries */, 32768)     = 0
+close(3)                                = 0
+stat("/tmp/MathLink", {st_mode=S_IFDIR|0777, st_size=20480, ...}) = 0
+open("/tmp/MathLink", O_RDONLY|O_NONBLOCK|O_DIRECTORY|O_CLOEXEC) = 3
+getdents(3, /* 80 entries */, 32768)    = 3168
+getdents(3, /* 0 entries */, 32768)     = 0
+close(3)                                = 0
+open("/dev/shm/r4i6ne", O_RDWR|O_CREAT|O_EXCL|O_NOFOLLOW|O_CLOEXEC, 0644) = 3
+ftruncate(3, 100)                       = 0
+mmap(NULL, 100, PROT_READ|PROT_WRITE, MAP_SHARED, 3, 0) = 0x7f97b5e22000
+munmap(0x7f97b5e22000, 100)             = 0
+unlink("/dev/shm/r4i6ne")               = 0
+close(3)                                = 0
+open("/dev/shm/a7rzf_shm", O_RDWR|O_CREAT|O_EXCL|O_NOFOLLOW|O_CLOEXEC, 0644) = 3
+ftruncate(3, 200120)                    = 0
+mmap(NULL, 200120, PROT_READ|PROT_WRITE, MAP_SHARED, 3, 0) = 0x7f97ac371000
+stat("/tmp/MathLink/mlshm-a7rzf_shm.rec", 0x7ffe7f608c80) = -1 ENOENT (No such file or directory)
+umask(0)                                = 022
+open("/tmp/MathLink/mlshm-a7rzf_shm.rec", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 4
+umask(022)                              = 0
+open("/tmp/MathLink/mlshm-a7rzf_shm.rec", O_RDWR) = 5
+fcntl(5, F_SETLKW, {type=F_WRLCK, whence=SEEK_SET, start=0, len=0}) = 0
+close(5)                                = 0
+fstat(4, {st_mode=S_IFREG|0666, st_size=0, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f97b5e22000
+umask(0)                                = 022
+chmod("/tmp/MathLink/mlshm-a7rzf_shm.rec", 0666) = 0
+umask(022)                              = 0
+open("/tmp/MathLink/mlshm-a7rzf_shm.rec", O_RDWR) = 5
+fcntl(5, F_SETLKW, {type=F_UNLCK, whence=SEEK_SET, start=0, len=0}) = 0
+close(5)                                = 0
+write(4, "19294:\n", 7)                 = 7
+close(4)                                = 0
+munmap(0x7f97b5e22000, 4096)            = 0
+umask(0)                                = 022
+mknod("/tmp/MathLink/a7rzf_shmffrdcon", S_IFIFO|0666) = 0
+umask(022)                              = 0
+open("/tmp/MathLink/a7rzf_shmffrdcon", O_RDONLY|O_NONBLOCK) = 4
+open("/tmp/MathLink/a7rzf_shmffrdcon", O_WRONLY) = 5
+stat("/tmp/MathLink/ml19294-9p2h24d6rawn2sbdwjji.rec", 0x7ffe7f608790) = -1 ENOENT (No such file or directory)
+umask(0)                                = 022
+open("/tmp/MathLink/ml19294-9p2h24d6rawn2sbdwjji.rec", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 6
+umask(022)                              = 0
+open("/tmp/MathLink/ml19294-9p2h24d6rawn2sbdwjji.rec", O_RDWR) = 7
+fcntl(7, F_SETLKW, {type=F_WRLCK, whence=SEEK_SET, start=0, len=0}) = 0
+close(7)                                = 0
+fstat(6, {st_mode=S_IFREG|0666, st_size=0, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f97b5e22000
+umask(0)                                = 022
+chmod("/tmp/MathLink/ml19294-9p2h24d6rawn2sbdwjji.rec", 0666) = 0
+umask(022)                              = 0
+open("/tmp/MathLink/ml19294-9p2h24d6rawn2sbdwjji.rec", O_RDWR) = 7
+fcntl(7, F_SETLKW, {type=F_UNLCK, whence=SEEK_SET, start=0, len=0}) = 0
+close(7)                                = 0
+write(6, "19294\na7rzf_shmffrdcon:FC\n", 26) = 26
+close(6)                                = 0
+munmap(0x7f97b5e22000, 4096)            = 0
+fcntl(4, F_SETFL, O_RDONLY|O_NONBLOCK)  = 0
+umask(0)                                = 022
+mknod("/tmp/MathLink/a7rzf_shmffrmcon", S_IFIFO|0666) = 0
+umask(022)                              = 0
+open("/tmp/MathLink/a7rzf_shmffrmcon", O_RDONLY|O_NONBLOCK) = 6
+open("/tmp/MathLink/a7rzf_shmffrmcon", O_WRONLY) = 7
+stat("/tmp/MathLink/ml19294-9p2h24d6rawn2sbdwjji.rec", {st_mode=S_IFREG|0666, st_size=26, ...}) = 0
+open("/tmp/MathLink/ml19294-9p2h24d6rawn2sbdwjji.rec", O_RDWR) = 8
+fcntl(8, F_SETLKW, {type=F_WRLCK, whence=SEEK_SET, start=0, len=0}) = 0
+close(8)                                = 0
+umask(0)                                = 022
+open("/tmp/MathLink/ml19294-9p2h24d6rawn2sbdwjji.rec", O_RDONLY) = 8
+umask(022)                              = 0
+fstat(8, {st_mode=S_IFREG|0666, st_size=26, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f97b5e22000
+read(8, "19294\na7rzf_shmffrdcon:FC\n", 4096) = 26
+read(8, "", 4096)                       = 0
+read(8, "", 4096)                       = 0
+open("/tmp/MathLink/ml19294-9p2h24d6rawn2sbdwjji.rec", O_RDWR) = 9
+fcntl(9, F_SETLKW, {type=F_UNLCK, whence=SEEK_SET, start=0, len=0}) = 0
+close(9)                                = 0
+umask(0)                                = 022
+open("/tmp/MathLink/ml19294-9p2h24d6rawn2sbdwjji.rec", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 9
+umask(022)                              = 0
+close(8)                                = 0
+munmap(0x7f97b5e22000, 4096)            = 0
+open("/tmp/MathLink/ml19294-9p2h24d6rawn2sbdwjji.rec", O_RDWR) = 8
+fcntl(8, F_SETLKW, {type=F_WRLCK, whence=SEEK_SET, start=0, len=0}) = 0
+close(8)                                = 0
+fstat(9, {st_mode=S_IFREG|0666, st_size=0, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f97b5e22000
+umask(0)                                = 022
+chmod("/tmp/MathLink/ml19294-9p2h24d6rawn2sbdwjji.rec", 0666) = 0
+umask(022)                              = 0
+open("/tmp/MathLink/ml19294-9p2h24d6rawn2sbdwjji.rec", O_RDWR) = 8
+fcntl(8, F_SETLKW, {type=F_UNLCK, whence=SEEK_SET, start=0, len=0}) = 0
+close(8)                                = 0
+write(9, "19294\na7rzf_shmffrdcon:FC\na7rzf_"..., 46) = 46
+close(9)                                = 0
+munmap(0x7f97b5e22000, 4096)            = 0
+fcntl(6, F_SETFL, O_RDONLY|O_NONBLOCK)  = 0
+umask(0)                                = 022
+mknod("/tmp/MathLink/a7rzf_shmfffsrdcon", S_IFIFO|0666) = 0
+umask(022)                              = 0
+open("/tmp/MathLink/a7rzf_shmfffsrdcon", O_RDONLY|O_NONBLOCK) = 8
+open("/tmp/MathLink/a7rzf_shmfffsrdcon", O_WRONLY) = 9
+stat("/tmp/MathLink/ml19294-9p2h24d6rawn2sbdwjji.rec", {st_mode=S_IFREG|0666, st_size=46, ...}) = 0
+open("/tmp/MathLink/ml19294-9p2h24d6rawn2sbdwjji.rec", O_RDWR) = 10
+fcntl(10, F_SETLKW, {type=F_WRLCK, whence=SEEK_SET, start=0, len=0}) = 0
+close(10)                               = 0
+umask(0)                                = 022
+open("/tmp/MathLink/ml19294-9p2h24d6rawn2sbdwjji.rec", O_RDONLY) = 10
+umask(022)                              = 0
+fstat(10, {st_mode=S_IFREG|0666, st_size=46, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f97b5e22000
+read(10, "19294\na7rzf_shmffrdcon:FC\na7rzf_"..., 4096) = 46
+read(10, "", 4096)                      = 0
+read(10, "", 4096)                      = 0
+open("/tmp/MathLink/ml19294-9p2h24d6rawn2sbdwjji.rec", O_RDWR) = 11
+fcntl(11, F_SETLKW, {type=F_UNLCK, whence=SEEK_SET, start=0, len=0}) = 0
+close(11)                               = 0
+umask(0)                                = 022
+open("/tmp/MathLink/ml19294-9p2h24d6rawn2sbdwjji.rec", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 11
+umask(022)                              = 0
+close(10)                               = 0
+munmap(0x7f97b5e22000, 4096)            = 0
+open("/tmp/MathLink/ml19294-9p2h24d6rawn2sbdwjji.rec", O_RDWR) = 10
+fcntl(10, F_SETLKW, {type=F_WRLCK, whence=SEEK_SET, start=0, len=0}) = 0
+close(10)                               = 0
+fstat(11, {st_mode=S_IFREG|0666, st_size=0, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f97b5e22000
+umask(0)                                = 022
+chmod("/tmp/MathLink/ml19294-9p2h24d6rawn2sbdwjji.rec", 0666) = 0
+umask(022)                              = 0
+open("/tmp/MathLink/ml19294-9p2h24d6rawn2sbdwjji.rec", O_RDWR) = 10
+fcntl(10, F_SETLKW, {type=F_UNLCK, whence=SEEK_SET, start=0, len=0}) = 0
+close(10)                               = 0
+write(11, "19294\na7rzf_shmffrdcon:FC\na7rzf_"..., 68) = 68
+close(11)                               = 0
+munmap(0x7f97b5e22000, 4096)            = 0
+fcntl(8, F_SETFL, O_RDONLY|O_NONBLOCK)  = 0
+umask(0)                                = 022
+open("/tmp/MathLink/a7rzf_shmwrlck", O_RDWR|O_CREAT|O_EXCL, 0666) = 10
+umask(022)                              = 0
+write(10, "FillerBytes\n", 12)          = 12
+stat("/tmp/MathLink/ml19294-9p2h24d6rawn2sbdwjji.rec", {st_mode=S_IFREG|0666, st_size=68, ...}) = 0
+open("/tmp/MathLink/ml19294-9p2h24d6rawn2sbdwjji.rec", O_RDWR) = 11
+fcntl(11, F_SETLKW, {type=F_WRLCK, whence=SEEK_SET, start=0, len=0}) = 0
+close(11)                               = 0
+umask(0)                                = 022
+open("/tmp/MathLink/ml19294-9p2h24d6rawn2sbdwjji.rec", O_RDONLY) = 11
+umask(022)                              = 0
+fstat(11, {st_mode=S_IFREG|0666, st_size=68, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f97b5e22000
+read(11, "19294\na7rzf_shmffrdcon:FC\na7rzf_"..., 4096) = 68
+read(11, "", 4096)                      = 0
+read(11, "", 4096)                      = 0
+open("/tmp/MathLink/ml19294-9p2h24d6rawn2sbdwjji.rec", O_RDWR) = 12
+fcntl(12, F_SETLKW, {type=F_UNLCK, whence=SEEK_SET, start=0, len=0}) = 0
+close(12)                               = 0
+umask(0)                                = 022
+open("/tmp/MathLink/ml19294-9p2h24d6rawn2sbdwjji.rec", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 12
+umask(022)                              = 0
+close(11)                               = 0
+munmap(0x7f97b5e22000, 4096)            = 0
+open("/tmp/MathLink/ml19294-9p2h24d6rawn2sbdwjji.rec", O_RDWR) = 11
+fcntl(11, F_SETLKW, {type=F_WRLCK, whence=SEEK_SET, start=0, len=0}) = 0
+close(11)                               = 0
+fstat(12, {st_mode=S_IFREG|0666, st_size=0, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f97b5e22000
+umask(0)                                = 022
+chmod("/tmp/MathLink/ml19294-9p2h24d6rawn2sbdwjji.rec", 0666) = 0
+umask(022)                              = 0
+open("/tmp/MathLink/ml19294-9p2h24d6rawn2sbdwjji.rec", O_RDWR) = 11
+fcntl(11, F_SETLKW, {type=F_UNLCK, whence=SEEK_SET, start=0, len=0}) = 0
+close(11)                               = 0
+write(12, "19294\na7rzf_shmffrdcon:FC\na7rzf_"..., 86) = 86
+close(12)                               = 0
+munmap(0x7f97b5e22000, 4096)            = 0
+umask(0)                                = 022
+open("/tmp/MathLink/a7rzf_shmrdlck", O_RDWR|O_CREAT|O_EXCL, 0666) = 11
+umask(022)                              = 0
+write(11, "FillerBytes\n", 12)          = 12
+stat("/tmp/MathLink/ml19294-9p2h24d6rawn2sbdwjji.rec", {st_mode=S_IFREG|0666, st_size=86, ...}) = 0
+open("/tmp/MathLink/ml19294-9p2h24d6rawn2sbdwjji.rec", O_RDWR) = 12
+fcntl(12, F_SETLKW, {type=F_WRLCK, whence=SEEK_SET, start=0, len=0}) = 0
+close(12)                               = 0
+umask(0)                                = 022
+open("/tmp/MathLink/ml19294-9p2h24d6rawn2sbdwjji.rec", O_RDONLY) = 12
+umask(022)                              = 0
+fstat(12, {st_mode=S_IFREG|0666, st_size=86, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f97b5e22000
+read(12, "19294\na7rzf_shmffrdcon:FC\na7rzf_"..., 4096) = 86
+read(12, "", 4096)                      = 0
+read(12, "", 4096)                      = 0
+open("/tmp/MathLink/ml19294-9p2h24d6rawn2sbdwjji.rec", O_RDWR) = 13
+fcntl(13, F_SETLKW, {type=F_UNLCK, whence=SEEK_SET, start=0, len=0}) = 0
+close(13)                               = 0
+umask(0)                                = 022
+open("/tmp/MathLink/ml19294-9p2h24d6rawn2sbdwjji.rec", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 13
+umask(022)                              = 0
+close(12)                               = 0
+munmap(0x7f97b5e22000, 4096)            = 0
+open("/tmp/MathLink/ml19294-9p2h24d6rawn2sbdwjji.rec", O_RDWR) = 12
+fcntl(12, F_SETLKW, {type=F_WRLCK, whence=SEEK_SET, start=0, len=0}) = 0
+close(12)                               = 0
+fstat(13, {st_mode=S_IFREG|0666, st_size=0, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f97b5e22000
+umask(0)                                = 022
+chmod("/tmp/MathLink/ml19294-9p2h24d6rawn2sbdwjji.rec", 0666) = 0
+umask(022)                              = 0
+open("/tmp/MathLink/ml19294-9p2h24d6rawn2sbdwjji.rec", O_RDWR) = 12
+fcntl(12, F_SETLKW, {type=F_UNLCK, whence=SEEK_SET, start=0, len=0}) = 0
+close(12)                               = 0
+write(13, "19294\na7rzf_shmffrdcon:FC\na7rzf_"..., 104) = 104
+close(13)                               = 0
+munmap(0x7f97b5e22000, 4096)            = 0
+umask(0)                                = 022
+open("/tmp/MathLink/a7rzf_shmwrmsglck", O_RDWR|O_CREAT|O_EXCL, 0666) = 12
+umask(022)                              = 0
+write(12, "FillerBytes\n", 12)          = 12
+stat("/tmp/MathLink/ml19294-9p2h24d6rawn2sbdwjji.rec", {st_mode=S_IFREG|0666, st_size=104, ...}) = 0
+open("/tmp/MathLink/ml19294-9p2h24d6rawn2sbdwjji.rec", O_RDWR) = 13
+fcntl(13, F_SETLKW, {type=F_WRLCK, whence=SEEK_SET, start=0, len=0}) = 0
+close(13)                               = 0
+umask(0)                                = 022
+open("/tmp/MathLink/ml19294-9p2h24d6rawn2sbdwjji.rec", O_RDONLY) = 13
+umask(022)                              = 0
+fstat(13, {st_mode=S_IFREG|0666, st_size=104, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f97b5e22000
+read(13, "19294\na7rzf_shmffrdcon:FC\na7rzf_"..., 4096) = 104
+read(13, "", 4096)                      = 0
+read(13, "", 4096)                      = 0
+open("/tmp/MathLink/ml19294-9p2h24d6rawn2sbdwjji.rec", O_RDWR) = 14
+fcntl(14, F_SETLKW, {type=F_UNLCK, whence=SEEK_SET, start=0, len=0}) = 0
+close(14)                               = 0
+umask(0)                                = 022
+open("/tmp/MathLink/ml19294-9p2h24d6rawn2sbdwjji.rec", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 14
+umask(022)                              = 0
+close(13)                               = 0
+munmap(0x7f97b5e22000, 4096)            = 0
+open("/tmp/MathLink/ml19294-9p2h24d6rawn2sbdwjji.rec", O_RDWR) = 13
+fcntl(13, F_SETLKW, {type=F_WRLCK, whence=SEEK_SET, start=0, len=0}) = 0
+close(13)                               = 0
+fstat(14, {st_mode=S_IFREG|0666, st_size=0, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f97b5e22000
+umask(0)                                = 022
+chmod("/tmp/MathLink/ml19294-9p2h24d6rawn2sbdwjji.rec", 0666) = 0
+umask(022)                              = 0
+open("/tmp/MathLink/ml19294-9p2h24d6rawn2sbdwjji.rec", O_RDWR) = 13
+fcntl(13, F_SETLKW, {type=F_UNLCK, whence=SEEK_SET, start=0, len=0}) = 0
+close(13)                               = 0
+write(14, "19294\na7rzf_shmffrdcon:FC\na7rzf_"..., 125) = 125
+close(14)                               = 0
+munmap(0x7f97b5e22000, 4096)            = 0
+umask(0)                                = 022
+open("/tmp/MathLink/a7rzf_shmrdmsglck", O_RDWR|O_CREAT|O_EXCL, 0666) = 13
+umask(022)                              = 0
+write(13, "FillerBytes\n", 12)          = 12
+stat("/tmp/MathLink/ml19294-9p2h24d6rawn2sbdwjji.rec", {st_mode=S_IFREG|0666, st_size=125, ...}) = 0
+open("/tmp/MathLink/ml19294-9p2h24d6rawn2sbdwjji.rec", O_RDWR) = 14
+fcntl(14, F_SETLKW, {type=F_WRLCK, whence=SEEK_SET, start=0, len=0}) = 0
+close(14)                               = 0
+umask(0)                                = 022
+open("/tmp/MathLink/ml19294-9p2h24d6rawn2sbdwjji.rec", O_RDONLY) = 14
+umask(022)                              = 0
+fstat(14, {st_mode=S_IFREG|0666, st_size=125, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f97b5e22000
+read(14, "19294\na7rzf_shmffrdcon:FC\na7rzf_"..., 4096) = 125
+read(14, "", 4096)                      = 0
+read(14, "", 4096)                      = 0
+open("/tmp/MathLink/ml19294-9p2h24d6rawn2sbdwjji.rec", O_RDWR) = 15
+fcntl(15, F_SETLKW, {type=F_UNLCK, whence=SEEK_SET, start=0, len=0}) = 0
+close(15)                               = 0
+umask(0)                                = 022
+open("/tmp/MathLink/ml19294-9p2h24d6rawn2sbdwjji.rec", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 15
+umask(022)                              = 0
+close(14)                               = 0
+munmap(0x7f97b5e22000, 4096)            = 0
+open("/tmp/MathLink/ml19294-9p2h24d6rawn2sbdwjji.rec", O_RDWR) = 14
+fcntl(14, F_SETLKW, {type=F_WRLCK, whence=SEEK_SET, start=0, len=0}) = 0
+close(14)                               = 0
+fstat(15, {st_mode=S_IFREG|0666, st_size=0, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f97b5e22000
+umask(0)                                = 022
+chmod("/tmp/MathLink/ml19294-9p2h24d6rawn2sbdwjji.rec", 0666) = 0
+umask(022)                              = 0
+open("/tmp/MathLink/ml19294-9p2h24d6rawn2sbdwjji.rec", O_RDWR) = 14
+fcntl(14, F_SETLKW, {type=F_UNLCK, whence=SEEK_SET, start=0, len=0}) = 0
+close(14)                               = 0
+write(15, "19294\na7rzf_shmffrdcon:FC\na7rzf_"..., 146) = 146
+close(15)                               = 0
+munmap(0x7f97b5e22000, 4096)            = 0
+pipe([14, 15])                          = 0
+fcntl(14, F_SETFL, O_RDONLY|O_NONBLOCK) = 0
+socket(PF_INET, SOCK_STREAM, IPPROTO_IP) = 16
+bind(16, {sa_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("0.0.0.0")}, 16) = 0
+listen(16, 5)                           = 0
+getsockname(16, {sa_family=AF_INET, sin_port=htons(60899), sin_addr=inet_addr("0.0.0.0")}, [16]) = 0
+rt_sigaction(SIGPIPE, {SIG_IGN, [], SA_RESTORER, 0x3a6cc0f7e0}, {0x7311c0, [], SA_RESTORER|SA_SIGINFO, 0x3a6cc0f7e0}, 8) = 0
+clone(child_stack=0, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f97b5859a30) = 19300
+rt_sigprocmask(SIG_BLOCK, NULL, [], 8)  = 0
+rt_sigprocmask(SIG_SETMASK, [CHLD], NULL, 8) = 0
+wait4(19300, 0x7ffe7f609d70, WNOHANG, NULL) = 0
+select(0, NULL, NULL, NULL, {0, 1})     = 0 (Timeout)
+wait4(19300, 0x7ffe7f609d70, WNOHANG, NULL) = 0
+select(0, NULL, NULL, NULL, {0, 1})     = 0 (Timeout)
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+rt_sigaction(SIGPIPE, {0x7311c0, [], SA_RESTORER|SA_SIGINFO, 0x3a6cc0f7e0}, {SIG_IGN, [], SA_RESTORER, 0x3a6cc0f7e0}, 8) = 0
+wait4(19300, 0x7ffe7f609d1c, WNOHANG, NULL) = 0
+mmap(NULL, 10489856, PROT_READ|PROT_WRITE|PROT_EXEC, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7f97975ff000
+mprotect(0x7f97975ff000, 4096, PROT_NONE) = 0
+clone(child_stack=0x7f9797ffef90, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_tidptr=0x7f9797fff9d0, tls=0x7f9797fff700, child_tidptr=0x7f9797fff9d0) = 19301
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+select(0, NULL, NULL, NULL, {0, 100})   = 0 (Timeout)
+open("/tmp/MathLink/a7rzf_shmffwrcon", O_RDONLY|O_NONBLOCK) = 17
+open("/tmp/MathLink/a7rzf_shmffwrcon", O_WRONLY) = 18
+stat("/tmp/MathLink/ml19294-9p2h24d6rawn2sbdwjji.rec", {st_mode=S_IFREG|0666, st_size=146, ...}) = 0
+open("/tmp/MathLink/ml19294-9p2h24d6rawn2sbdwjji.rec", O_RDWR) = 19
+fcntl(19, F_SETLKW, {type=F_WRLCK, whence=SEEK_SET, start=0, len=0}) = 0
+close(19)                               = 0
+umask(0)                                = 022
+open("/tmp/MathLink/ml19294-9p2h24d6rawn2sbdwjji.rec", O_RDONLY) = 19
+umask(022)                              = 0
+fstat(19, {st_mode=S_IFREG|0666, st_size=146, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f97b5e22000
+read(19, "19294\na7rzf_shmffrdcon:FC\na7rzf_"..., 4096) = 146
+read(19, "", 4096)                      = 0
+read(19, "", 4096)                      = 0
+open("/tmp/MathLink/ml19294-9p2h24d6rawn2sbdwjji.rec", O_RDWR) = 20
+fcntl(20, F_SETLKW, {type=F_UNLCK, whence=SEEK_SET, start=0, len=0}) = 0
+close(20)                               = 0
+umask(0)                                = 022
+open("/tmp/MathLink/ml19294-9p2h24d6rawn2sbdwjji.rec", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 20
+umask(022)                              = 0
+close(19)                               = 0
+munmap(0x7f97b5e22000, 4096)            = 0
+open("/tmp/MathLink/ml19294-9p2h24d6rawn2sbdwjji.rec", O_RDWR) = 19
+fcntl(19, F_SETLKW, {type=F_WRLCK, whence=SEEK_SET, start=0, len=0}) = 0
+close(19)                               = 0
+fstat(20, {st_mode=S_IFREG|0666, st_size=0, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f97b5e22000
+umask(0)                                = 022
+chmod("/tmp/MathLink/ml19294-9p2h24d6rawn2sbdwjji.rec", 0666) = 0
+umask(022)                              = 0
+open("/tmp/MathLink/ml19294-9p2h24d6rawn2sbdwjji.rec", O_RDWR) = 19
+fcntl(19, F_SETLKW, {type=F_UNLCK, whence=SEEK_SET, start=0, len=0}) = 0
+close(19)                               = 0
+write(20, "19294\na7rzf_shmffrdcon:FC\na7rzf_"..., 166) = 166
+close(20)                               = 0
+munmap(0x7f97b5e22000, 4096)            = 0
+fcntl(17, F_SETFL, O_RDONLY|O_NONBLOCK) = 0
+open("/tmp/MathLink/a7rzf_shmffwmcon", O_RDONLY|O_NONBLOCK) = 19
+open("/tmp/MathLink/a7rzf_shmffwmcon", O_WRONLY) = 20
+stat("/tmp/MathLink/ml19294-9p2h24d6rawn2sbdwjji.rec", {st_mode=S_IFREG|0666, st_size=166, ...}) = 0
+open("/tmp/MathLink/ml19294-9p2h24d6rawn2sbdwjji.rec", O_RDWR) = 21
+fcntl(21, F_SETLKW, {type=F_WRLCK, whence=SEEK_SET, start=0, len=0}) = 0
+close(21)                               = 0
+umask(0)                                = 022
+open("/tmp/MathLink/ml19294-9p2h24d6rawn2sbdwjji.rec", O_RDONLY) = 21
+umask(022)                              = 0
+fstat(21, {st_mode=S_IFREG|0666, st_size=166, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f97b5e22000
+read(21, "19294\na7rzf_shmffrdcon:FC\na7rzf_"..., 4096) = 166
+read(21, "", 4096)                      = 0
+read(21, "", 4096)                      = 0
+open("/tmp/MathLink/ml19294-9p2h24d6rawn2sbdwjji.rec", O_RDWR) = 22
+fcntl(22, F_SETLKW, {type=F_UNLCK, whence=SEEK_SET, start=0, len=0}) = 0
+close(22)                               = 0
+umask(0)                                = 022
+open("/tmp/MathLink/ml19294-9p2h24d6rawn2sbdwjji.rec", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 22
+umask(022)                              = 0
+close(21)                               = 0
+munmap(0x7f97b5e22000, 4096)            = 0
+open("/tmp/MathLink/ml19294-9p2h24d6rawn2sbdwjji.rec", O_RDWR) = 21
+fcntl(21, F_SETLKW, {type=F_WRLCK, whence=SEEK_SET, start=0, len=0}) = 0
+close(21)                               = 0
+fstat(22, {st_mode=S_IFREG|0666, st_size=0, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f97b5e22000
+umask(0)                                = 022
+chmod("/tmp/MathLink/ml19294-9p2h24d6rawn2sbdwjji.rec", 0666) = 0
+umask(022)                              = 0
+open("/tmp/MathLink/ml19294-9p2h24d6rawn2sbdwjji.rec", O_RDWR) = 21
+fcntl(21, F_SETLKW, {type=F_UNLCK, whence=SEEK_SET, start=0, len=0}) = 0
+close(21)                               = 0
+write(22, "19294\na7rzf_shmffrdcon:FC\na7rzf_"..., 186) = 186
+close(22)                               = 0
+munmap(0x7f97b5e22000, 4096)            = 0
+fcntl(19, F_SETFL, O_RDONLY|O_NONBLOCK) = 0
+open("/tmp/MathLink/a7rzf_shmfffswrcon", O_RDONLY|O_NONBLOCK) = 21
+open("/tmp/MathLink/a7rzf_shmfffswrcon", O_WRONLY) = 22
+stat("/tmp/MathLink/ml19294-9p2h24d6rawn2sbdwjji.rec", {st_mode=S_IFREG|0666, st_size=186, ...}) = 0
+open("/tmp/MathLink/ml19294-9p2h24d6rawn2sbdwjji.rec", O_RDWR) = 23
+fcntl(23, F_SETLKW, {type=F_WRLCK, whence=SEEK_SET, start=0, len=0}) = 0
+close(23)                               = 0
+umask(0)                                = 022
+open("/tmp/MathLink/ml19294-9p2h24d6rawn2sbdwjji.rec", O_RDONLY) = 23
+umask(022)                              = 0
+fstat(23, {st_mode=S_IFREG|0666, st_size=186, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f97b5e22000
+read(23, "19294\na7rzf_shmffrdcon:FC\na7rzf_"..., 4096) = 186
+read(23, "", 4096)                      = 0
+read(23, "", 4096)                      = 0
+open("/tmp/MathLink/ml19294-9p2h24d6rawn2sbdwjji.rec", O_RDWR) = 24
+fcntl(24, F_SETLKW, {type=F_UNLCK, whence=SEEK_SET, start=0, len=0}) = 0
+close(24)                               = 0
+umask(0)                                = 022
+open("/tmp/MathLink/ml19294-9p2h24d6rawn2sbdwjji.rec", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 24
+umask(022)                              = 0
+close(23)                               = 0
+munmap(0x7f97b5e22000, 4096)            = 0
+open("/tmp/MathLink/ml19294-9p2h24d6rawn2sbdwjji.rec", O_RDWR) = 23
+fcntl(23, F_SETLKW, {type=F_WRLCK, whence=SEEK_SET, start=0, len=0}) = 0
+close(23)                               = 0
+fstat(24, {st_mode=S_IFREG|0666, st_size=0, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f97b5e22000
+umask(0)                                = 022
+chmod("/tmp/MathLink/ml19294-9p2h24d6rawn2sbdwjji.rec", 0666) = 0
+umask(022)                              = 0
+open("/tmp/MathLink/ml19294-9p2h24d6rawn2sbdwjji.rec", O_RDWR) = 23
+fcntl(23, F_SETLKW, {type=F_UNLCK, whence=SEEK_SET, start=0, len=0}) = 0
+close(23)                               = 0
+write(24, "19294\na7rzf_shmffrdcon:FC\na7rzf_"..., 208) = 208
+close(24)                               = 0
+munmap(0x7f97b5e22000, 4096)            = 0
+fcntl(21, F_SETFL, O_RDONLY|O_NONBLOCK) = 0
+poll([{fd=5, events=POLLIN|POLLOUT}], 1, 0) = 1 ([{fd=5, revents=POLLOUT}])
+write(5, "1", 1)                        = 1
+mmap(NULL, 10489856, PROT_READ|PROT_WRITE|PROT_EXEC, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7f9796bfe000
+mprotect(0x7f9796bfe000, 4096, PROT_NONE) = 0
+clone(child_stack=0x7f97975fdf90, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_tidptr=0x7f97975fe9d0, tls=0x7f97975fe700, child_tidptr=0x7f97975fe9d0) = 19407
+poll([{fd=16, events=POLLIN}], 1, 1)    = 1 ([{fd=16, revents=POLLIN}])
+accept(16, {sa_family=AF_INET, sin_port=htons(41292), sin_addr=inet_addr("127.0.0.1")}, [16]) = 23
+dup2(23, 16)                            = 16
+close(23)                               = 0
+setsockopt(16, SOL_SOCKET, SO_KEEPALIVE, [1], 4) = 0
+flock(10, LOCK_EX)                      = 0
+flock(10, LOCK_UN)                      = 0
+flock(10, LOCK_EX)                      = 0
+flock(10, LOCK_UN)                      = 0
+poll([{fd=18, events=POLLIN|POLLOUT}], 1, 0) = 1 ([{fd=18, revents=POLLOUT}])
+write(18, "1", 1)                       = 1
+flock(10, LOCK_EX)                      = 0
+flock(10, LOCK_UN)                      = 0
+flock(11, LOCK_EX)                      = 0
+flock(11, LOCK_UN)                      = 0
+flock(11, LOCK_EX)                      = 0
+flock(11, LOCK_UN)                      = 0
+flock(10, LOCK_EX)                      = 0
+flock(10, LOCK_UN)                      = 0
+poll([{fd=18, events=POLLIN|POLLOUT}], 1, 0) = 1 ([{fd=18, revents=POLLOUT}])
+write(18, "1", 1)                       = 1
+flock(10, LOCK_EX)                      = 0
+flock(10, LOCK_UN)                      = 0
+flock(10, LOCK_EX)                      = 0
+flock(10, LOCK_UN)                      = 0
+poll([{fd=18, events=POLLIN|POLLOUT}], 1, 0) = 1 ([{fd=18, revents=POLLOUT}])
+write(18, "1", 1)                       = 1
+flock(10, LOCK_EX)                      = 0
+flock(10, LOCK_UN)                      = 0
+flock(10, LOCK_EX)                      = 0
+flock(10, LOCK_UN)                      = 0
+poll([{fd=18, events=POLLIN|POLLOUT}], 1, 0) = 1 ([{fd=18, revents=POLLOUT}])
+write(18, "1", 1)                       = 1
+flock(10, LOCK_EX)                      = 0
+flock(10, LOCK_UN)                      = 0
+flock(10, LOCK_EX)                      = 0
+flock(10, LOCK_UN)                      = 0
+poll([{fd=18, events=POLLIN|POLLOUT}], 1, 0) = 1 ([{fd=18, revents=POLLOUT}])
+write(18, "1", 1)                       = 1
+flock(10, LOCK_EX)                      = 0
+flock(10, LOCK_UN)                      = 0
+flock(10, LOCK_EX)                      = 0
+flock(10, LOCK_UN)                      = 0
+poll([{fd=18, events=POLLIN|POLLOUT}], 1, 0) = 1 ([{fd=18, revents=POLLOUT}])
+write(18, "1", 1)                       = 1
+flock(10, LOCK_EX)                      = 0
+flock(10, LOCK_UN)                      = 0
+flock(10, LOCK_EX)                      = 0
+flock(10, LOCK_UN)                      = 0
+poll([{fd=18, events=POLLIN|POLLOUT}], 1, 0) = 1 ([{fd=18, revents=POLLOUT}])
+write(18, "1", 1)                       = 1
+flock(10, LOCK_EX)                      = 0
+flock(10, LOCK_UN)                      = 0
+flock(11, LOCK_EX)                      = 0
+flock(11, LOCK_UN)                      = 0
+flock(11, LOCK_EX)                      = 0
+flock(11, LOCK_UN)                      = 0
+brk(0x218e000)                          = 0x218e000
+brk(0x21af000)                          = 0x21af000
+brk(0x21d0000)                          = 0x21d0000
+brk(0x21f1000)                          = 0x21f1000
+brk(0x2212000)                          = 0x2212000
+brk(0x2233000)                          = 0x2233000
+brk(0x2254000)                          = 0x2254000
+brk(0x2275000)                          = 0x2275000
+brk(0x2296000)                          = 0x2296000
+brk(0x22b7000)                          = 0x22b7000
+brk(0x22d8000)                          = 0x22d8000
+brk(0x22f9000)                          = 0x22f9000
+brk(0x231a000)                          = 0x231a000
+brk(0x233b000)                          = 0x233b000
+brk(0x235c000)                          = 0x235c000
+brk(0x237d000)                          = 0x237d000
+brk(0x239e000)                          = 0x239e000
+brk(0x23bf000)                          = 0x23bf000
+flock(11, LOCK_EX)                      = 0
+flock(11, LOCK_UN)                      = 0
+poll([{fd=4, events=POLLIN}], 1, 50)    = 1 ([{fd=4, revents=POLLIN}])
+read(4, "111", 256)                     = 3
+flock(11, LOCK_EX)                      = 0
+flock(11, LOCK_UN)                      = 0
+poll([{fd=4, events=POLLIN}], 1, 50)    = 0 (Timeout)
+flock(11, LOCK_EX)                      = 0
+flock(11, LOCK_UN)                      = 0
+poll([{fd=4, events=POLLIN}], 1, 50)    = 0 (Timeout)
+flock(11, LOCK_EX)                      = 0
+flock(11, LOCK_UN)                      = 0
+poll([{fd=4, events=POLLIN}], 1, 50)    = 0 (Timeout)
+flock(11, LOCK_EX)                      = 0
+flock(11, LOCK_UN)                      = 0
+poll([{fd=4, events=POLLIN}], 1, 50)    = 0 (Timeout)
+flock(11, LOCK_EX)                      = 0
+flock(11, LOCK_UN)                      = 0
+poll([{fd=4, events=POLLIN}], 1, 50)    = 0 (Timeout)
+flock(11, LOCK_EX)                      = 0
+flock(11, LOCK_UN)                      = 0
+poll([{fd=4, events=POLLIN}], 1, 50)    = 0 (Timeout)
+flock(11, LOCK_EX)                      = 0
+flock(11, LOCK_UN)                      = 0
+poll([{fd=4, events=POLLIN}], 1, 50)    = 0 (Timeout)
+flock(11, LOCK_EX)                      = 0
+flock(11, LOCK_UN)                      = 0
+poll([{fd=4, events=POLLIN}], 1, 50)    = 0 (Timeout)
+flock(11, LOCK_EX)                      = 0
+flock(11, LOCK_UN)                      = 0
+poll([{fd=4, events=POLLIN}], 1, 50)    = 0 (Timeout)
+flock(11, LOCK_EX)                      = 0
+flock(11, LOCK_UN)                      = 0
+poll([{fd=4, events=POLLIN}], 1, 50)    = 0 (Timeout)
+flock(11, LOCK_EX)                      = 0
+flock(11, LOCK_UN)                      = 0
+poll([{fd=4, events=POLLIN}], 1, 50)    = 1 ([{fd=4, revents=POLLIN}])
+read(4, "1", 256)                       = 1
+flock(11, LOCK_EX)                      = 0
+flock(11, LOCK_UN)                      = 0
+flock(11, LOCK_EX)                      = 0
+flock(11, LOCK_UN)                      = 0
+mmap(NULL, 10489856, PROT_READ|PROT_WRITE|PROT_EXEC, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7f97961fd000
+mprotect(0x7f97961fd000, 4096, PROT_NONE) = 0
+clone(child_stack=0x7f9796bfcf90, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_tidptr=0x7f9796bfd9d0, tls=0x7f9796bfd700, child_tidptr=0x7f9796bfd9d0) = 19428
+flock(10, LOCK_EX)                      = 0
+flock(10, LOCK_UN)                      = 0
+poll([{fd=18, events=POLLIN|POLLOUT}], 1, 0) = 1 ([{fd=18, revents=POLLOUT}])
+write(18, "1", 1)                       = 1
+flock(10, LOCK_EX)                      = 0
+flock(10, LOCK_UN)                      = 0
+flock(11, LOCK_EX)                      = 0
+flock(11, LOCK_UN)                      = 0
+poll([{fd=4, events=POLLIN}], 1, 50)    = 0 (Timeout)
+flock(11, LOCK_EX)                      = 0
+flock(11, LOCK_UN)                      = 0
+poll([{fd=4, events=POLLIN}], 1, 50)    = 0 (Timeout)
+flock(11, LOCK_EX)                      = 0
+flock(11, LOCK_UN)                      = 0
+poll([{fd=4, events=POLLIN}], 1, 50)    = 0 (Timeout)
+flock(11, LOCK_EX)                      = 0
+flock(11, LOCK_UN)                      = 0
+poll([{fd=4, events=POLLIN}], 1, 50)    = 0 (Timeout)
+flock(11, LOCK_EX)                      = 0
+flock(11, LOCK_UN)                      = 0
+poll([{fd=4, events=POLLIN}], 1, 50)    = 0 (Timeout)
+flock(11, LOCK_EX)                      = 0
+flock(11, LOCK_UN)                      = 0
+poll([{fd=4, events=POLLIN}], 1, 50)    = 0 (Timeout)
+flock(11, LOCK_EX)                      = 0
+flock(11, LOCK_UN)                      = 0
+poll([{fd=4, events=POLLIN}], 1, 50)    = 0 (Timeout)
+flock(11, LOCK_EX)                      = 0
+flock(11, LOCK_UN)                      = 0
+poll([{fd=4, events=POLLIN}], 1, 50)    = 0 (Timeout)
+flock(11, LOCK_EX)                      = 0
+flock(11, LOCK_UN)                      = 0
+poll([{fd=4, events=POLLIN}], 1, 50)    = 0 (Timeout)
+flock(11, LOCK_EX)                      = 0
+flock(11, LOCK_UN)                      = 0
+poll([{fd=4, events=POLLIN}], 1, 50)    = 0 (Timeout)
+flock(11, LOCK_EX)                      = 0
+flock(11, LOCK_UN)                      = 0
+poll([{fd=4, events=POLLIN}], 1, 50)    = 0 (Timeout)
+flock(11, LOCK_EX)                      = 0
+flock(11, LOCK_UN)                      = 0
+poll([{fd=4, events=POLLIN}], 1, 50)    = 0 (Timeout)
+flock(11, LOCK_EX)                      = 0
+flock(11, LOCK_UN)                      = 0
+poll([{fd=4, events=POLLIN}], 1, 50)    = 0 (Timeout)
+flock(11, LOCK_EX)                      = 0
+flock(11, LOCK_UN)                      = 0
+poll([{fd=4, events=POLLIN}], 1, 50)    = 0 (Timeout)
+flock(11, LOCK_EX)                      = 0
+flock(11, LOCK_UN)                      = 0
+poll([{fd=4, events=POLLIN}], 1, 50)    = 0 (Timeout)
+flock(11, LOCK_EX)                      = 0
+flock(11, LOCK_UN)                      = 0
+poll([{fd=4, events=POLLIN}], 1, 50)    = 0 (Timeout)
+flock(11, LOCK_EX)                      = 0
+flock(11, LOCK_UN)                      = 0
+poll([{fd=4, events=POLLIN}], 1, 50)    = 0 (Timeout)
+flock(11, LOCK_EX)                      = 0
+flock(11, LOCK_UN)                      = 0
+poll([{fd=4, events=POLLIN}], 1, 50)    = 0 (Timeout)
+flock(11, LOCK_EX)                      = 0
+flock(11, LOCK_UN)                      = 0
+poll([{fd=4, events=POLLIN}], 1, 50)    = 0 (Timeout)
+flock(11, LOCK_EX)                      = 0
+flock(11, LOCK_UN)                      = 0
+poll([{fd=4, events=POLLIN}], 1, 50)    = 0 (Timeout)
+flock(11, LOCK_EX)                      = 0
+flock(11, LOCK_UN)                      = 0
+poll([{fd=4, events=POLLIN}], 1, 50)    = 0 (Timeout)
+flock(11, LOCK_EX)                      = 0
+flock(11, LOCK_UN)                      = 0
+poll([{fd=4, events=POLLIN}], 1, 50)    = 0 (Timeout)
+flock(11, LOCK_EX)                      = 0
+flock(11, LOCK_UN)                      = 0
+poll([{fd=4, events=POLLIN}], 1, 50)    = 0 (Timeout)
+flock(11, LOCK_EX)                      = 0
+flock(11, LOCK_UN)                      = 0
+poll([{fd=4, events=POLLIN}], 1, 50)    = 0 (Timeout)
+flock(11, LOCK_EX)                      = 0
+flock(11, LOCK_UN)                      = 0
+poll([{fd=4, events=POLLIN}], 1, 50)    = 0 (Timeout)
+flock(11, LOCK_EX)                      = 0
+flock(11, LOCK_UN)                      = 0
+poll([{fd=4, events=POLLIN}], 1, 50)    = 0 (Timeout)
+flock(11, LOCK_EX)                      = 0
+flock(11, LOCK_UN)                      = 0
+poll([{fd=4, events=POLLIN}], 1, 50)    = 0 (Timeout)
+flock(11, LOCK_EX)                      = 0
+flock(11, LOCK_UN)                      = 0
+poll([{fd=4, events=POLLIN}], 1, 50)    = 0 (Timeout)
+flock(11, LOCK_EX)                      = 0
+flock(11, LOCK_UN)                      = 0
+poll([{fd=4, events=POLLIN}], 1, 50)    = 0 (Timeout)
+flock(11, LOCK_EX)                      = 0
+flock(11, LOCK_UN)                      = 0
+poll([{fd=4, events=POLLIN}], 1, 50)    = 0 (Timeout)
+flock(11, LOCK_EX)                      = 0
+flock(11, LOCK_UN)                      = 0
+poll([{fd=4, events=POLLIN}], 1, 50)    = 0 (Timeout)
+flock(11, LOCK_EX)                      = 0
+flock(11, LOCK_UN)                      = 0
+poll([{fd=4, events=POLLIN}], 1, 50)    = 0 (Timeout)
+flock(11, LOCK_EX)                      = 0
+flock(11, LOCK_UN)                      = 0
+poll([{fd=4, events=POLLIN}], 1, 50)    = 0 (Timeout)
+flock(11, LOCK_EX)                      = 0
+flock(11, LOCK_UN)                      = 0
+poll([{fd=4, events=POLLIN}], 1, 50)    = 1 ([{fd=4, revents=POLLIN}])
+read(4, "1", 256)                       = 1
+flock(11, LOCK_EX)                      = 0
+flock(11, LOCK_UN)                      = 0
+flock(11, LOCK_EX)                      = 0
+flock(11, LOCK_UN)                      = 0
+flock(12, LOCK_EX)                      = 0
+poll([{fd=20, events=POLLIN|POLLOUT}], 1, 0) = 1 ([{fd=20, revents=POLLOUT}])
+write(20, "1", 1)                       = 1
+flock(12, LOCK_UN)                      = 0
+poll([{fd=15, events=POLLIN|POLLOUT}], 1, 0) = 1 ([{fd=15, revents=POLLOUT}])
+write(15, "1", 1)                       = 1
+futex(0x7f97975fe9d0, FUTEX_WAIT, 19407, NULL) = -1 EAGAIN (Resource temporarily unavailable)
+close(16)                               = 0
+munmap(0x7f97ac371000, 200120)          = 0
+unlink("/dev/shm/a7rzf_shm")            = 0
+close(3)                                = 0
+stat("/tmp/MathLink/mlshm-a7rzf_shm.rec", {st_mode=S_IFREG|0666, st_size=12, ...}) = 0
+open("/tmp/MathLink/mlshm-a7rzf_shm.rec", O_RDWR) = 3
+fcntl(3, F_SETLKW, {type=F_WRLCK, whence=SEEK_SET, start=0, len=0}) = 0
+close(3)                                = 0
+umask(0)                                = 022
+open("/tmp/MathLink/mlshm-a7rzf_shm.rec", O_RDONLY) = 3
+umask(022)                              = 0
+fstat(3, {st_mode=S_IFREG|0666, st_size=12, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f97b5e21000
+read(3, "19294:19300\n", 4096)          = 12
+read(3, "", 4096)                       = 0
+read(3, "", 4096)                       = 0
+open("/tmp/MathLink/mlshm-a7rzf_shm.rec", O_RDWR) = 16
+fcntl(16, F_SETLKW, {type=F_UNLCK, whence=SEEK_SET, start=0, len=0}) = 0
+close(16)                               = 0
+umask(0)                                = 022
+open("/tmp/MathLink/mlshm-a7rzf_shm.rec", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 16
+umask(022)                              = 0
+close(3)                                = 0
+munmap(0x7f97b5e21000, 4096)            = 0
+open("/tmp/MathLink/mlshm-a7rzf_shm.rec", O_RDWR) = 3
+fcntl(3, F_SETLKW, {type=F_WRLCK, whence=SEEK_SET, start=0, len=0}) = 0
+close(3)                                = 0
+fstat(16, {st_mode=S_IFREG|0666, st_size=0, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f97b5e21000
+open("/tmp/MathLink/mlshm-a7rzf_shm.rec", O_RDWR) = 3
+fcntl(3, F_SETLKW, {type=F_UNLCK, whence=SEEK_SET, start=0, len=0}) = 0
+close(3)                                = 0
+write(16, ":19300\n", 7)                = 7
+close(16)                               = 0
+munmap(0x7f97b5e21000, 4096)            = 0
+close(4)                                = 0
+close(5)                                = 0
+unlink("/tmp/MathLink/a7rzf_shmffrdcon") = 0
+close(14)                               = 0
+close(15)                               = 0
+close(13)                               = 0
+unlink("/tmp/MathLink/a7rzf_shmrdmsglck") = -1 ENOENT (No such file or directory)
+close(12)                               = 0
+unlink("/tmp/MathLink/a7rzf_shmwrmsglck") = -1 ENOENT (No such file or directory)
+close(11)                               = 0
+unlink("/tmp/MathLink/a7rzf_shmrdlck")  = -1 ENOENT (No such file or directory)
+close(10)                               = 0
+unlink("/tmp/MathLink/a7rzf_shmwrlck")  = -1 ENOENT (No such file or directory)
+close(8)                                = 0
+close(9)                                = 0
+unlink("/tmp/MathLink/a7rzf_shmfffsrdcon") = 0
+close(6)                                = 0
+close(7)                                = 0
+unlink("/tmp/MathLink/a7rzf_shmffrmcon") = 0
+close(21)                               = 0
+close(22)                               = 0
+close(19)                               = 0
+close(20)                               = 0
+close(17)                               = 0
+close(18)                               = 0
+futex(0x7f97a8000b8c, FUTEX_CMP_REQUEUE_PRIVATE, 1, 2147483647, 0x7f97a8000b60, 4) = 1
+futex(0x213dc5c, FUTEX_CMP_REQUEUE_PRIVATE, 1, 2147483647, 0x213dc30, 2) = 1
+futex(0x213dc30, FUTEX_WAKE_PRIVATE, 1) = 1
+futex(0x213dffc, FUTEX_CMP_REQUEUE_PRIVATE, 1, 2147483647, 0x213dfd0, 4) = 1
+futex(0x213dfd0, FUTEX_WAKE_PRIVATE, 1) = 1
+futex(0x7f97ad7a39d0, FUTEX_WAIT, 19298, NULL) = -1 EAGAIN (Resource temporarily unavailable)
+futex(0x213eb7c, FUTEX_CMP_REQUEUE_PRIVATE, 1, 2147483647, 0x213eb50, 2) = 1
+futex(0x213eb50, FUTEX_WAKE_PRIVATE, 1) = 1
+munmap(0x7f9796bfe000, 10489856)        = 0
+futex(0xb8de84, FUTEX_CMP_REQUEUE_PRIVATE, 1, 2147483647, 0xb8dec0, 2) = 1
+futex(0xb8dec0, FUTEX_WAKE_PRIVATE, 1)  = 1
+munmap(0x7f97ad7a4000, 10489856)        = 0
+futex(0x212a53c, FUTEX_CMP_REQUEUE_PRIVATE, 1, 2147483647, 0x212a510, 2) = 1
+futex(0x212a510, FUTEX_WAKE_PRIVATE, 1) = 1
+futex(0x7f9797fff9d0, FUTEX_WAIT, 19301, NULL) = -1 EAGAIN (Resource temporarily unavailable)
+munmap(0x7f97acda3000, 10489856)        = 0
+clock_gettime(CLOCK_REALTIME, {1543209205, 227129965}) = 0
+munmap(0x7f97ac3a2000, 10489856)        = 0
+futex(0x21457c0, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+unlink("/home/kamano/.cache/Wolfram/WolframScript/WolframScriptTemporary/tmp_WOTupTRxd3") = 0
+unlink("/home/kamano/.cache/Wolfram/WolframScript/WolframScriptTemporary/tmp_9BcjMBpEWb") = 0
+exit_group(0)                           = ?
++++ exited with 0 +++
