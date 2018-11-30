@@ -18,7 +18,9 @@ cat test.es | ./s
 cat test.es | ./cst in=/dev/stdin > test.es.et
 diff test.et test.es.et
 
-
+#J2T
+cat test.s.t.mM.j | j2mM.swl | mM2t.pl >  test.s.t.mM.j.mM.t
+diff test.s.t.mM.j.mM.t test.s.t
 #J2M ##1
 cat test.s | ./cst in=/dev/stdin | t2mM.pl > test.s.t.mM
 mM2j.wl test.s.t.mM > test.s.t.mM.j
