@@ -1,3 +1,6 @@
 #!/usr/local/bin/math -script
-s = Import["!tee", "Text"];
-Print[s];
+s = ToExpression[Import["!tee","Text"]];
+ss = Map[ExportString[#,"ExpressionJSON"]&,s];
+sss = Map[StringReplace[{" "->"","\t"->"","\n"->""}][#]&,ss];
+out = StringReplace[{"{"->"","}"->"",", "->"\n"}][ToString[sss]];
+Print[out]
