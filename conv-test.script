@@ -15,9 +15,14 @@ cat test.es | ./s
 cat test.es | ./cst in=/dev/stdin > test.es.et
 diff test.et test.es.et
 
-#J2M
+#J2M ##1
 cat test.s | ./cst in=/dev/stdin | t2mM.pl > test.s.t.mM
 mM2j.wl test.s.t.mM > test.s.t.mM.j
+j2mM.wl test.s.t.mM.j > test.s.t.mM.j.mM
+diff test.s.t.mM test.s.t.mM.j.mM
+#J2M ##2
+cat test.s | ./cst in=/dev/stdin | t2mM.pl > test.s.t.mM
+cat test.s.t.mM | mM2j.wl > test.s.t.mM.j
 j2mM.wl test.s.t.mM.j > test.s.t.mM.j.mM
 diff test.s.t.mM test.s.t.mM.j.mM
 
