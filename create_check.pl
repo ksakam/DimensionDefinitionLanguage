@@ -16,6 +16,8 @@ foreach (@arr) {
 	$cnt = @pair;
 	#print $cnt
 	if($cnt == 2){
+		print "echo \'$pair[0]\' | /home/kamano/gitsrc/DimensionDefinitionLanguage/t\n";
+		print "echo \'$pair[1]\' | /home/kamano/gitsrc/DimensionDefinitionLanguage/s\n";
 		print "echo \'$pair[0]\'\n";
 		print "echo \'$pair[1]\' | /home/kamano/gitsrc/DimensionDefinitionLanguage/cst in=/dev/stdin\n";
 		print "echo \n";
