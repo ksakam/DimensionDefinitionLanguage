@@ -1,3 +1,5 @@
+echo 'START'
+
 #T
 cat test.t | ./t
 cat test.et | ./t
@@ -62,4 +64,4 @@ cat test.s.t.mM.j | j2mM.swl > test.s.t.mM.j.mM
 diff test.s.t.mM test.s.t.mM.j.mM
 
 
-
+echo 'END'
