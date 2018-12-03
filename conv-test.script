@@ -11,13 +11,13 @@ cat test.t | t2mM.pl | mM2j.swl | j2s.pl > test.t.mM.j.s
 cat test.t.mM.j.s | cst in=/dev/stdin > test.t.mM.j.s.t
 diff test.t test.t.mM.j.s.t
 #T2J
-cat test.s.t | t2mM.pl | mM2j.swl > test.s.t.mM.j
-cat test.s.t.mM.j | j2mM.swl | mM2t.pl > test.s.t.mM.j.mM.t
-diff test.s.t test.s.t.mM.j.mM.t
+cat test.t | t2mM.pl | mM2j.swl > test.t.mM.j
+cat test.t.mM.j | j2mM.swl | mM2t.pl > test.t.mM.j.mM.t
+diff test.t test.t.mM.j.mM.t
 #T2M
-cat test.s.t | t2mM.pl > test.s.t.mM
-cat test.s.t.mM | mM2t.pl > test.s.t.mM.t
-diff test.s.t test.s.t.mM.t
+cat test.t | t2mM.pl > test.t.mM
+cat test.t.mM | mM2t.pl > test.t.mM.t
+diff test.t test.t.mM.t
 
 
 #S2T
@@ -29,6 +29,9 @@ cat test.s | cst in=/dev/stdin | t2mM.pl | mM2j.swl > test.s.t.mM.j
 cat test.s.t.mM.j | j2s.pl > test.s.t.mM.j.s
 diff test.s test.s.t.mM.j.s
 #S2M
+cat test.s | cst in=/dev/stdin | t2mM.pl > test.s.t.mM
+cat test.s.t.mM | mM2j.swl | j2s.pl > test.s.t.mM.j.s
+diff test.s test.s.t.mM.j.s
 
 
 #J2T
