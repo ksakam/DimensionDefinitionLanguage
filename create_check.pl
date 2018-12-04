@@ -21,6 +21,7 @@ foreach (@arr) {
 		print "echo \'$pair[1]\'\n";
 		print "echo \'$pair[0]\'\n";
 		print "echo \'$pair[1]\' | /home/kamano/gitsrc/DimensionDefinitionLanguage/cst in=/dev/stdin\n";
+		print "diff \<(echo \'$pair[0]\') \<(echo \'$pair[1]\' | /home/kamano/gitsrc/DimensionDefinitionLanguage/cst in=/dev/stdin)\n";
 		print "echo \n";
 	}
 }
