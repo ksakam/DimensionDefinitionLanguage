@@ -209,6 +209,9 @@ int relay_CHAR(FILE *_IN, struct List *top, int WAR){
 			}
 			close++;
 		}else if(C == '\n'){
+			//print BUFF
+			BUFF[buf_ptr] = '\0';
+			printf("%s",BUFF);
 			//clear BUFF
 			BUFF[0] = '\0';
 			buf_ptr = 0;
