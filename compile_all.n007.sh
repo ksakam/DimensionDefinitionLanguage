@@ -137,4 +137,6 @@ echo t2s
 gcc t2s.c -o t2s
 echo t2sR
 gcc t2sR.c -o t2sR
+echo cts
+gcc cts.c -o cts
 
