@@ -284,7 +284,6 @@ int main(int argc, char **argv){
 	}
 	init_List_zero(top);
 	while(c != EOF){
-	//while((c = fgetc(IN)) != EOF){
 		c = relay_CHAR(IN,top,(*opt).war);
 	}
 
