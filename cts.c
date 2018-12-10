@@ -33,7 +33,7 @@ void help(void){
 
 void status(void){
 	printf("STATUS:\n");
-	printf(" copied from test code.\n");
+	printf("  testging.\n");
 }
 
 struct options *alloc_options(void){
