@@ -85,7 +85,7 @@ void check_options(struct options *opt){
 }
 
 // function definition
-int relay_CHAR(FILE *_IN, struct List *top, int WAR){
+int store_CHAR(FILE *_IN, struct List *top, int WAR){
 	int i;
 	int itrs;
 	int C;
@@ -287,7 +287,7 @@ int main(int argc, char **argv){
 	}
 	init_List_zero(top);
 	while(c != EOF){
-		c = relay_CHAR(IN,top,(*opt).war);
+		c = store_CHAR(IN,top,(*opt).war);
 	}
 
 	// close file
