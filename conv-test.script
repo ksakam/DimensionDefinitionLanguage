@@ -12,10 +12,15 @@ cat test.es | ./s
 cat test.t | t2mM.pl | mM2j.swl | j2s.pl > test.t.mM.j.s
 cat test.t.mM.j.s | cst in=/dev/stdin > test.t.mM.j.s.t
 diff test.t test.t.mM.j.s.t
-#T2S##1
+#T2S##2
 cat test.t | ./cts in=/dev/stdin > test.t.s
 cat test.t.s | ./cst in=/dev/stdin > test.t.s.t
 diff test.t test.t.s.t
+#T2S##3
+cat test.t | ./tq in=/dev/stdin -FS > test.t.S
+cat test.t.S | ./cst in=/dev/stdin > test.t.S.t
+diff test.t test.t.S.t
+
 #T2J
 cat test.t | t2mM.pl | mM2j.swl > test.t.mM.j
 cat test.t.mM.j | j2mM.swl | mM2t.pl > test.t.mM.j.mM.t
