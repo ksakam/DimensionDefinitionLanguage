@@ -8,7 +8,7 @@ gcc44 y.tab.c lex.yy.c -lfl -ll
 mv a.out t
 mv y.output t.output
 
-##etf
+##et
 echo et
 lex t.l
 yacc -dv et.y
