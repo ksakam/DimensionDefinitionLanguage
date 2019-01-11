@@ -7,7 +7,7 @@ extern char *yytext;
 // lexfile: llf.l
 %}
 
-%token DIM ARGEX ALPH NUM FUNC_S FUNC_E RULE LIST REF REF_S REF_E SET LABEL SP END ERR
+%token DIM ARGEX ALPH NUM FUNC_S FUNC_E RULE LIST REW REF REF_S REF_E SET LABEL SP END ERR
 %left ARGEX
 %right FUNC_S
 %left FUNC_E
