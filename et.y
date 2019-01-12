@@ -10,7 +10,7 @@ extern char *yytext;
 %left ARGEX
 %right FUNC_S
 %left FUNC_E
-%left LIST
+%right LIST
 
 %%
 line_list
@@ -65,5 +65,5 @@ int main(void)
     if (yyparse()) {
         exit(1);
     }
-    printf("::CLEAR::\n");
+    printf("::T:CLEAR::\n");
 }

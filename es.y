@@ -30,13 +30,11 @@ dimension_expression
 
 list
 	: FUNC_S func FUNC_E
-	// | list list
 
 func
 	: arg
 	| FUNC_S func FUNC_E
 	| func LIST func
-	// | func func
 
 arg
 	: ARGEX
@@ -59,5 +57,5 @@ int main(void)
     if (yyparse()) {
         exit(1);
     }
-    printf("::CLEAR::\n");
+    printf("::S:CLEAR::\n");
 }
