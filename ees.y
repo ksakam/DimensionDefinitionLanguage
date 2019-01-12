@@ -61,5 +61,5 @@ int main(void)
     if (yyparse()) {
         exit(1);
     }
-    printf("::CLEAR::\n");
+    printf("::S:CLEAR::\n");
 }
