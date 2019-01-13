@@ -7,7 +7,7 @@ extern char *yytext;
 // lexfile: llf.l
 %}
 
-%token ARGEX ALPH NUM DIM LIST REW FUNC_S FUNC_E RULE REF REF_S REF_E SET LABEL SP END ERR
+%token ARGEX ALPH NUM DIM LIST FUNC_S FUNC_E RULE REW REF REF_S REF_E SET SP LABEL END ERR
 %right FUNC_S
 %right FUNC_E
 %left LIST
@@ -21,12 +21,20 @@ line
 	: dimension_expression END 	{printf(":END:\n");}
 
 dimension_expression
-	: arg				{printf(":Dataset:");}
-	| list				{printf(":Dataset:");}
-	| arg RULE arg			{printf(":In->Out:");}
-	| arg RULE list			{printf(":In->Out:");}
-	| list RULE arg			{printf(":In->Out:");}
-	| list RULE list		{printf(":In->Out:");}
+	: arg					{printf(":Dataset:");}
+	| list					{printf(":Dataset:");}
+	| arg RULE arg				{printf(":In->Out:");}
+	| arg RULE list				{printf(":In->Out:");}
+	| list RULE arg				{printf(":In->Out:");}
+	| list RULE list			{printf(":In->Out:");}
+	| arg RULE arg REW arg			{printf(":In->Out=>REW:");}
+	| arg RULE arg REW list			{printf(":In->Out=>REW:");}
+	| arg RULE list REW arg			{printf(":In->Out=>REW:");}
+	| arg RULE list REW list		{printf(":In->Out=>REW:");}
+	| list RULE arg REW arg			{printf(":In->Out=>REW:");}
+	| list RULE arg REW list		{printf(":In->Out=>REW:");}
+	| list RULE list REW arg		{printf(":In->Out=>REW:");}
+	| list RULE list REW list		{printf(":In->Out=>REW:");}
 
 list
 	: FUNC_S func FUNC_E
