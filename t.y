@@ -27,6 +27,15 @@ dimension_expression
 	| arg RULE list				{printf(":In->Out:");}
 	| list RULE arg				{printf(":In->Out:");}
 	| list RULE list			{printf(":In->Out:");}
+	| arg RULE arg REW arg			{printf(":In->Out=>REW:");}
+	| arg RULE arg REW list			{printf(":In->Out=>REW:");}
+	| arg RULE list REW arg			{printf(":In->Out=>REW:");}
+	| arg RULE list REW list		{printf(":In->Out=>REW:");}
+	| list RULE arg REW arg			{printf(":In->Out=>REW:");}
+	| list RULE arg REW list		{printf(":In->Out=>REW:");}
+	| list RULE list REW arg		{printf(":In->Out=>REW:");}
+	| list RULE list REW list		{printf(":In->Out=>REW:");}
+
 
 list
 	: arg func_l
