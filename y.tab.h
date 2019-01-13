@@ -1,0 +1,17 @@
+#define DIM 257
+#define ARGEX 258
+#define ALPH 259
+#define NUM 260
+#define FUNC_S 261
+#define FUNC_E 262
+#define RULE 263
+#define LIST 264
+#define REW 265
+#define REF 266
+#define REF_S 267
+#define REF_E 268
+#define SET 269
+#define LABEL 270
+#define SP 271
+#define END 272
+#define ERR 273
