@@ -38,16 +38,16 @@ dimension_expression
 
 
 list
-	: arg func_l
+	: arg func
 
-func_l
+func
 	: FUNC_S argm FUNC_E
 	| FUNC_S FUNC_E
-	| func_l func_l
+	| func func
 
 argm
 	: args
-	| args func_l
+	| args func
 	| argm LIST argm
 
 args
