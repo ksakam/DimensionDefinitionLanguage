@@ -19,75 +19,91 @@ extern int yyparse(void);
 
 static int yygrowstack(void);
 #define YYPREFIX "yy"
-#line 2 "ees.y"
+#line 2 "c.y"
 #include <stdio.h>
 #include <stdlib.h>
 #include "y.tab.h"
 int yylex(void);
 extern char *yytext;
-/* lexfile: llf.l*/
-#line 30 "y.tab.c"
-#define DIM 257
-#define ARGEX 258
-#define ALPH 259
-#define NUM 260
-#define FUNC_S 261
-#define FUNC_E 262
-#define RULE 263
-#define LIST 264
+#line 29 "y.tab.c"
+#define ARGEX 257
+#define ALPH 258
+#define NUM 259
+#define DIM 260
+#define LIST 261
+#define FUNC_S 262
+#define FUNC_E 263
+#define RULE 264
 #define REW 265
 #define REF 266
 #define REF_S 267
 #define REF_E 268
 #define SET 269
-#define LABEL 270
-#define SP 271
+#define SP 270
+#define LABEL 271
 #define END 272
 #define ERR 273
 #define YYERRCODE 256
 short yylhs[] = {                                        -1,
-    0,    0,    1,    2,    2,    2,    2,    2,    2,    4,
-    4,    5,    5,    5,    5,    5,    3,    3,
+    0,    0,    1,    2,    2,    2,    2,    2,    2,    2,
+    2,    2,    2,    2,    2,    2,    2,    4,    5,    5,
+    5,    5,    5,    3,    3,
 };
 short yylen[] = {                                         2,
-    1,    2,    2,    1,    1,    3,    3,    3,    3,    3,
-    2,    1,    1,    3,    3,    2,    1,    2,
+    1,    2,    2,    1,    1,    3,    3,    3,    3,    5,
+    5,    5,    5,    5,    5,    5,    5,    1,    1,    3,
+    2,    3,    2,    1,    2,
 };
 short yydefred[] = {                                      0,
-    0,    0,    0,    1,    0,    0,    0,   18,    0,   13,
-   12,    0,    2,    3,    0,    0,    0,    0,   10,   13,
-    0,    6,    0,    8,    0,   14,   15,
+    0,    0,    0,    1,    0,    0,    0,    0,   25,   21,
+   19,    0,    2,    3,    0,    0,    0,    0,   20,    0,
+    0,    0,    0,    0,    0,    0,    0,    0,    0,   11,
+    0,   13,    0,   15,    0,   17,
 };
 short yydgoto[] = {                                       3,
-    4,    5,   11,   17,   21,
+    4,    5,   11,    7,    8,
 };
-short yysindex[] = {                                   -255,
- -247, -229, -255,    0, -253, -239, -225,    0, -229,    0,
-    0, -236,    0,    0, -255, -255, -222, -231,    0,    0,
- -224,    0, -222,    0, -222,    0,    0,
+short yysindex[] = {                                   -178,
+ -260, -159, -178,    0, -269, -249, -245, -255,    0,    0,
+    0, -161,    0,    0, -178, -178, -178, -255,    0, -244,
+ -243, -240, -230, -219, -178, -178, -178, -178,    0,    0,
+    0,    0,    0,    0,    0,    0,
 };
 short yyrindex[] = {                                      0,
- -249,    0,    0,    0,    0, -230, -228,    0,    0,    0,
-    0,    0,    0,    0,    0,    0, -261,    0,    0,    0,
- -221,    0, -227,    0, -226,    0,    0,
+ -252,    0,    0,    0,    0, -217, -222, -173,    0,    0,
+    0,    0,    0,    0,    0,    0,    0, -231,    0, -214,
+ -221, -208, -213, -226,    0,    0,    0,    0, -205,    0,
+ -196,    0, -189,    0, -187,    0,
 };
 short yygindex[] = {                                      0,
-   40,    0,    1,    5,   -2,
+   57,    0,    1,   62,    6,
 };
-#define YYTABLESIZE 46
-short yytable[] = {                                      12,
-    6,   11,    1,    6,    7,    2,   18,    7,   17,    8,
-   11,   17,   17,   17,   17,   22,   24,   27,   14,   23,
-   25,    1,   17,   15,    9,   19,    1,   20,    1,    9,
-   26,    9,   20,    1,   10,    2,    9,   16,    2,   20,
-   16,    4,   13,    5,    7,    9,
+#define YYTABLESIZE 104
+short yytable[] = {                                       9,
+    6,    1,   14,    6,   24,   17,    2,   12,   24,   24,
+   24,   24,   24,   18,   15,   20,   22,   18,   16,   24,
+   25,   26,   24,   18,   27,   29,   31,   33,   35,   18,
+   22,   23,   23,   23,   28,   22,   22,   22,   22,   19,
+   23,   17,   19,   19,   19,   22,   19,   19,   19,    5,
+    7,   19,   19,   19,    4,   19,   19,    6,    9,   13,
+   19,    0,    0,    8,   19,   19,   10,   19,    0,   19,
+    0,   19,   19,   19,   19,   12,   21,   23,    1,    0,
+    0,    0,   14,    2,   16,    0,   30,   32,   34,   36,
+   18,   18,    0,    0,    0,    1,    0,    1,   18,   17,
+    2,   19,    2,   10,
 };
-short yycheck[] = {                                       2,
-    0,  263,  258,    3,    0,  261,    9,    3,  258,  257,
-  272,  261,  262,  263,  264,   15,   16,   20,  272,   15,
-   16,  258,  272,  263,  261,  262,  258,  264,  258,  261,
-  262,  261,  264,  258,  264,  261,  261,  263,  261,  264,
-  262,  272,    3,  272,  272,  272,
+short yycheck[] = {                                     260,
+    0,  257,  272,    3,  257,  261,  262,    2,  261,  262,
+  263,  264,  265,    8,  264,   15,   16,   12,  264,  272,
+  265,  265,   17,   18,  265,   25,   26,   27,   28,   24,
+  257,  263,  264,  265,  265,  262,  263,  264,  265,  257,
+  272,  261,  257,  261,  262,  272,  261,  262,  257,  272,
+  272,  257,  261,  262,  272,  261,  262,  272,  272,    3,
+  257,   -1,   -1,  272,  261,  262,  272,  257,   -1,  257,
+   -1,  261,  262,  261,  262,  272,   15,   16,  257,   -1,
+   -1,   -1,  272,  262,  272,   -1,   25,   26,   27,   28,
+  264,  265,   -1,   -1,   -1,  257,   -1,  257,  272,  261,
+  262,  263,  262,  263,
 };
 #define YYFINAL 3
 #ifndef YYDEBUG
@@ -102,9 +118,9 @@ char *yyname[] = {
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"DIM","ARGEX","ALPH","NUM",
-"FUNC_S","FUNC_E","RULE","LIST","REW","REF","REF_S","REF_E","SET","LABEL","SP",
-"END","ERR",
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"ARGEX","ALPH","NUM","DIM","LIST",
+"FUNC_S","FUNC_E","RULE","REW","REF","REF_S","REF_E","SET","SP","LABEL","END",
+"ERR",
 };
 char *yyrule[] = {
 "$accept : line_list",
@@ -117,13 +133,20 @@ char *yyrule[] = {
 "dimension_expression : arg RULE list",
 "dimension_expression : list RULE arg",
 "dimension_expression : list RULE list",
-"list : FUNC_S func FUNC_E",
-"list : list list",
-"func : arg",
-"func : LIST",
-"func : FUNC_S func FUNC_E",
-"func : func LIST func",
-"func : func func",
+"dimension_expression : arg RULE arg REW arg",
+"dimension_expression : arg RULE arg REW list",
+"dimension_expression : arg RULE list REW arg",
+"dimension_expression : arg RULE list REW list",
+"dimension_expression : list RULE arg REW arg",
+"dimension_expression : list RULE arg REW list",
+"dimension_expression : list RULE list REW arg",
+"dimension_expression : list RULE list REW list",
+"list : chain",
+"chain : arg",
+"chain : FUNC_S chain FUNC_E",
+"chain : FUNC_S FUNC_E",
+"chain : chain LIST chain",
+"chain : chain chain",
 "arg : ARGEX",
 "arg : ARGEX DIM",
 };
@@ -164,7 +187,7 @@ static short   *yyss;
 static short   *yysslim;
 static YYSTYPE *yyvs;
 static int      yystacksize;
-#line 48 "ees.y"
+#line 54 "c.y"
 int yyerror(char const *str)
 {
     extern char *yytext;
@@ -181,9 +204,9 @@ int main(void)
     if (yyparse()) {
         exit(1);
     }
-    printf("::S:CLEAR::\n");
+    printf("::C:CLEAR::\n");
 }
-#line 187 "y.tab.c"
+#line 210 "y.tab.c"
 /* allocate initial stack or double stack size, up to YYMAXDEPTH */
 static int yygrowstack(void)
 {
@@ -365,34 +388,66 @@ yyreduce:
     switch (yyn)
     {
 case 3:
-#line 22 "ees.y"
+#line 21 "c.y"
 {printf(":END:\n");}
 break;
 case 4:
-#line 25 "ees.y"
+#line 24 "c.y"
 {printf(":Dataset:");}
 break;
 case 5:
-#line 26 "ees.y"
+#line 25 "c.y"
 {printf(":Dataset:");}
 break;
 case 6:
-#line 27 "ees.y"
+#line 26 "c.y"
 {printf(":In->Out:");}
 break;
 case 7:
-#line 28 "ees.y"
+#line 27 "c.y"
 {printf(":In->Out:");}
 break;
 case 8:
-#line 29 "ees.y"
+#line 28 "c.y"
 {printf(":In->Out:");}
 break;
 case 9:
-#line 30 "ees.y"
+#line 29 "c.y"
 {printf(":In->Out:");}
 break;
-#line 396 "y.tab.c"
+case 10:
+#line 30 "c.y"
+{printf(":In->Out=>REW:");}
+break;
+case 11:
+#line 31 "c.y"
+{printf(":In->Out=>REW:");}
+break;
+case 12:
+#line 32 "c.y"
+{printf(":In->Out=>REW:");}
+break;
+case 13:
+#line 33 "c.y"
+{printf(":In->Out=>REW:");}
+break;
+case 14:
+#line 34 "c.y"
+{printf(":In->Out=>REW:");}
+break;
+case 15:
+#line 35 "c.y"
+{printf(":In->Out=>REW:");}
+break;
+case 16:
+#line 36 "c.y"
+{printf(":In->Out=>REW:");}
+break;
+case 17:
+#line 37 "c.y"
+{printf(":In->Out=>REW:");}
+break;
+#line 451 "y.tab.c"
     }
     yyssp -= yym;
     yystate = *yyssp;
