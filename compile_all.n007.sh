@@ -34,6 +34,13 @@ gcc44 y.tab.c lex.yy.c -lfl -ll
 mv a.out es
 mv y.output es.output
 
+##c
+echo c
+lex c.l
+yacc -dv c.y
+gcc44 y.tab.c lex.yy.c -lfl -ll
+mv a.out c
+mv y.output c.output
 
 
 # converter
