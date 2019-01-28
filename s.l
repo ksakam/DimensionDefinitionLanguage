@@ -16,7 +16,6 @@ $[$#%&0-9a-zA-Z;^/ ]*		return ARGEX;
 \@				return REF;
 \[				return REF_S;
 \]				return REF_E;
-\:				return SET;
 \#[#0-9]+			return LABEL;
 \n				return END;
 .				return ERR;
