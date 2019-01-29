@@ -6,11 +6,11 @@ int yylex(void);
 extern char *yytext;
 %}
 
-%token DIM ARGEX FUNC_S FUNC_E RULE REW LIST REF ALPH NUM REF_S REF_E SET SP LABEL END ERR
+%token ARGEX ALPH NUM DIM LIST FUNC_S FUNC_E RULE REW REF REF_S REF_E LABEL END ERR
 %left ARGEX
 %right FUNC_S
 %left FUNC_E
-%left LIST
+%right LIST
 
 %%
 line_list
@@ -21,15 +21,30 @@ line
 	: dimension_expression END 	{printf(":END:\n");}
 
 dimension_expression
-	: list					{printf(":Dataset:");}
+	: arg					{printf(":Dataset:");}
+	| list					{printf(":Dataset:");}
+	| arg RULE arg				{printf(":In->Out:");}
+	| arg RULE list				{printf(":In->Out:");}
+	| list RULE arg				{printf(":In->Out:");}
 	| list RULE list			{printf(":In->Out:");}
+	| arg RULE arg REW arg			{printf(":In->Out=>REW:");}
+	| arg RULE arg REW list			{printf(":In->Out=>REW:");}
+	| arg RULE list REW arg			{printf(":In->Out=>REW:");}
+	| arg RULE list REW list		{printf(":In->Out=>REW:");}
+	| list RULE arg REW arg			{printf(":In->Out=>REW:");}
+	| list RULE arg REW list		{printf(":In->Out=>REW:");}
+	| list RULE list REW arg		{printf(":In->Out=>REW:");}
+	| list RULE list REW list		{printf(":In->Out=>REW:");}
 
 list
+	: chain
+
+chain
 	: arg
+	| FUNC_S chain FUNC_E
 	| FUNC_S FUNC_E
-	| list LIST list
-	| list FUNC_S list FUNC_E
-	| list list
+	| chain LIST chain
+	| chain chain
 
 arg
 	: ARGEX
@@ -52,5 +67,5 @@ int main(void)
     if (yyparse()) {
         exit(1);
     }
-    printf("::T:CLEAR::\n");
+    printf("::C:CLEAR::\n");
 }
