@@ -7,6 +7,10 @@ cat test.et | ./t
 cat test.s | ./s
 cat test.es | ./s
 
+#tq
+./tq in=test.t -FT > test.t.t
+diff test.t test.t.t
+
 
 #T2S##1
 cat test.t | t2mM.pl | mM2j.swl | j2s.pl > test.t.mM.j.s
