@@ -4,13 +4,13 @@
 #include "y.tab.h"
 int yylex(void);
 extern char *yytext;
-// lexfile: llf.l
 %}
 
-%token ARGEX ALPH NUM DIM LIST FUNC_S FUNC_E RULE REW REF REF_S REF_E SET SP LABEL END ERR
+%token ARGEX ALPH NUM DIM LIST FUNC_S FUNC_E RULE REW REF REF_S REF_E LABEL END ERR
+%left ARGEX
 %right FUNC_S
-%right FUNC_E
-%left LIST
+%left FUNC_E
+%right LIST
 
 %%
 line_list

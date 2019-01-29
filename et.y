@@ -6,7 +6,7 @@ int yylex(void);
 extern char *yytext;
 %}
 
-%token ARGEX ALPH NUM DIM LIST FUNC_S FUNC_E RULE REW REF REF_S REF_E SET SP LABEL END ERR
+%token ARGEX ALPH NUM DIM LIST FUNC_S FUNC_E RULE REW REF REF_S REF_E LABEL END ERR
 %left ARGEX
 %right FUNC_S
 %left FUNC_E
@@ -38,16 +38,16 @@ dimension_expression
 
 
 list
-	: arg func_l
+	: arg func
 
-func_l
+func
 	: FUNC_S argm FUNC_E
 	| FUNC_S FUNC_E
-	| func_l func_l
+	| func func
 
 argm
 	: args
-	| args func_l
+	| args func
 	| argm LIST argm
 
 args
