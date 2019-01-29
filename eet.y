@@ -37,7 +37,8 @@ dimension_expression
 	| list RULE list REW list		{printf(":In->Out=>REW:");}
 
 list
-	: chain
+	: arg
+	| arg chain
 
 chain
 	: arg
