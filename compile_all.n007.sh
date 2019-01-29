@@ -7,7 +7,6 @@ yacc -dv t.y
 gcc44 y.tab.c lex.yy.c -lfl -ll
 mv a.out t
 mv y.output t.output
-
 ##et
 echo et
 lex t.l
@@ -15,6 +14,13 @@ yacc -dv et.y
 gcc44 y.tab.c lex.yy.c -lfl -ll
 mv a.out et
 mv y.output et.output
+##eet
+echo eet
+lex t.l
+yacc -dv eet.y
+gcc44 y.tab.c lex.yy.c -lfl -ll
+mv a.out eet
+mv y.output eet.output
 
 
 
@@ -41,6 +47,15 @@ yacc -dv c.y
 gcc44 y.tab.c lex.yy.c -lfl -ll
 mv a.out c
 mv y.output c.output
+
+
+##g
+echo g
+lex g.l
+yacc -dv g.y
+gcc44 y.tab.c lex.yy.c -lfl -ll
+mv a.out g
+mv y.output g.output
 
 
 # converter
