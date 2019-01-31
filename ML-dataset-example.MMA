@@ -1,0 +1,66 @@
+(*アイテム参照データセット*)
+List[                   (*全体を一つのListとする*)
+  List(*/Association*)[               (*行に相当*)
+    Rule["VocId","Value"]                (*列に相当*)
+  ]];
+
+(*Quantity set 形式(純データセット)*)
+List[                              (*全体を一つのListとする*)
+  List(*/Association*)[                          (*行に相当*)
+    Rule["VocId",Quantity["Value","Unit"]]          (*列に相当*)
+  ]];
+
+(*アイテム参照形式(IN->OUT)*)
+List[                           (*全体を一つのListとする*)
+  Rule[                                       (*行に相当*)
+    List(*/Association*)[               
+      Rule["VocId","Value"]],                  (*IN列に相当*)   
+    List(*/Association*)[             
+      Rule["VocId","Value"]]                  (*OUT列に相当*)
+  ]];
+
+(*Quantity set 形式(IN->OUT)*)
+List[                                 (*全体を一つのListとする*)
+  Rule[                                             (*行に相当*)
+    List(*/Association*)[                     
+      Rule["VocId",Quantity["Value","Unit"]]],       (*IN列に相当*)
+    List(*/Association*)[                    
+      Rule["VocId",Quantity["Value","Unit"]]]       (*OUT列に相当*)
+  ]];
+
+(*アイテム参照形式(IN->OUT=>報酬)*)
+List[                           (*全体を一つのListとする*)
+  Rule[                                       (*行に相当*)
+    Rule[                                      (*IN->OUT*)
+      List(*/Association*)[              
+        Rule["VocId","Value"]],                (*IN列に相当*)
+      List(*/Association*)[            
+        Rule["VocId","Value"]] ],             (*OUT列に相当*)
+    "Value"                                 (*報酬列に相当*)
+  ]] ;
+
+(*Quantity set 形式(IN->OUT=>報酬)*)
+List[                                    (*全体を一つのListとする*)
+  Rule[                                                (*行に相当*)
+    Rule[                                               (*IN->OUT*)
+      List(*/Association*)[                      
+        Rule["VocId",Quantity["Value","Unit"]]],        (*IN列に相当*) 
+      List(*/Association*)[                      
+        Rule["VocId",Quantity["Value","Unit"]]] ],     (*OUT列に相当*)
+    "Value"                                          (*報酬列に相当*)
+  ]] ;
+
+(*辞書参照のexample*)
+$X$List[                                    (*全体を一つのListとする*)
+  $X$Rule[                                                (*行に相当*)
+    $X$Rule[                                               (*IN->OUT*)
+      $X$List(*/$X$Association*)[                      
+        $X$Rule[$$X$VocId,Quantity[$$X$Value,$$X$Unit]]],        (*IN列に相当*) 
+      $X$List(*/$X$Association*)[                      
+        $X$Rule[$$X$VocId,Quantity[$$X$Value,$$X$Unit]]] ],     (*OUT列に相当*)
+    $$X$Value                                          (*報酬列に相当*)
+  ]] ;
+
+
+
+
