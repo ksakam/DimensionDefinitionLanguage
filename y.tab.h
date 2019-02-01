@@ -10,8 +10,7 @@
 #define REF 266
 #define REF_S 267
 #define REF_E 268
-#define SET 269
-#define SP 270
-#define LABEL 271
-#define END 272
-#define ERR 273
+#define LABEL 269
+#define DOT 270
+#define END 271
+#define ERR 272

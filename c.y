@@ -49,6 +49,9 @@ chain
 arg
 	: ARGEX
 	| ARGEX DIM
+	| LABEL ARGEX
+	| LABEL ARGEX DIM
+	| arg arg
 
 %%
 int yyerror(char const *str)
