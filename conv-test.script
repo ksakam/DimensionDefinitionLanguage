@@ -2,10 +2,8 @@ echo 'START'
 
 #T
 cat test.t | ./t
-cat test.et | ./t
 #S
 cat test.s | ./s
-cat test.es | ./s
 
 #tq
 ./tq in=test.t -FT > test.t.t
