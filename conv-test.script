@@ -9,6 +9,9 @@ cat test.s | ./s
 ./tq in=test.t -FT > test.t.t
 diff test.t test.t.t
 
+#S/T comp
+./tq in=test.t -FS > test.t.s
+diff test.t.s test.s
 
 #T2S##1
 cat test.t | t2mM.pl | mM2j.swl | j2s.pl > test.t.mM.j.s
