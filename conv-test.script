@@ -26,15 +26,18 @@ cat test.t | ./tq in=/dev/stdin -FS > test.t.S
 cat test.t.S | ./cst in=/dev/stdin > test.t.S.t
 diff test.t test.t.S.t
 
-#T2J
+#T2J##1
 cat test.t | t2mM.pl | mM2j.swl > test.t.mM.j
 cat test.t.mM.j | j2mM.swl | mM2t.pl > test.t.mM.j.mM.t
 diff test.t test.t.mM.j.mM.t
+#T2J##1
+cat test.t | ./tq in=/dev/stdin -FJ > test.t.j
+cat test.t.j | j2mM.swl | mM2t.pl > test.t.j.mM.t
+diff test.t test.t.j.mM.t
 #T2M
 cat test.t | t2mM.pl > test.t.mM
 cat test.t.mM | mM2t.pl > test.t.mM.t
 diff test.t test.t.mM.t
-
 
 #S2T
 cat test.s | ./cst in=/dev/stdin > test.s.t
