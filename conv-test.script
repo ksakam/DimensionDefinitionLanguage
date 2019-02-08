@@ -27,7 +27,6 @@ diff test.t test.t.s.t
 cat test.t | ./tq in=/dev/stdin -FS > test.t.S
 cat test.t.S | ./cst in=/dev/stdin > test.t.S.t
 diff test.t test.t.S.t
-
 #T2J##1
 cat test.t | t2mM.pl | mM2j.swl > test.t.mM.j
 cat test.t.mM.j | j2mM.swl | mM2t.pl > test.t.mM.j.mM.t
