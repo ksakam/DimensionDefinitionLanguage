@@ -44,10 +44,14 @@ diff test.t test.t.mM.t
 cat test.s | ./cst in=/dev/stdin > test.s.t
 cat test.s.t | t2mM.pl | mM2j.swl | j2s.pl > test.s.t.mM.j.s
 diff test.s test.s.t.mM.j.s
-#S2J
+#S2J##1
 cat test.s | cst in=/dev/stdin | t2mM.pl | mM2j.swl > test.s.t.mM.j
 cat test.s.t.mM.j | j2s.pl > test.s.t.mM.j.s
 diff test.s test.s.t.mM.j.s
+#S2J##2
+cat test.s | ./cst in=/dev/stdin | ./tq in=/dev/stdin -FJ > test.s.t.j
+cat test.s.t.j | ./j2s.pl > test.s.t.j.s
+diff test.s test.s.t.j.s
 #S2M
 cat test.s | cst in=/dev/stdin | t2mM.pl > test.s.t.mM
 cat test.s.t.mM | mM2j.swl | j2s.pl > test.s.t.mM.j.s
