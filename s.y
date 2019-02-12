@@ -47,6 +47,10 @@ func
 arg
 	: ARGEX
 	| ARGEX DIM
+	| LABEL ARGEX
+	| LABEL ARGEX DIM
+	| '$' LABEL ARGEX
+	| '$' LABEL ARGEX DIM
 
 %%
 int yyerror(char const *str)
