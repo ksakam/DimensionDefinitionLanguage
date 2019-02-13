@@ -1,9 +1,9 @@
 echo 'START EE'
 
 #T
-cat test.eet | ./et
+cat test.eet | ./t
 #S
-cat test.ees | ./es
+cat test.ees | ./s
 
 #tq
 ./tq in=test.eet  -FS > test.eet.ees
