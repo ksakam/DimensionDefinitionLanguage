@@ -1,4 +1,4 @@
-$E$($X$DSZ,$X$DDF,$X$FunctionObject) -> $X$DRY
+$E$($X$FileType,$X$DDF,$X$FunctionObject) -> $X$DRY
 $X$Application -> $X$Mathematica
 $X$FunctionObject -> $X$List($X$toPartitionSheet)
 $X$FileObject -> $X$List($`dpf_Fe-BCC.xlsx)
