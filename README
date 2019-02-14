@@ -21,3 +21,6 @@ compile_all.sh
 ### T -> S
 - t2s : テス中
 - t2sR : テスト中
+
+# Federation
+.ddf => .dsz => .ddl => .frl => .dry => .fed => .int.xxx
