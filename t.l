@@ -4,15 +4,15 @@
 int  yywrap(void) { return 1; }
 %}
 %%
-$[$#&0-9a-zA-Z`;]*		return ARGEX;
+$[$#&0-9a-zA-Z`"._\-;]*		return ARGEX;
 [a-zA-Z]*			return ALPH;
 [0-9]*				return NUM;
 \[[0-9,]*\]			return DIM;
 ,				return LIST;
 \(				return FUNC_S;
 \)				return FUNC_E;
-->				return RULE;
-=>				return REW;
+\x20->\x20			return RULE;
+\x20=>\x20			return REW;
 \@				return REF;
 \#[#0-9]+			return LABEL;
 \n				return END;
