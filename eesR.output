@@ -1,0 +1,584 @@
+   0  $accept : line_list $end
+
+   1  line_list : line
+   2            | line_list line
+
+   3  line : dimension_expression END
+   4       | dimension_expression_ref END
+
+   5  dimension_expression_ref : dimension_expression REF refs
+
+   6  refs : ref
+   7       | refs LIST ref
+
+   8  ref : arg SET REF_S ALPH SET numalph REF_E
+   9      | arg SET REF_S arg SET numalph REF_E
+  10      | arg SET REF_S ALPH SET arg REF_E
+  11      | arg SET REF_S arg SET arg REF_E
+  12      | arg SET REF_S LABEL SET NUM REF_E
+
+  13  dimension_expression : arg
+  14                       | list
+  15                       | arg RULE arg
+  16                       | arg RULE list
+  17                       | list RULE arg
+  18                       | list RULE list
+
+  19  list : FUNC_S func FUNC_E
+  20       | list list
+
+  21  func : arg
+  22       | FUNC_S func FUNC_E
+  23       | func LIST func
+  24       | func func
+
+  25  arg : ARGEX
+  26      | ARGEX DIM
+
+  27  numalph : NUM
+  28          | ALPH
+  29          | numalph numalph
+
+state 0
+	$accept : . line_list $end  (0)
+
+	ARGEX  shift 1
+	FUNC_S  shift 2
+	.  error
+
+	line_list  goto 3
+	line  goto 4
+	dimension_expression  goto 5
+	dimension_expression_ref  goto 6
+	arg  goto 7
+	list  goto 8
+
+
+state 1
+	arg : ARGEX .  (25)
+	arg : ARGEX . DIM  (26)
+
+	DIM  shift 9
+	ARGEX  reduce 25
+	FUNC_S  reduce 25
+	FUNC_E  reduce 25
+	RULE  reduce 25
+	LIST  reduce 25
+	REF  reduce 25
+	REF_E  reduce 25
+	SET  reduce 25
+	END  reduce 25
+
+
+state 2
+	list : FUNC_S . func FUNC_E  (19)
+
+	ARGEX  shift 1
+	FUNC_S  shift 10
+	.  error
+
+	arg  goto 11
+	func  goto 12
+
+
+state 3
+	$accept : line_list . $end  (0)
+	line_list : line_list . line  (2)
+
+	$end  accept
+	ARGEX  shift 1
+	FUNC_S  shift 2
+	.  error
+
+	line  goto 13
+	dimension_expression  goto 5
+	dimension_expression_ref  goto 6
+	arg  goto 7
+	list  goto 8
+
+
+state 4
+	line_list : line .  (1)
+
+	.  reduce 1
+
+
+state 5
+	line : dimension_expression . END  (3)
+	dimension_expression_ref : dimension_expression . REF refs  (5)
+
+	REF  shift 14
+	END  shift 15
+	.  error
+
+
+state 6
+	line : dimension_expression_ref . END  (4)
+
+	END  shift 16
+	.  error
+
+
+state 7
+	dimension_expression : arg .  (13)
+	dimension_expression : arg . RULE arg  (15)
+	dimension_expression : arg . RULE list  (16)
+
+	RULE  shift 17
+	REF  reduce 13
+	END  reduce 13
+
+
+state 8
+	dimension_expression : list .  (14)
+	dimension_expression : list . RULE arg  (17)
+	dimension_expression : list . RULE list  (18)
+	list : list . list  (20)
+
+	FUNC_S  shift 2
+	RULE  shift 18
+	REF  reduce 14
+	END  reduce 14
+
+	list  goto 19
+
+
+state 9
+	arg : ARGEX DIM .  (26)
+
+	.  reduce 26
+
+
+state 10
+	func : FUNC_S . func FUNC_E  (22)
+
+	ARGEX  shift 1
+	FUNC_S  shift 10
+	.  error
+
+	arg  goto 11
+	func  goto 20
+
+
+state 11
+	func : arg .  (21)
+
+	.  reduce 21
+
+
+state 12
+	list : FUNC_S func . FUNC_E  (19)
+	func : func . LIST func  (23)
+	func : func . func  (24)
+
+	ARGEX  shift 1
+	FUNC_S  shift 10
+	FUNC_E  shift 21
+	LIST  shift 22
+	.  error
+
+	arg  goto 11
+	func  goto 23
+
+
+state 13
+	line_list : line_list line .  (2)
+
+	.  reduce 2
+
+
+state 14
+	dimension_expression_ref : dimension_expression REF . refs  (5)
+
+	ARGEX  shift 1
+	.  error
+
+	refs  goto 24
+	ref  goto 25
+	arg  goto 26
+
+
+state 15
+	line : dimension_expression END .  (3)
+
+	.  reduce 3
+
+
+state 16
+	line : dimension_expression_ref END .  (4)
+
+	.  reduce 4
+
+
+state 17
+	dimension_expression : arg RULE . arg  (15)
+	dimension_expression : arg RULE . list  (16)
+
+	ARGEX  shift 1
+	FUNC_S  shift 2
+	.  error
+
+	arg  goto 27
+	list  goto 28
+
+
+state 18
+	dimension_expression : list RULE . arg  (17)
+	dimension_expression : list RULE . list  (18)
+
+	ARGEX  shift 1
+	FUNC_S  shift 2
+	.  error
+
+	arg  goto 29
+	list  goto 30
+
+
+19: shift/reduce conflict (shift 2, reduce 20) on FUNC_S
+state 19
+	list : list . list  (20)
+	list : list list .  (20)
+
+	FUNC_S  shift 2
+	RULE  reduce 20
+	REF  reduce 20
+	END  reduce 20
+
+	list  goto 19
+
+
+state 20
+	func : FUNC_S func . FUNC_E  (22)
+	func : func . LIST func  (23)
+	func : func . func  (24)
+
+	ARGEX  shift 1
+	FUNC_S  shift 10
+	FUNC_E  shift 31
+	LIST  shift 22
+	.  error
+
+	arg  goto 11
+	func  goto 23
+
+
+state 21
+	list : FUNC_S func FUNC_E .  (19)
+
+	.  reduce 19
+
+
+state 22
+	func : func LIST . func  (23)
+
+	ARGEX  shift 1
+	FUNC_S  shift 10
+	.  error
+
+	arg  goto 11
+	func  goto 32
+
+
+23: shift/reduce conflict (shift 1, reduce 24) on ARGEX
+23: shift/reduce conflict (shift 10, reduce 24) on FUNC_S
+23: shift/reduce conflict (shift 22, reduce 24) on LIST
+state 23
+	func : func . LIST func  (23)
+	func : func . func  (24)
+	func : func func .  (24)
+
+	ARGEX  shift 1
+	FUNC_S  shift 10
+	LIST  shift 22
+	FUNC_E  reduce 24
+
+	arg  goto 11
+	func  goto 23
+
+
+state 24
+	dimension_expression_ref : dimension_expression REF refs .  (5)
+	refs : refs . LIST ref  (7)
+
+	LIST  shift 33
+	END  reduce 5
+
+
+state 25
+	refs : ref .  (6)
+
+	.  reduce 6
+
+
+state 26
+	ref : arg . SET REF_S ALPH SET numalph REF_E  (8)
+	ref : arg . SET REF_S arg SET numalph REF_E  (9)
+	ref : arg . SET REF_S ALPH SET arg REF_E  (10)
+	ref : arg . SET REF_S arg SET arg REF_E  (11)
+	ref : arg . SET REF_S LABEL SET NUM REF_E  (12)
+
+	SET  shift 34
+	.  error
+
+
+state 27
+	dimension_expression : arg RULE arg .  (15)
+
+	.  reduce 15
+
+
+state 28
+	dimension_expression : arg RULE list .  (16)
+	list : list . list  (20)
+
+	FUNC_S  shift 2
+	REF  reduce 16
+	END  reduce 16
+
+	list  goto 19
+
+
+state 29
+	dimension_expression : list RULE arg .  (17)
+
+	.  reduce 17
+
+
+state 30
+	dimension_expression : list RULE list .  (18)
+	list : list . list  (20)
+
+	FUNC_S  shift 2
+	REF  reduce 18
+	END  reduce 18
+
+	list  goto 19
+
+
+state 31
+	func : FUNC_S func FUNC_E .  (22)
+
+	.  reduce 22
+
+
+32: shift/reduce conflict (shift 1, reduce 23) on ARGEX
+state 32
+	func : func . LIST func  (23)
+	func : func LIST func .  (23)
+	func : func . func  (24)
+
+	ARGEX  shift 1
+	FUNC_S  reduce 23
+	FUNC_E  reduce 23
+	LIST  reduce 23
+
+	arg  goto 11
+	func  goto 23
+
+
+state 33
+	refs : refs LIST . ref  (7)
+
+	ARGEX  shift 1
+	.  error
+
+	ref  goto 35
+	arg  goto 26
+
+
+state 34
+	ref : arg SET . REF_S ALPH SET numalph REF_E  (8)
+	ref : arg SET . REF_S arg SET numalph REF_E  (9)
+	ref : arg SET . REF_S ALPH SET arg REF_E  (10)
+	ref : arg SET . REF_S arg SET arg REF_E  (11)
+	ref : arg SET . REF_S LABEL SET NUM REF_E  (12)
+
+	REF_S  shift 36
+	.  error
+
+
+state 35
+	refs : refs LIST ref .  (7)
+
+	.  reduce 7
+
+
+state 36
+	ref : arg SET REF_S . ALPH SET numalph REF_E  (8)
+	ref : arg SET REF_S . arg SET numalph REF_E  (9)
+	ref : arg SET REF_S . ALPH SET arg REF_E  (10)
+	ref : arg SET REF_S . arg SET arg REF_E  (11)
+	ref : arg SET REF_S . LABEL SET NUM REF_E  (12)
+
+	ARGEX  shift 1
+	ALPH  shift 37
+	LABEL  shift 38
+	.  error
+
+	arg  goto 39
+
+
+state 37
+	ref : arg SET REF_S ALPH . SET numalph REF_E  (8)
+	ref : arg SET REF_S ALPH . SET arg REF_E  (10)
+
+	SET  shift 40
+	.  error
+
+
+state 38
+	ref : arg SET REF_S LABEL . SET NUM REF_E  (12)
+
+	SET  shift 41
+	.  error
+
+
+state 39
+	ref : arg SET REF_S arg . SET numalph REF_E  (9)
+	ref : arg SET REF_S arg . SET arg REF_E  (11)
+
+	SET  shift 42
+	.  error
+
+
+state 40
+	ref : arg SET REF_S ALPH SET . numalph REF_E  (8)
+	ref : arg SET REF_S ALPH SET . arg REF_E  (10)
+
+	ARGEX  shift 1
+	ALPH  shift 43
+	NUM  shift 44
+	.  error
+
+	arg  goto 45
+	numalph  goto 46
+
+
+state 41
+	ref : arg SET REF_S LABEL SET . NUM REF_E  (12)
+
+	NUM  shift 47
+	.  error
+
+
+state 42
+	ref : arg SET REF_S arg SET . numalph REF_E  (9)
+	ref : arg SET REF_S arg SET . arg REF_E  (11)
+
+	ARGEX  shift 1
+	ALPH  shift 43
+	NUM  shift 44
+	.  error
+
+	arg  goto 48
+	numalph  goto 49
+
+
+state 43
+	numalph : ALPH .  (28)
+
+	.  reduce 28
+
+
+state 44
+	numalph : NUM .  (27)
+
+	.  reduce 27
+
+
+state 45
+	ref : arg SET REF_S ALPH SET arg . REF_E  (10)
+
+	REF_E  shift 50
+	.  error
+
+
+state 46
+	ref : arg SET REF_S ALPH SET numalph . REF_E  (8)
+	numalph : numalph . numalph  (29)
+
+	ALPH  shift 43
+	NUM  shift 44
+	REF_E  shift 51
+	.  error
+
+	numalph  goto 52
+
+
+state 47
+	ref : arg SET REF_S LABEL SET NUM . REF_E  (12)
+
+	REF_E  shift 53
+	.  error
+
+
+state 48
+	ref : arg SET REF_S arg SET arg . REF_E  (11)
+
+	REF_E  shift 54
+	.  error
+
+
+state 49
+	ref : arg SET REF_S arg SET numalph . REF_E  (9)
+	numalph : numalph . numalph  (29)
+
+	ALPH  shift 43
+	NUM  shift 44
+	REF_E  shift 55
+	.  error
+
+	numalph  goto 52
+
+
+state 50
+	ref : arg SET REF_S ALPH SET arg REF_E .  (10)
+
+	.  reduce 10
+
+
+state 51
+	ref : arg SET REF_S ALPH SET numalph REF_E .  (8)
+
+	.  reduce 8
+
+
+52: shift/reduce conflict (shift 43, reduce 29) on ALPH
+52: shift/reduce conflict (shift 44, reduce 29) on NUM
+state 52
+	numalph : numalph . numalph  (29)
+	numalph : numalph numalph .  (29)
+
+	ALPH  shift 43
+	NUM  shift 44
+	REF_E  reduce 29
+
+	numalph  goto 52
+
+
+state 53
+	ref : arg SET REF_S LABEL SET NUM REF_E .  (12)
+
+	.  reduce 12
+
+
+state 54
+	ref : arg SET REF_S arg SET arg REF_E .  (11)
+
+	.  reduce 11
+
+
+state 55
+	ref : arg SET REF_S arg SET numalph REF_E .  (9)
+
+	.  reduce 9
+
+
+State 19 contains 1 shift/reduce conflict.
+State 23 contains 3 shift/reduce conflicts.
+State 32 contains 1 shift/reduce conflict.
+State 52 contains 2 shift/reduce conflicts.
+
+
+18 terminals, 11 nonterminals
+30 grammar rules, 56 states

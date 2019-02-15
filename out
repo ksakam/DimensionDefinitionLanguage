@@ -1,0 +1,37 @@
+
+Syntax::com: Warning: comma encountered with no adjacent expression. The
+     expression will be treated as Null.  (line 1 of "tmps").
+
+Syntax::com: Warning: comma encountered with no adjacent expression. The
+     expression will be treated as Null.  (line 1 of "tmps").
+
+Syntax::com: Warning: comma encountered with no adjacent expression. The
+     expression will be treated as Null.  (line 1 of "tmps").
+
+Syntax::com: Warning: comma encountered with no adjacent expression. The
+     expression will be treated as Null.  (line 1 of "tmps").
+[
+	[
+		"$1",
+		"DIM",
+		3,
+		4
+	],
+	"$5",
+	[
+		[
+			[
+				[
+					"$23",
+					"DIM",
+					null,
+					null,
+					null,
+					null
+				]
+			]
+		],
+		"$4",
+		"$6"
+	]
+]

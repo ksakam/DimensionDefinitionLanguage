@@ -1,0 +1,237 @@
+   0  $accept : line_list $end
+
+   1  line_list : line
+   2            | line_list line
+
+   3  line : dimension_expression END
+
+   4  dimension_expression : arg
+   5                       | list
+   6                       | arg RULE arg
+   7                       | arg RULE list
+   8                       | list RULE arg
+   9                       | list RULE list
+
+  10  list : FUNC_S argfunc FUNC_E
+
+  11  argfunc : arg
+  12          | argfunc LIST arg
+  13          | argfunc LIST FUNC_S argfunc FUNC_E
+
+  14  arg : ARG
+  15      | ARG DIM
+
+state 0
+	$accept : . line_list $end  (0)
+
+	ARG  shift 1
+	FUNC_S  shift 2
+	.  error
+
+	line_list  goto 3
+	line  goto 4
+	dimension_expression  goto 5
+	arg  goto 6
+	list  goto 7
+
+
+state 1
+	arg : ARG .  (14)
+	arg : ARG . DIM  (15)
+
+	DIM  shift 8
+	FUNC_E  reduce 14
+	RULE  reduce 14
+	LIST  reduce 14
+	END  reduce 14
+
+
+state 2
+	list : FUNC_S . argfunc FUNC_E  (10)
+
+	ARG  shift 1
+	.  error
+
+	arg  goto 9
+	argfunc  goto 10
+
+
+state 3
+	$accept : line_list . $end  (0)
+	line_list : line_list . line  (2)
+
+	$end  accept
+	ARG  shift 1
+	FUNC_S  shift 2
+	.  error
+
+	line  goto 11
+	dimension_expression  goto 5
+	arg  goto 6
+	list  goto 7
+
+
+state 4
+	line_list : line .  (1)
+
+	.  reduce 1
+
+
+state 5
+	line : dimension_expression . END  (3)
+
+	END  shift 12
+	.  error
+
+
+state 6
+	dimension_expression : arg .  (4)
+	dimension_expression : arg . RULE arg  (6)
+	dimension_expression : arg . RULE list  (7)
+
+	RULE  shift 13
+	END  reduce 4
+
+
+state 7
+	dimension_expression : list .  (5)
+	dimension_expression : list . RULE arg  (8)
+	dimension_expression : list . RULE list  (9)
+
+	RULE  shift 14
+	END  reduce 5
+
+
+state 8
+	arg : ARG DIM .  (15)
+
+	.  reduce 15
+
+
+state 9
+	argfunc : arg .  (11)
+
+	.  reduce 11
+
+
+state 10
+	list : FUNC_S argfunc . FUNC_E  (10)
+	argfunc : argfunc . LIST arg  (12)
+	argfunc : argfunc . LIST FUNC_S argfunc FUNC_E  (13)
+
+	FUNC_E  shift 15
+	LIST  shift 16
+	.  error
+
+
+state 11
+	line_list : line_list line .  (2)
+
+	.  reduce 2
+
+
+state 12
+	line : dimension_expression END .  (3)
+
+	.  reduce 3
+
+
+state 13
+	dimension_expression : arg RULE . arg  (6)
+	dimension_expression : arg RULE . list  (7)
+
+	ARG  shift 1
+	FUNC_S  shift 2
+	.  error
+
+	arg  goto 17
+	list  goto 18
+
+
+state 14
+	dimension_expression : list RULE . arg  (8)
+	dimension_expression : list RULE . list  (9)
+
+	ARG  shift 1
+	FUNC_S  shift 2
+	.  error
+
+	arg  goto 19
+	list  goto 20
+
+
+state 15
+	list : FUNC_S argfunc FUNC_E .  (10)
+
+	.  reduce 10
+
+
+state 16
+	argfunc : argfunc LIST . arg  (12)
+	argfunc : argfunc LIST . FUNC_S argfunc FUNC_E  (13)
+
+	ARG  shift 1
+	FUNC_S  shift 21
+	.  error
+
+	arg  goto 22
+
+
+state 17
+	dimension_expression : arg RULE arg .  (6)
+
+	.  reduce 6
+
+
+state 18
+	dimension_expression : arg RULE list .  (7)
+
+	.  reduce 7
+
+
+state 19
+	dimension_expression : list RULE arg .  (8)
+
+	.  reduce 8
+
+
+state 20
+	dimension_expression : list RULE list .  (9)
+
+	.  reduce 9
+
+
+state 21
+	argfunc : argfunc LIST FUNC_S . argfunc FUNC_E  (13)
+
+	ARG  shift 1
+	.  error
+
+	arg  goto 9
+	argfunc  goto 23
+
+
+state 22
+	argfunc : argfunc LIST arg .  (12)
+
+	.  reduce 12
+
+
+state 23
+	argfunc : argfunc . LIST arg  (12)
+	argfunc : argfunc . LIST FUNC_S argfunc FUNC_E  (13)
+	argfunc : argfunc LIST FUNC_S argfunc . FUNC_E  (13)
+
+	FUNC_E  shift 24
+	LIST  shift 16
+	.  error
+
+
+state 24
+	argfunc : argfunc LIST FUNC_S argfunc FUNC_E .  (13)
+
+	.  reduce 13
+
+
+10 terminals, 7 nonterminals
+16 grammar rules, 25 states

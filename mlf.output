@@ -1,0 +1,302 @@
+   0  $accept : line_list $end
+
+   1  line_list : line
+   2            | line_list line
+
+   3  line : dimension_expression END
+
+   4  dimension_expression : arg
+   5                       | list
+   6                       | arg RULE arg
+   7                       | arg RULE list
+   8                       | list RULE arg
+   9                       | list RULE list
+
+  10  list : arg func_b
+
+  11  func_b : FUNC_S argm FUNC_E
+
+  12  argm : args
+  13       | arg func_b
+  14       | argm argm
+  15       | argm LIST argm
+
+  16  args : arg
+  17       | args LIST arg
+
+  18  arg : ARGEX
+  19      | ARGEX DIM
+
+state 0
+	$accept : . line_list $end  (0)
+
+	ARGEX  shift 1
+	.  error
+
+	line_list  goto 2
+	line  goto 3
+	dimension_expression  goto 4
+	arg  goto 5
+	list  goto 6
+
+
+state 1
+	arg : ARGEX .  (18)
+	arg : ARGEX . DIM  (19)
+
+	DIM  shift 7
+	ARGEX  reduce 18
+	FUNC_S  reduce 18
+	FUNC_E  reduce 18
+	RULE  reduce 18
+	LIST  reduce 18
+	END  reduce 18
+
+
+state 2
+	$accept : line_list . $end  (0)
+	line_list : line_list . line  (2)
+
+	$end  accept
+	ARGEX  shift 1
+	.  error
+
+	line  goto 8
+	dimension_expression  goto 4
+	arg  goto 5
+	list  goto 6
+
+
+state 3
+	line_list : line .  (1)
+
+	.  reduce 1
+
+
+state 4
+	line : dimension_expression . END  (3)
+
+	END  shift 9
+	.  error
+
+
+state 5
+	dimension_expression : arg .  (4)
+	dimension_expression : arg . RULE arg  (6)
+	dimension_expression : arg . RULE list  (7)
+	list : arg . func_b  (10)
+
+	FUNC_S  shift 10
+	RULE  shift 11
+	END  reduce 4
+
+	func_b  goto 12
+
+
+state 6
+	dimension_expression : list .  (5)
+	dimension_expression : list . RULE arg  (8)
+	dimension_expression : list . RULE list  (9)
+
+	RULE  shift 13
+	END  reduce 5
+
+
+state 7
+	arg : ARGEX DIM .  (19)
+
+	.  reduce 19
+
+
+state 8
+	line_list : line_list line .  (2)
+
+	.  reduce 2
+
+
+state 9
+	line : dimension_expression END .  (3)
+
+	.  reduce 3
+
+
+state 10
+	func_b : FUNC_S . argm FUNC_E  (11)
+
+	ARGEX  shift 1
+	.  error
+
+	arg  goto 14
+	argm  goto 15
+	args  goto 16
+
+
+state 11
+	dimension_expression : arg RULE . arg  (6)
+	dimension_expression : arg RULE . list  (7)
+
+	ARGEX  shift 1
+	.  error
+
+	arg  goto 17
+	list  goto 18
+
+
+state 12
+	list : arg func_b .  (10)
+
+	.  reduce 10
+
+
+state 13
+	dimension_expression : list RULE . arg  (8)
+	dimension_expression : list RULE . list  (9)
+
+	ARGEX  shift 1
+	.  error
+
+	arg  goto 19
+	list  goto 20
+
+
+state 14
+	argm : arg . func_b  (13)
+	args : arg .  (16)
+
+	FUNC_S  shift 10
+	ARGEX  reduce 16
+	FUNC_E  reduce 16
+	LIST  reduce 16
+
+	func_b  goto 21
+
+
+state 15
+	func_b : FUNC_S argm . FUNC_E  (11)
+	argm : argm . argm  (14)
+	argm : argm . LIST argm  (15)
+
+	ARGEX  shift 1
+	FUNC_E  shift 22
+	LIST  shift 23
+	.  error
+
+	arg  goto 14
+	argm  goto 24
+	args  goto 16
+
+
+16: shift/reduce conflict (shift 25, reduce 12) on LIST
+state 16
+	argm : args .  (12)
+	args : args . LIST arg  (17)
+
+	LIST  shift 25
+	ARGEX  reduce 12
+	FUNC_E  reduce 12
+
+
+state 17
+	dimension_expression : arg RULE arg .  (6)
+	list : arg . func_b  (10)
+
+	FUNC_S  shift 10
+	END  reduce 6
+
+	func_b  goto 12
+
+
+state 18
+	dimension_expression : arg RULE list .  (7)
+
+	.  reduce 7
+
+
+state 19
+	dimension_expression : list RULE arg .  (8)
+	list : arg . func_b  (10)
+
+	FUNC_S  shift 10
+	END  reduce 8
+
+	func_b  goto 12
+
+
+state 20
+	dimension_expression : list RULE list .  (9)
+
+	.  reduce 9
+
+
+state 21
+	argm : arg func_b .  (13)
+
+	.  reduce 13
+
+
+state 22
+	func_b : FUNC_S argm FUNC_E .  (11)
+
+	.  reduce 11
+
+
+state 23
+	argm : argm LIST . argm  (15)
+
+	ARGEX  shift 1
+	.  error
+
+	arg  goto 14
+	argm  goto 26
+	args  goto 16
+
+
+24: shift/reduce conflict (shift 1, reduce 14) on ARGEX
+24: shift/reduce conflict (shift 23, reduce 14) on LIST
+state 24
+	argm : argm . argm  (14)
+	argm : argm argm .  (14)
+	argm : argm . LIST argm  (15)
+
+	ARGEX  shift 1
+	LIST  shift 23
+	FUNC_E  reduce 14
+
+	arg  goto 14
+	argm  goto 24
+	args  goto 16
+
+
+state 25
+	args : args LIST . arg  (17)
+
+	ARGEX  shift 1
+	.  error
+
+	arg  goto 27
+
+
+state 26
+	argm : argm . argm  (14)
+	argm : argm . LIST argm  (15)
+	argm : argm LIST argm .  (15)
+
+	.  reduce 15
+
+	arg  goto 14
+	argm  goto 24
+	args  goto 16
+
+
+state 27
+	args : args LIST arg .  (17)
+
+	.  reduce 17
+
+
+State 16 contains 1 shift/reduce conflict.
+State 24 contains 2 shift/reduce conflicts.
+
+
+18 terminals, 9 nonterminals
+20 grammar rules, 28 states

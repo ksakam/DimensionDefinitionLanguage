@@ -1,0 +1,4 @@
+#!/usr/bin/wolframscript -function
+Function[
+  Map[ ImportString[#,"ExpressionJSON"]&,StringSplit[Import[#1,"Text"],"\n"] ]
+]
