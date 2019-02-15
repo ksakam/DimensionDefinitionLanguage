@@ -23,7 +23,6 @@ mv a.out eet
 mv y.output eet.output
 
 
-
 ##s
 echo s
 lex s.l
@@ -31,7 +30,6 @@ yacc -dv s.y
 gcc44 y.tab.c lex.yy.c -lfl -ll
 mv a.out s
 mv y.output s.output
-
 ##es
 echo es
 lex s.l
@@ -39,6 +37,15 @@ yacc -dv es.y
 gcc44 y.tab.c lex.yy.c -lfl -ll
 mv a.out es
 mv y.output es.output
+##ees
+echo ees
+lex s.l
+yacc -dv ees.y
+gcc44 y.tab.c lex.yy.c -lfl -ll
+mv a.out ees
+mv y.output ees.output
+
+
 
 ##c
 echo c
