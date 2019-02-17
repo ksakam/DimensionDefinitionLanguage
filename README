@@ -31,3 +31,4 @@ bash conv_e-test.script
 bash conv_ee-test.script
 bash check-example.script
 bash cat-example.script | ./tq -FT in=/dev/stdin
+./tq in=test-single.t form=single -FT
