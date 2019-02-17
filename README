@@ -33,4 +33,5 @@ bash check-example.script
 bash cat-example.script | ./tq -FT in=/dev/stdin
 ./tq in=test-single.t form=single -FT
 ## for mem-leak and performance
+## 80 sec. @ N007
 time ./tq in=lllarge-test.t
