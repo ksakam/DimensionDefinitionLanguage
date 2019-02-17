@@ -30,7 +30,9 @@ bash conv-test.script
 bash conv_e-test.script
 bash conv_ee-test.script
 bash check-example.script
-bash cat-example.script | ./tq -FT in=/dev/stdin
+bash cat-example.script | ./tq -FT in=/dev/stdin > tmp
+bash cat-example.script | ./tq -FT in=/dev/stdin | ./tq -FT in=/dev/stdin > tmp2
+diff tmp tmp2
 ./tq in=test-single.t form=single -FT
 ## for mem-leak and performance
 ## time: 80 sec.; mem in use:540Byte @ N007
