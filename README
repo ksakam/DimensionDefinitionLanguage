@@ -23,7 +23,7 @@ compile_all.sh
 - t2sR : テスト中
 
 # Federation
-.ddf => .dsz => .ddl => .frl => .dry => .fed => .int.xxx
+.ddf => .dsz => .ddl => .frl => .dry => .fed => .int.wl => .int.exe.wl
 
 # test
 bash conv-test.script
@@ -41,7 +41,10 @@ diff tmp.o tmp2.o
 ## time: 80 sec.; mem in use:540Byte @ N007
 ## time: 55 sec.; mem in use:360Byte @ G005
 time ./tq in=lllarge-test.t
-# for WL
+# for dry => fed
+./tq in=toSheet.dry -FW -C > toSHeet.tmp
+diff toSHeet.tmp toSheet.fed
+# for WL => exec
 cd /home/kamano/Devel/DataFederation/DataIntegration/Fe-BCC
 cat /home/kamano/gitsrc/DimensionDefinitionLanguage/toSheet.int.wl | math
 diff test.sheet dpf_Fe-BCC.dep.wl
