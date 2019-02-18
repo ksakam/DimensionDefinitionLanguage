@@ -23,7 +23,7 @@ compile_all.sh
 - t2sR : テスト中
 
 # Federation
-.ddf => .dsz => .ddl => .frl => .dry => .fed => .int.wl => .int.exe.wl
+.ddf => .dsz => .ddl => .frl => .dry => .fed => .int.wl
 
 # test
 bash conv-test.script
