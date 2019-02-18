@@ -33,6 +33,9 @@ bash check-example.script
 bash cat-example.script | ./tq -FT in=/dev/stdin > tmp
 bash cat-example.script | ./tq -FT in=/dev/stdin | ./tq -FT in=/dev/stdin > tmp2
 diff tmp tmp2
+bash cat-example.script | ./tq -FT in=/dev/stdin -C > tmp.o
+bash cat-example.script | ./tq -FT in=/dev/stdin -C | ./tq -FT in=/dev/stdin -C > tmp2.o
+diff tmp.o tmp2.o
 ./tq in=test-single.t form=single -FT
 ## for mem-leak and performance
 ## time: 80 sec.; mem in use:540Byte @ N007
