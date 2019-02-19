@@ -12,9 +12,7 @@ compile_all.sh
 - es
 - ees
 
-# Federation
-.ddf => .dsz => .ddl => .frl => .dry => .fed => .int.wl
-## test
+# test
 bash conv-test.script
 bash conv_e-test.script
 bash conv_ee-test.script
@@ -31,6 +29,9 @@ diff tmp.o tmp2.o
 ### time: 55 sec.; mem in use:360Byte @ G005
 time ./tq in=lllarge-test.t
 
+
+# Federation
+.ddf => .dsz => .ddl => .frl => .dry => .fed => .int.wl
 ## create DRY
 ## DRY => FED@WL
 ./tq in=toSheet.dry -FW -C > toSheet.dry.fed.wl
