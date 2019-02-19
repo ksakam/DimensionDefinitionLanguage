@@ -32,7 +32,7 @@ diff tmp.o tmp2.o
 time ./tq in=lllarge-test.t
 ## for dry => fed
 ./tq in=toSheet.dry -FW -C > toSheet.tmp
-diff toSHeet.tmp toSheet.fed
+diff toSheet.tmp toSheet.fed
 ## for WL => exec
 cd /home/kamano/Devel/DataFederation/DataIntegration/Fe-BCC
 cat /home/kamano/gitsrc/DimensionDefinitionLanguage/toSheet.int.wl | math
