@@ -33,6 +33,7 @@ time ./tq in=lllarge-test.t
 # Federation
 .ddf => .dsz => .ddl => .frl => .dry => .fed => .int.wl
 ## create DRY
+from .ddf .dsz .ddl => toSheet.dry
 ## DRY => FED@WL
 ./tq in=toSheet.dry -FW -C > toSheet.dry.fed.wl
 diff toSheet.tmp toSheet.dry.fed.wl
