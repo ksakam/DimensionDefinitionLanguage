@@ -31,9 +31,8 @@ time ./tq in=lllarge-test.t
 
 
 # Federation
-.ddf => .dsz => .ddl => .frl => .dry => .fed => .int.wl
+{.ddf , .dsz , .ddl} => .frl => .dry => dry.fed => .dry.fed.<exe>
 ## create DRY
-from .ddf .dsz .ddl => toSheet.dry
 ## DRY => FED@WL
 ./tq in=toSheet.dry -FW -C > toSheet.dry.fed.wl
 ./tq in=toSheet.dry -FW -Cr > toSheet.dry.fed.rwl
