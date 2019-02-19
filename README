@@ -30,6 +30,8 @@ diff tmp.o tmp2.o
 ### time: 80 sec.; mem in use:540Byte @ N007
 ### time: 55 sec.; mem in use:360Byte @ G005
 time ./tq in=lllarge-test.t
+
+## create DRY
 ## DRY => FED@WL
 ./tq in=toSheet.dry -FW -C > toSheet.dry.fed.wl
 diff toSheet.tmp toSheet.dry.fed.wl
