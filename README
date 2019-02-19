@@ -1,31 +1,20 @@
+# compile
+compile_all.sh
+
+
 # 言語
 ## t系
 - t
 - et
 - eet
-
 ## s系
 - s
 - es
 - ees
 
-
-# compile
-compile_all.sh
-
-#tool
-##コンバーター
-### S -> T
-- s2t : バグあり
-- s2tR : 不完全
-### T -> S
-- t2s : テス中
-- t2sR : テスト中
-
 # Federation
 .ddf => .dsz => .ddl => .frl => .dry => .fed => .int.wl
-
-# test
+## test
 bash conv-test.script
 bash conv_e-test.script
 bash conv_ee-test.script
@@ -37,14 +26,14 @@ bash cat-example.script | ./tq -FT in=/dev/stdin -C > tmp.o
 bash cat-example.script | ./tq -FT in=/dev/stdin -C | ./tq -FT in=/dev/stdin -C > tmp2.o
 diff tmp.o tmp2.o
 ./tq in=test-single.t form=single -FT
-## for mem-leak and performance
-## time: 80 sec.; mem in use:540Byte @ N007
-## time: 55 sec.; mem in use:360Byte @ G005
+### for mem-leak and performance
+### time: 80 sec.; mem in use:540Byte @ N007
+### time: 55 sec.; mem in use:360Byte @ G005
 time ./tq in=lllarge-test.t
-# for dry => fed
+## for dry => fed
 ./tq in=toSheet.dry -FW -C > toSheet.tmp
 diff toSHeet.tmp toSheet.fed
-# for WL => exec
+## for WL => exec
 cd /home/kamano/Devel/DataFederation/DataIntegration/Fe-BCC
 cat /home/kamano/gitsrc/DimensionDefinitionLanguage/toSheet.int.wl | math
 diff test.sheet dpf_Fe-BCC.dep.wl
