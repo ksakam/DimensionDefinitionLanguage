@@ -38,9 +38,7 @@ time ./tq in=lllarge-test.t
 ## create DRY
 ./tqR2D.pl toSheet.frl > toSheet.dry
 ## DRY => FED
-./tq in=toSheet.dry -FW -C > toSheet.dry.fed.wl
-./tq in=toSheet.dry -FW -Cr > toSheet.dry.fed.rwl
-diff toSheet.dry.fed.wl toSheet.dry.fed.rwl
+./tq.o in=toSheet.dry -FW -Cr > toSheet.dry.fed.rwl
 ## FED => EXEC
 > toSheet.dry.fed.rwl.exe
 ## EXEC
