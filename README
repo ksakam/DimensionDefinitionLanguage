@@ -32,14 +32,15 @@ time ./tq in=lllarge-test.t
 
 # Federation
 # test file : toSheet
-{.tgt , .ddf , .dsz , .ddl} =cat=> .frl =tqR2D.pl=> .dry => dry.fed => .dry.fed.<exe>
+{.tgt , .ddf , .dsz , .ddl} =cat=> .frl =tqR2D=> .frl.dry =tqD2F=> .frl.dry.fed =tqR2D=> .frl.dry.fed.com
 ## create FRL
 ./tq target=toSheet
-## create DRY
+## FRL => DRY 
 ./tqR2D.pl toSheet.frl > toSheet.frl.dry # => toSheet.frl.dry.fed.com
 ## DRY => FED
-./tqD2F.pl toSheet.frl.dry # => toSheet.dry.fed
+./tqD2F.pl toSheet.frl.dry # => toSheet.frl.dry.fed
 ## FED => EXEC
+=> toSheet.frl.dry.fed.com
 ## EXEC
 ./toSheet.frl.dry.fed.com
 
