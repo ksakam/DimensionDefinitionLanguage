@@ -37,10 +37,12 @@ time ./tq in=lllarge-test.t
 ./tq target=toSheet
 ## create DRY
 ./tqR2D.pl toSheet.frl > toSheet.dry
-## DRY => FED => EXEC
+## DRY => FED
 ./tq in=toSheet.dry -FW -C > toSheet.dry.fed.wl
 ./tq in=toSheet.dry -FW -Cr > toSheet.dry.fed.rwl
 diff toSheet.dry.fed.wl toSheet.dry.fed.rwl
+## FED => EXEC
+
 ## EXEC
 cp toSheet.dry.fed.rwl /home/kamano/Devel/DataFederation/DataIntegration/Fe-BCC
 cd /home/kamano/Devel/DataFederation/DataIntegration/Fe-BCC
