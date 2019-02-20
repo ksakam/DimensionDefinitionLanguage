@@ -38,6 +38,7 @@ time ./tq in=lllarge-test.t
 ## create DRY
 ./tqR2D.pl toSheet.frl > toSheet.dry
 ## DRY => FED
+## under construction
 ./tq.o in=toSheet.dry -FW -Cr > toSheet.dry.fed.rwl
 ## FED => EXEC
 > toSheet.dry.fed.rwl.exe
