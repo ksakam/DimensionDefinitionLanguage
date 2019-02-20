@@ -36,16 +36,10 @@ time ./tq in=lllarge-test.t
 ## create FRL
 ./tq target=toSheet
 ## create DRY
-./tqR2D.pl toSheet.frl > toSheet.dry
+./tqR2D.pl toSheet.frl > toSheet.frl.dry # => toSheet.frl.dry.fed.com
 ## DRY => FED
-## under construction
-./tq.o in=toSheet.dry -FW -Cr > toSheet.dry.fed.rwl
+./tqD2F.pl toSheet.frl.dry # => toSheet.dry.fed
 ## FED => EXEC
-> toSheet.dry.fed.rwl.exe
 ## EXEC
-cp toSheet.dry.fed.rwl /home/kamano/Devel/DataFederation/DataIntegration/Fe-BCC
-cd /home/kamano/Devel/DataFederation/DataIntegration/Fe-BCC
-./toSheet.dry.fed.rwl.exe
-cat toSheet.dry.fed.rwl | math
-diff test.sheet dpf_Fe-BCC.dep.wl
+./toSheet.frl.dry.fed.com
 
