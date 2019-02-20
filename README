@@ -32,7 +32,7 @@ time ./tq in=lllarge-test.t
 
 # Federation
 # test file : toSheet
-{.ddf , .dsz , .ddl} =cat=> .frl =tqR2D.pl=> .dry => dry.fed => .dry.fed.<exe>
+{.tgt , .ddf , .dsz , .ddl} =cat=> .frl =tqR2D.pl=> .dry => dry.fed => .dry.fed.<exe>
 ## create FRL
 ./tq target=toSheet
 ## create DRY
