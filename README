@@ -44,3 +44,13 @@ time ./tq in=lllarge-test.t
 ## EXEC
 ./toSheet.frl.dry.fed.com
 
+## file transition
+|file|  +command+
+|tgt|  +cat+
+|dsz|  +   + 
+|ddf|  +   + 
+|ddl|  +   + 
+               |frl|  +tqR2D+ 
+                                                        |com|  +com+
+                                |dry|  +tqD2F+                 +   +
+                                                 |fed|         +   +
