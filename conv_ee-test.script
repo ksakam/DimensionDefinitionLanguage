@@ -6,7 +6,7 @@ cat test.eet | ./t
 cat test.ees | ./s
 
 #tq
-./tq in=test.eet  -FS > test.eet.ees
+./tq.o in=test.eet  -FS > test.eet.ees
 ./cst in=test.eet.ees > test.eet.ees.eet
 diff test.ees test.eet.ees
 diff test.eet test.eet.ees.eet

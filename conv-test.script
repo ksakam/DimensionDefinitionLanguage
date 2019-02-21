@@ -9,12 +9,12 @@ cat test.s | ./s
 
 #tq
 echo 'tq'
-./tq in=test.t -FT > test.t.t
+./tq.o in=test.t -FT > test.t.t
 diff test.t test.t.t
 
 #S/T comp
 echo 'S/T'
-./tq in=test.t -FS > test.t.s
+./tq.o in=test.t -FS > test.t.s
 diff test.t.s test.s
 ./cst in=test.s > test.s.t
 diff test.s.t test.t
@@ -29,7 +29,7 @@ cat test.t | ./cts in=/dev/stdin > test.t.s
 cat test.t.s | ./cst in=/dev/stdin > test.t.s.t
 diff test.t test.t.s.t
 #T2S##3
-cat test.t | ./tq in=/dev/stdin -FS > test.t.S
+cat test.t | ./tq.o in=/dev/stdin -FS > test.t.S
 cat test.t.S | ./cst in=/dev/stdin > test.t.S.t
 diff test.t test.t.S.t
 #T2J##1
@@ -38,7 +38,7 @@ cat test.t | t2mM.pl | mM2j.swl > test.t.mM.j
 cat test.t.mM.j | j2mM.swl | mM2t.pl > test.t.mM.j.mM.t
 diff test.t test.t.mM.j.mM.t
 #T2J##2
-cat test.t | ./tq in=/dev/stdin -FJ > test.t.j
+cat test.t | ./tq.o in=/dev/stdin -FJ > test.t.j
 cat test.t.j | j2mM.swl | mM2t.pl > test.t.j.mM.t
 diff test.t test.t.j.mM.t
 #T2M
@@ -58,7 +58,7 @@ cat test.s | cst in=/dev/stdin | t2mM.pl | mM2j.swl > test.s.t.mM.j
 cat test.s.t.mM.j | j2s.pl > test.s.t.mM.j.s
 diff test.s test.s.t.mM.j.s
 #S2J##2
-cat test.s | ./cst in=/dev/stdin | ./tq in=/dev/stdin -FJ > test.s.t.j
+cat test.s | ./cst in=/dev/stdin | ./tq.o in=/dev/stdin -FJ > test.s.t.j
 cat test.s.t.j | ./j2s.pl > test.s.t.j.s
 diff test.s test.s.t.j.s
 #S2M

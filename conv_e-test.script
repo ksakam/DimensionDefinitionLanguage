@@ -6,7 +6,7 @@ cat test.et | ./t
 cat test.es | ./s
 
 #tq
-./tq in=test.et -FS > test.et.es
+./tq.o in=test.et -FS > test.et.es
 ./cst in=test.et.es > test.et.es.et
 diff test.es test.et.es
 diff test.et test.et.es.et
