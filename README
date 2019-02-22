@@ -50,7 +50,7 @@ time ./tq.o in=lllarge-test.t
 |dsz|  +   + 
 |ddf|  +   + 
 |ddl|  +   + 
-               |frl|  +tqR2D+ 
-                                                        |com|  +com+
+       +   +   |frl|  +tqR2D+ 
+                      +     +                           |com|  +com+
                                 |dry|  +tqD2F+                 +   +
-                                                 |fed|         +   +
+                                       +     +   |fed|         +   +
