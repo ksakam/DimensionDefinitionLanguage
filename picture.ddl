@@ -1,2 +1,2 @@
 $RE$DRY($X$FileType,$X$DDF,$X$Target)
-$CM$Application	->	$X$Python
+$CM$Application($X$Python)
