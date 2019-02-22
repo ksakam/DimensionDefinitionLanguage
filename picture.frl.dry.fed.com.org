@@ -1,0 +1,1 @@
+python convert_jpeg_to_json.py picture.jpg

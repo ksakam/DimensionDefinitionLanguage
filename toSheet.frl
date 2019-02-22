@@ -1,8 +1,8 @@
 $RE$DRY($X$FileType,$X$DDF,$X$Target)
-$X$Application	->	$X$Mathematica
+$CM$Application	->	$X$Mathematica
 $X$Set($xlsx,$X$Import($X$Target))
 $X$Set($sheet,$X$toPartitionSheet($X$DDF)($X$FileType)($xlsx))
-$X$Export($`test.sheet,$X$FullForm($sheet),$`String)
+$X$Export($`export.sheet,$X$FullForm($sheet),$`String)
 $X$DDF	->	$X$List($`$$$3[],$`$$$2002[],$`$$$2004[,])
 $X$FileType	->	$`$$3020
 $X$Target	->	$`toSheet.xlsx

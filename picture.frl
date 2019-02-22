@@ -1,0 +1,5 @@
+$RE$DRY($X$FileType,$X$DDF,$X$Target)
+$X$Application	->	$X$Python
+$X$DDF	->	$X$PackedData
+$X$FileType	->	$`$$3015
+$X$Target	->	$`mldata_1807_010404.jpg
