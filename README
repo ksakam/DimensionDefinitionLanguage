@@ -12,7 +12,7 @@ compile_all.sh
 - es
 - ees
 
-# test
+# convert test
 bash conv-test.script
 bash conv_e-test.script
 bash conv_ee-test.script
