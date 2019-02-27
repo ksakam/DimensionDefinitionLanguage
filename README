@@ -17,23 +17,23 @@ bash conv-test.script
 bash conv_e-test.script
 bash conv_ee-test.script
 bash check-example.script
-bash cat-example.script | ./tq.o -FT in=/dev/stdin > tmp
-bash cat-example.script | ./tq.o -FT in=/dev/stdin | ./tq.o -FT in=/dev/stdin > tmp2
+bash cat-example.script | tconv -FT in=/dev/stdin > tmp
+bash cat-example.script | tconv -FT in=/dev/stdin | ./tq.o -FT in=/dev/stdin > tmp2
 diff tmp tmp2
-bash cat-example.script | ./tq.o -FT in=/dev/stdin -C > tmp.o
-bash cat-example.script | ./tq.o -FT in=/dev/stdin -C | ./tq.o -FT in=/dev/stdin -C > tmp2.o
+bash cat-example.script | tconv -FT in=/dev/stdin -C > tmp.o
+bash cat-example.script | tconv -FT in=/dev/stdin -C | ./tq.o -FT in=/dev/stdin -C > tmp2.o
 diff tmp.o tmp2.o
-./tq.o in=test-single.t form=single -FT
+tconv in=test-single.t form=single -FT
 
 ##performance
-time ./tq.o in=lllarge-test.t
+time tconv in=lllarge-test.t
 ### time: 80 sec.; mem in use:540Byte @ N007
 ### time: 55 sec.; mem in use:360Byte @ G005
-time ./tq.o in=llarge-test.t
+time tconv in=llarge-test.t
 ### time: 14 sec.; mem in use:520Byte @ N007
-time ./tq.o in=llarge-test.t -FT > /dev/null
+time tconv in=llarge-test.t -FT > /dev/null
 ### time: 20 sec.; mem in use:570Byte @ N007
-time ./tq.o in=llarge-test.t -FN > /dev/null
+time tconv in=llarge-test.t -FN > /dev/null
 ### time: 20 sec.; mem in use:570Byte @ N007
 
 
