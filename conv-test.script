@@ -8,7 +8,7 @@ echo 'S'
 cat test.s | ./s
 
 #tq
-echo 'tq'
+echo 'tconv'
 ./tconv in=test.t -FT > test.t.t
 diff test.t test.t.t
 
