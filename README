@@ -1,4 +1,8 @@
 # compile
+cd RECURSIVE-SYSTEM
+compile_all.sh
+
+cd DimensionDefinitionLanguage
 compile_all.sh
 
 
@@ -13,6 +17,7 @@ compile_all.sh
 - ees
 
 # convert test
+cd DimensionDefinitionLanguage
 bash conv-test.script
 bash conv_e-test.script
 ## 以下はコンバートが正しく行われないので、チェッカーではじかれることを確認
@@ -46,6 +51,7 @@ time tconv in=llarge-test.t -FN > /dev/null
 
 
 # Federation
+cd DimensionDefinitionLanguage
 # test file : toSheet
 {.tgt , .ddf , .dsz , .ddl} =cat=> .frl =tqR2D=> .frl.dry =tqD2F=> .frl.dry.fed =tqR2D=> .frl.dry.fed.com
 ## create FRL
