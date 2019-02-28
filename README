@@ -27,9 +27,12 @@ diff tmp.o tmp2.o
 tconv in=test-single.t form=single -FT
 
 ##performance
-### time: 80 sec.; mem in use:540Byte @ N007
+### time: 80 sec.; mem in use:520Byte @ N007
 ### time: 55 sec.; mem in use:360Byte @ G005
 time tconv in=lllarge-test.t
+
+### time: 1m43sec.; mem in use:560Byte @ N007
+time tconv in=lllarge-test.t -FS > /dev/null
 
 ### time: 14 sec.; mem in use:520Byte @ N007
 time tconv in=llarge-test.t
