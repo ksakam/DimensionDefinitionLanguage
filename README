@@ -3,7 +3,7 @@ cd RECURSIVE-SYSTEM
 compile_all.sh
 
 cd DimensionDefinitionLanguage
-compile_all.sh
+compile_all.n007.sh
 
 
 # 言語
