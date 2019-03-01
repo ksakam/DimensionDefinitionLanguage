@@ -99,4 +99,8 @@ cat test.s.t.mM | mM2j.swl > test.s.t.mM.j
 cat test.s.t.mM.j | j2mM.swl > test.s.t.mM.j.mM
 diff test.s.t.mM test.s.t.mM.j.mM
 
+#json format check
+echo 'json ckeck'
+for file in test*.j; do cat $file | ./to_jseq.pl | jq . 1>/dev/null; done
+
 echo 'END'
