@@ -48,9 +48,9 @@ time tconv in=llarge-test.t -FT > /dev/null
 ### time: 20 sec. ; mem in use:570Byte @ N007
 time tconv in=llarge-test.t -FN > /dev/null
 
-### time: 75 sec. ; mem: 89G. @ N007
+### time: 75 sec. ; mem: 89G. @ N007 ; 1.3M nodes
 time tconv in=llarge-single-test.t -FT form=single > /dev/null
-### 参考 jq 80 sec. ; mem: 17G @ N007
+### 参考 jq 80 sec. ; mem: 17G @ N007 ; 1.1M nodes
 time cat llarge-test-single.t.j | jq . > tmp.json
 ### 参考 mathematica 20 sec. ; mem: 4G @ N007
 js=Import["llarge-test-single.t.j","JSON"];
