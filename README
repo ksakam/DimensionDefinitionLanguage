@@ -51,6 +51,9 @@ time tconv in=llarge-test.t -FN > /dev/null
 ### time: 75 sec. ; mem: 89G. @ N007
 time tconv in=llarge-single-test.t -FT form=single > /dev/null
 
+### 参考 jq 80 sec. ; mem: 17G @ N007
+time cat llarge-test-single.t.j | jq . > tmp.json
+
 
 
 # Federation
