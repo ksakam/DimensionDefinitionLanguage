@@ -42,11 +42,14 @@ time tconv in=lllarge-test.t -FS > /dev/null
 ### time: 14 sec.; mem in use:520Byte @ N007
 time tconv in=llarge-test.t
 
-### time: 20 sec.; mem in use:570Byte @ N007
+### time: 20 sec. ; mem in use:570Byte @ N007
 time tconv in=llarge-test.t -FT > /dev/null
 
-### time: 20 sec.; mem in use:570Byte @ N007
+### time: 20 sec. ; mem in use:570Byte @ N007
 time tconv in=llarge-test.t -FN > /dev/null
+
+### time: 75 sec. ; mem: 89G. @ N007
+time tconv in=llarge-single-test.t -FT form=single > /dev/null
 
 
 
