@@ -29,7 +29,7 @@ diff tmp tmp2
 bash cat-example.script | tconv -FT in=/dev/stdin -C > tmp.o
 bash cat-example.script | tconv -FT in=/dev/stdin -C | ./tq.o -FT in=/dev/stdin -C > tmp2.o
 diff tmp.o tmp2.o
-tconv in=test-single.t form=single -FT
+tconv in=single-test.t form=single -FT
 
 ##performance
 ### time: 80 sec.; mem in use:520Byte @ N007
@@ -51,7 +51,7 @@ time tconv in=llarge-test.t -FN > /dev/null
 ### time: 75 sec. ; mem: 89G. @ N007 ; 1.3M nodes
 time tconv in=llarge-single-test.t -FT form=single > /dev/null
 ### 参考 jq 80 sec. ; mem: 17G @ N007 ; 1.1M nodes
-time cat llarge-test-single.t.j | jq . > tmp.json
+time cat llarge-single-test.t.j | jq . > tmp.json
 ### 参考 mathematica 20 sec. ; mem: 4G @ N007
 js=Import["llarge-test-single.t.j","JSON"];
 
