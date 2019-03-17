@@ -17,6 +17,8 @@ compile_all.n007.sh
 - ees
 
 # convert test
+cd RECURSIVE-SYSTEM
+bash conv-check.script
 cd DimensionDefinitionLanguage
 bash conv-test.script
 bash conv_e-test.script
