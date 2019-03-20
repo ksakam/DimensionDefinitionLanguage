@@ -22,7 +22,6 @@ bash conv-check.script
 cd DimensionDefinitionLanguage
 bash conv-test.script
 bash conv_e-test.script
-## 以下はコンバートが正しく行われないので、チェッカーではじかれることを確認
 bash conv_ee-test.script
 bash check-example.script
 
