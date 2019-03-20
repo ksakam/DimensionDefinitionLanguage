@@ -85,12 +85,12 @@ cd DimensionDefinitionLanguage
 ./toSheet.frl.dry.fed.com
 
 ## file transition
-|file|  +command+
+|file| +exec+
 |tgt|  +cat+
 |dsz|  +   + 
 |ddf|  +   + 
 |ddl|  +   + 
-       +   +   |frl|  +tqR2D+ 
-                      +     +                           |com|  +com+
-                      +     +   |dry|  +tqD2F+                 +   +
-                                       +     +   |fed|         +   +
+       +   +  |frl|  +tqR2D+ 
+                     +     +                         |com|  +com+
+                     +     +  |dry|  +tqD2F+                +   +
+                                     +     +  |fed|         +   +
