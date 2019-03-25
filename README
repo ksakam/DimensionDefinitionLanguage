@@ -47,6 +47,9 @@ tconv in=single-test.t form=single -FT
 ### time: 55 sec.; mem in use:360Byte @ G005
 time tq.o in=lllarge-test.t
 
+### time: 1m 24sec.; mem in use:560Byte @ N007
+time tq.o in=lllarge-test.t Sp=0,1
+
 ### time: 1m43sec.; mem in use:560Byte @ N007
 time tq.o in=lllarge-test.t -FS > /dev/null
 
